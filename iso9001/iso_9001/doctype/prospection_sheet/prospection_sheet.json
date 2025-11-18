@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{prospect_name}-{####}",
+ "creation": "2025-11-05 09:17:42.091174",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tb1",
+  "sb1",
+  "prospection_date",
+  "cb1",
+  "prospector",
+  "sb2",
+  "prospect_name",
+  "prospect_type",
+  "source",
+  "cb2",
+  "contact_phone",
+  "contact_email",
+  "section_break_vdrw",
+  "additional_note",
+  "tb3",
+  "tb4",
+  "interest_level",
+  "feedback",
+  "tb5",
+  "remarks",
+  "linked_customer"
+ ],
+ "fields": [
+  {
+   "fieldname": "tb1",
+   "fieldtype": "Tab Break",
+   "label": "Identification"
+  },
+  {
+   "fieldname": "tb3",
+   "fieldtype": "Tab Break",
+   "label": "Prospection Details"
+  },
+  {
+   "fieldname": "tb4",
+   "fieldtype": "Tab Break",
+   "label": "Evaluation"
+  },
+  {
+   "fieldname": "tb5",
+   "fieldtype": "Tab Break",
+   "label": "Status & Follow-up"
+  },
+  {
+   "fieldname": "prospect_name",
+   "fieldtype": "Data",
+   "label": "Prospect Name"
+  },
+  {
+   "fieldname": "prospect_type",
+   "fieldtype": "Select",
+   "label": "Prospect Type",
+   "options": "Individual\nOrganization"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "interest_level",
+   "fieldtype": "Select",
+   "label": "Interest Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Long Text",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Long Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "linked_customer",
+   "fieldtype": "Link",
+   "label": "Linked Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "prospection_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Prospection Date"
+  },
+  {
+   "fieldname": "prospector",
+   "fieldtype": "Link",
+   "label": "Prospector",
+   "options": "User"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "face to face\nPhone Call\nEmail\nSocial Media\nWebsite"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break",
+   "label": "User Info"
+  },
+  {
+   "fieldname": "sb2",
+   "fieldtype": "Section Break",
+   "label": "Prospect Details"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vdrw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_note",
+   "fieldtype": "Long Text",
+   "label": "Additional Note"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-06 18:45:43.365925",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Prospection Sheet",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

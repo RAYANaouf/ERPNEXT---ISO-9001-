@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-21 00:02:27.893392",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "customer_company",
+  "survey_date",
+  "questions_section",
+  "overall_satisfaction",
+  "quality_price_ratio",
+  "sales_team_performance",
+  "product_satisfaction",
+  "column_break_wfjo",
+  "service_reactivity",
+  "customer_duration",
+  "future_relationship",
+  "recommendation_probability"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nom & Pr\u00e9nom"
+  },
+  {
+   "fieldname": "customer_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Soci\u00e9t\u00e9",
+   "options": "Company"
+  },
+  {
+   "fieldname": "survey_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "questions_section",
+   "fieldtype": "Section Break",
+   "label": "Questions"
+  },
+  {
+   "fieldname": "overall_satisfaction",
+   "fieldtype": "Select",
+   "label": "\u2705 Q1 \u2013 Globalement, \u00eates-vous satisfait(e) de notre entreprise ?",
+   "options": "\ud83d\ude04 Extr\u00eamement satisfait\n\ud83d\ude0a Tr\u00e8s satisfait\n\ud83d\ude42 Assez satisfait\n\ud83d\ude15 Insatisfait\n\ud83d\ude20 Tr\u00e8s insatisfait"
+  },
+  {
+   "fieldname": "quality_price_ratio",
+   "fieldtype": "Select",
+   "label": "\u2705 Q2 \u2013 Nos rapports qualit\u00e9/prix r\u00e9pondent-elles \u00e0 vos besoins ?",
+   "options": "\ud83c\udf1f Extr\u00eamement bien\n\ud83d\udc4d Tr\u00e8s bien\n\ud83d\ude42 Assez bien\n\ud83d\ude15 Pas tr\u00e8s bien\n\u274c Pas du tout"
+  },
+  {
+   "fieldname": "sales_team_performance",
+   "fieldtype": "Select",
+   "label": "\u2705 Q3 \u2013 Globalement, nos commerciaux r\u00e9pondent-ils \u00e0 vos besoins ?",
+   "options": "\ud83d\udcaf Tout \u00e0 fait\n\ud83d\ude42 Assez bien\n\ud83c\udf13 Partiellement\n\u26a0\ufe0f Avec difficult\u00e9s\n\u274c Pas du tout"
+  },
+  {
+   "fieldname": "product_satisfaction",
+   "fieldtype": "Select",
+   "label": "\u2705 Q4 \u2013 \u00cates-vous satisfait des Produits mis \u00e0 votre disposition ?",
+   "options": "\u2705 Oui, totalement\n\ud83d\ude42 Partiellement\n\ud83d\ude10 Pas trop"
+  },
+  {
+   "fieldname": "column_break_wfjo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_reactivity",
+   "fieldtype": "Select",
+   "label": "\u2705 Q5 \u2013 Avons-nous \u00e9t\u00e9 r\u00e9actifs pour r\u00e9pondre \u00e0 vos questions ou pr\u00e9occupations ?",
+   "options": "\u26a1 Tr\u00e8s r\u00e9actifs\n\ud83d\udc4d Assez r\u00e9actifs\n\ud83d\ude15 Pas tr\u00e8s r\u00e9actifs\n\u274c Pas du tout r\u00e9actifs"
+  },
+  {
+   "fieldname": "customer_duration",
+   "fieldtype": "Select",
+   "label": "\u2705 Q6 \u2013 Depuis combien de temps votre organisation est-elle cliente ?",
+   "options": "\ud83d\udfe1 Moins d\u2019un an\n\ud83d\udfe2 1 \u00e0 3 ans\n\ud83d\udd35 3 \u00e0 5 ans\n\ud83d\udfe3 Plus de 5 ans"
+  },
+  {
+   "fieldname": "future_relationship",
+   "fieldtype": "Select",
+   "label": "\u2705 Q7 \u2013 Pensez-vous que vous continuerez \u00e0 entretenir des relations commerciales avec nous dans le futur ?",
+   "options": "\ud83d\udd2e Assez probable\n\ud83e\udd14 Peu probable\n\u274c Certainement pas"
+  },
+  {
+   "fieldname": "recommendation_probability",
+   "fieldtype": "Select",
+   "label": "\u2705 Q8 \u2013 Recommanderiez-vous notre entreprise ?",
+   "options": "\ud83d\udc4d Assez probable\n\ud83e\udd14 Peu probable\n\u274c Certainement pas"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-21 11:34:10.774286",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Customer Satisfaction Survey",
+ "owner": "rayanaouf1512@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

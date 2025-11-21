@@ -5,30 +5,114 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_yzby",
-  "amended_from"
+  "customer_info",
+  "date",
+  "customer_name",
+  "column_break_77a1",
+  "region",
+  "requirements_section",
+  "explicit_requirements",
+  "other_requirements",
+  "sales_review",
+  "sales_decision",
+  "sales_reason",
+  "sales_signature",
+  "dg_section",
+  "dg_decision",
+  "dg_reason",
+  "dg_signature"
  ],
  "fields": [
   {
-   "fieldname": "section_break_yzby",
-   "fieldtype": "Section Break"
+   "fieldname": "customer_info",
+   "fieldtype": "Section Break",
+   "label": "\ud83d\udfe6 SECTION 1 \u2014 Informations Client"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
+   "fieldname": "date",
+   "fieldtype": "Currency",
+   "label": "Date",
    "no_copy": 1,
-   "options": "Customer Requirements Review",
    "print_hide": 1,
-   "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Nom du client"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "R\u00e9gion"
+  },
+  {
+   "fieldname": "requirements_section",
+   "fieldtype": "Section Break",
+   "label": "\ud83d\udfe6 SECTION 2 \u2014 Exigences"
+  },
+  {
+   "fieldname": "explicit_requirements",
+   "fieldtype": "Long Text",
+   "label": "Exigences explicites du client"
+  },
+  {
+   "fieldname": "other_requirements",
+   "fieldtype": "Long Text",
+   "label": "Autres exigences importantes du client"
+  },
+  {
+   "fieldname": "sales_review",
+   "fieldtype": "Section Break",
+   "label": "\ud83d\udfe6 SECTION 3 \u2014 Avis du Commercial"
+  },
+  {
+   "fieldname": "sales_decision",
+   "fieldtype": "Select",
+   "label": "Avis du Commercial",
+   "options": "GO \ud83d\udfe2\nNO GO \ud83d\udd34"
+  },
+  {
+   "fieldname": "sales_reason",
+   "fieldtype": "Long Text",
+   "label": "Motif"
+  },
+  {
+   "fieldname": "sales_signature",
+   "fieldtype": "Signature",
+   "label": "Visa du R. Commercial"
+  },
+  {
+   "fieldname": "dg_section",
+   "fieldtype": "Section Break",
+   "label": "\ud83d\udfe6 SECTION 4 \u2014 D\u00e9cision Direction G\u00e9n\u00e9rale"
+  },
+  {
+   "fieldname": "dg_decision",
+   "fieldtype": "Select",
+   "label": "D\u00e9cision finale de la Direction G\u00e9n\u00e9rale",
+   "options": "GO \ud83d\udfe2\nNO GO \ud83d\udd34"
+  },
+  {
+   "fieldname": "dg_reason",
+   "fieldtype": "Long Text",
+   "label": "Motif"
+  },
+  {
+   "fieldname": "dg_signature",
+   "fieldtype": "Signature",
+   "label": "Visa de la DG"
+  },
+  {
+   "fieldname": "column_break_77a1",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-21 11:35:26.330967",
+ "modified": "2025-11-21 11:49:26.918309",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Customer Requirements Review",

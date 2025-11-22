@@ -1,0 +1,31 @@
+{
+  "doctype": "DocType",
+  "name": "Reclamation Client",
+  "module": "ISO 9001",
+  "custom": 1,
+  "fields": [
+    {"fieldname": "client", "label": "Client", "fieldtype": "Link", "options": "Customer"},
+    {"fieldname": "date_reception", "label": "Date de réception", "fieldtype": "Date"},
+    {"fieldname": "reference_documents", "label": "Référence documents", "fieldtype": "Data"},
+    {"fieldname": "description_reclamation", "label": "Description de la réclamation", "fieldtype": "Small Text"},
+    {"fieldname": "correction_client", "label": "Correction par rapport au client / réponse", "fieldtype": "Small Text"},
+    {"fieldname": "date_correction", "label": "Date de correction", "fieldtype": "Date"},
+       {
+      "fieldname": "cause_probable",
+      "label": "Cause probable",
+      "fieldtype": "Select",
+      "options": "Main d'œuvre\nMatière\nMéthode\nMachine"
+    },
+  {
+      "fieldname": "cause_racine",
+      "label": "Cause Racine",
+      "fieldtype": "Small Text"
+    },
+    {"fieldname": "action_corrective", "label": "Action corrective", "fieldtype": "Small Text"},
+    {"fieldname": "responsable_action", "label": "Responsable Action corrective", "fieldtype": "Link", "options": "Employee"},
+    {"fieldname": "evaluation_efficacite", "label": "Evaluation de l’efficacité", "fieldtype": "Small Text"},
+    {"fieldname": "date_cloture", "label": "Date de clôture", "fieldtype": "Date"},
+    {"fieldname": "valeurs_ajoutes", "label": "Valeurs ajoutés", "fieldtype": "Small Text"}
+  ],
+  "permissions": [{"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}]
+}

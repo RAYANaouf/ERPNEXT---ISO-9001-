@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-03 00:03:38.658666",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "date_reception",
+  "documents_r\u00e9f\u00e9rence",
+  "desciption_reclamation",
+  "corection_client",
+  "date_correction",
+  "cause_probable",
+  "cause_racine",
+  "action_corrective",
+  "responsable_action",
+  "evaluation_efficacite",
+  "date_cluture",
+  "valeurs_ajoutes"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Data",
+   "label": "client"
+  },
+  {
+   "fieldname": "date_reception",
+   "fieldtype": "Date",
+   "label": "Date de r\u00e9ception"
+  },
+  {
+   "fieldname": "documents_r\u00e9f\u00e9rence",
+   "fieldtype": "Data",
+   "label": "documents de r\u00e9f\u00e9rence"
+  },
+  {
+   "fieldname": "desciption_reclamation",
+   "fieldtype": "Small Text",
+   "label": "Decription de la r\u00e9clamation "
+  },
+  {
+   "fieldname": "corection_client",
+   "fieldtype": "Small Text",
+   "label": "Correction par rapport au client"
+  },
+  {
+   "fieldname": "date_correction",
+   "fieldtype": "Date",
+   "label": "Date de correction"
+  },
+  {
+   "fieldname": "cause_probable",
+   "fieldtype": "Select",
+   "label": "Cause probable",
+   "options": "Main d'oeuvre\nMati\u00e9re\nM\u00e9thode\nMachine"
+  },
+  {
+   "fieldname": "cause_racine",
+   "fieldtype": "Small Text",
+   "label": "Cause Racine"
+  },
+  {
+   "fieldname": "action_corrective",
+   "fieldtype": "Small Text",
+   "label": "Action corrective"
+  },
+  {
+   "fieldname": "responsable_action",
+   "fieldtype": "Data",
+   "label": "Responsable Action corrective"
+  },
+  {
+   "fieldname": "evaluation_efficacite",
+   "fieldtype": "Small Text",
+   "label": "Evaluation de l'\u00e9fficacit\u00e9"
+  },
+  {
+   "fieldname": "date_cluture",
+   "fieldtype": "Date",
+   "label": "Date de cloture"
+  },
+  {
+   "fieldname": "valeurs_ajoutes",
+   "fieldtype": "Small Text",
+   "label": "Valeurs ajout\u00e9"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-03 00:30:06.540651",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "reclamtion client",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

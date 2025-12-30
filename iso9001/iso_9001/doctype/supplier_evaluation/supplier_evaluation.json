@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-29 10:20:52.155078",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "information_gererale",
+  "supplier",
+  "evaluation_date",
+  "evaluator",
+  "crit\u00e8re_devaluation_section",
+  "criteria_table",
+  "r\u00e9sultats_section",
+  "total_score",
+  "classement",
+  "decision",
+  "commentaires"
+ ],
+ "fields": [
+  {
+   "fieldname": "information_gererale",
+   "fieldtype": "Section Break",
+   "label": "Information G\u00e9n\u00e9rale"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fournisseur",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evaluation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date d'\u00e9valuation",
+   "reqd": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "evaluator",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Evaluateur",
+   "options": "User"
+  },
+  {
+   "fieldname": "crit\u00e8re_devaluation_section",
+   "fieldtype": "Section Break",
+   "label": "Crit\u00e8re d'Evaluation"
+  },
+  {
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Crit\u00e8re ",
+   "options": "Supplier Evaluation Criteria",
+   "reqd": 1
+  },
+  {
+   "fieldname": "r\u00e9sultats_section",
+   "fieldtype": "Section Break",
+   "label": "R\u00e9sultats"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_score",
+   "fieldtype": "Int",
+   "label": "Note Finale (%)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "classement",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Classement",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "decision",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "D\u00e9cision",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commentaires",
+   "fieldtype": "Text Editor",
+   "label": "Commentaires"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-29 10:45:54.983275",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Supplier Evaluation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Evaluation Periode Essai {employee_name}--{####}",
+ "creation": "2026-01-12 17:41:04.085516",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_h4db",
+  "service",
+  "employee_name",
+  "function",
+  "hiring_date",
+  "trial_duration",
+  "date_d\u00e9valuation",
+  "section_break_cvxw",
+  "evaluation_details",
+  "average_score",
+  "amended_from",
+  "commentaires",
+  "decision_section",
+  "decision_success",
+  "column_break_oumd",
+  "decision_failed",
+  "column_break_gtnz",
+  "decision_extend",
+  "section_break_kzza",
+  "manager_signature",
+  "column_break_9n29",
+  "hr_signature",
+  "column_break_17yj",
+  "director_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_h4db",
+   "fieldtype": "Section Break",
+   "label": "Informations g\u00e9n\u00e9rales"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Nom & Pr\u00e9nom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "function",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fonction",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hiring_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": " Date recrutement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trial_duration",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dur\u00e9e de la p\u00e9riode d'essai",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_d\u00e9valuation",
+   "fieldtype": "Date",
+   "label": "Date d'\u00e9valuation"
+  },
+  {
+   "fieldname": "section_break_cvxw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "evaluation_details",
+   "fieldtype": "Table",
+   "label": "Crit\u00e8res d\u2019\u00e9valuation",
+   "options": "Evaluation Periode Essai Detail"
+  },
+  {
+   "fieldname": "average_score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Moyenne",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Evaluation Periode Essai employe",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "commentaires",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Autres commentaires sur les comp\u00e9tences professionnelles"
+  },
+  {
+   "fieldname": "decision_section",
+   "fieldtype": "Section Break",
+   "label": "D\u00e9cision finale"
+  },
+  {
+   "default": "0",
+   "fieldname": "decision_success",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Exp\u00e9rience r\u00e9ussie"
+  },
+  {
+   "default": "0",
+   "fieldname": "decision_failed",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Exp\u00e9rience infructueuse"
+  },
+  {
+   "default": "0",
+   "fieldname": "decision_extend",
+   "fieldtype": "Check",
+   "label": "Prolongation de la p\u00e9riode d'essai"
+  },
+  {
+   "fieldname": "column_break_oumd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gtnz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kzza",
+   "fieldtype": "Section Break",
+   "label": "Signature "
+  },
+  {
+   "fieldname": "manager_signature",
+   "fieldtype": "Signature",
+   "in_list_view": 1,
+   "label": "Signature Responsable"
+  },
+  {
+   "fieldname": "hr_signature",
+   "fieldtype": "Signature",
+   "in_list_view": 1,
+   "label": "Signature RH"
+  },
+  {
+   "fieldname": "director_signature",
+   "fieldtype": "Signature",
+   "label": "Signature Directeur"
+  },
+  {
+   "fieldname": "column_break_9n29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_17yj",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-13 12:28:54.195609",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Evaluation Periode Essai employe",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

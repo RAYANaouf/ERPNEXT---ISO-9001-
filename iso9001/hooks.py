@@ -242,3 +242,33 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {
+        'dt': 'DocType',
+        'filters': [
+            ["istable" , "=" ,  1],
+            ["module" , "in" , ["POS AR"]],
+        ]
+    },
+    {
+        'dt': 'Custom Field',
+        'filters': [
+            ["module" , "in" , ["POS AR"]],
+        ]
+    },
+    {
+        'dt': 'Client Script',
+        'filters': [
+            ["module" , "in" , ["POS AR"]],
+        ]
+    },
+    {
+        'dt': 'Server Script',
+        'filters': [
+            ["module" , "in" , ["POS AR"]],
+        ]
+    },
+    {
+        'dt': 'Workflow',
+    }
+]

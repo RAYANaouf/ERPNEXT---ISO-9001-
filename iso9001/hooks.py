@@ -247,25 +247,25 @@ fixtures = [
         'dt': 'DocType',
         'filters': [
             ["istable" , "=" ,  1],
-            ["module" , "in" , ["POS AR"]],
+            ["module" , "in" , ["ISO 9001"]],
         ]
     },
     {
         'dt': 'Custom Field',
         'filters': [
-            ["module" , "in" , ["POS AR"]],
+            ["module" , "in" , ["ISO 9001"]],
         ]
     },
     {
         'dt': 'Client Script',
         'filters': [
-            ["module" , "in" , ["POS AR"]],
+            ["module" , "in" , ["ISO 9001"]],
         ]
     },
     {
         'dt': 'Server Script',
         'filters': [
-            ["module" , "in" , ["POS AR"]],
+            ["module" , "in" , ["ISO 9001"]],
         ]
     },
     {

@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Evaluation Periode Essai {employee_name}--{####}",
+ "creation": "2026-01-26 19:03:16.402476",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_h4db",
+  "employee_name",
+  "function",
+  "hiring_date",
+  "service_de_rattachement",
+  "section_break_cvxw",
+  "evaluation_details",
+  "d\u00e9cision_finale_section",
+  "average_score",
+  "final_score_100",
+  "commentaires",
+  "section_break_kzza",
+  "manager_signature",
+  "column_break_9n29",
+  "hr_signature",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_h4db",
+   "fieldtype": "Section Break",
+   "label": "Informations g\u00e9n\u00e9rales"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Nom & Pr\u00e9nom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "function",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fonction",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hiring_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": " Date recrutement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_cvxw",
+   "fieldtype": "Section Break",
+   "label": "Crit\u00e8res d\u2019\u00e9valuation \u2013 Appr\u00e9ciations"
+  },
+  {
+   "fieldname": "evaluation_details",
+   "fieldtype": "Table",
+   "label": "Crit\u00e8res d\u2019\u00e9valuation",
+   "options": "Evaluation Periode Essai Detail"
+  },
+  {
+   "fieldname": "average_score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Moyenne",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commentaires",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Autres commentaires sur les comp\u00e9tences professionnelles"
+  },
+  {
+   "fieldname": "section_break_kzza",
+   "fieldtype": "Section Break",
+   "label": "Signature "
+  },
+  {
+   "fieldname": "manager_signature",
+   "fieldtype": "Signature",
+   "in_list_view": 1,
+   "label": "Signature Responsable"
+  },
+  {
+   "fieldname": "column_break_9n29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hr_signature",
+   "fieldtype": "Signature",
+   "in_list_view": 1,
+   "label": "Signature de la personne concern\u00e9e par l'\u00e9valuation"
+  },
+  {
+   "fieldname": "service_de_rattachement",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service de rattachement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "d\u00e9cision_finale_section",
+   "fieldtype": "Section Break",
+   "label": "D\u00e9cision finale"
+  },
+  {
+   "fieldname": "final_score_100",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score final (/100)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "evaluation annuelle  ex et maitrise",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-26 19:29:57.488373",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "evaluation annuelle  ex et maitrise",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

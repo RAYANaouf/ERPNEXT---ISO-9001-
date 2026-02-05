@@ -1,34 +1,46 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:evaluation annuelle  {employee_name}--{####}",
- "creation": "2026-02-04 19:31:37.987559",
- "default_view": "List",
+ "autoname": "format:Evaluation Periode Essai {employee_name}--{####}",
+ "creation": "2026-02-04 17:58:08.344408",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_h4db",
+  "service",
   "employee_name",
   "function",
   "hiring_date",
-  "service_de_rattachement",
+  "trial_duration",
+  "date_d\u00e9valuation",
   "section_break_cvxw",
   "evaluation_details",
-  "d\u00e9cision_finale_section",
   "average_score",
-  "final_score_100",
-  "final_appreciation",
+  "amended_from",
   "commentaires",
+  "decision_section",
+  "decision_success",
+  "column_break_oumd",
+  "decision_failed",
+  "column_break_gtnz",
+  "decision_extend",
   "section_break_kzza",
   "manager_signature",
   "column_break_9n29",
-  "hr_signature"
+  "column_break_17yj"
  ],
  "fields": [
   {
    "fieldname": "section_break_h4db",
    "fieldtype": "Section Break",
    "label": "Informations g\u00e9n\u00e9rales"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service",
+   "reqd": 1
   },
   {
    "fieldname": "employee_name",
@@ -52,27 +64,26 @@
    "reqd": 1
   },
   {
-   "fieldname": "service_de_rattachement",
+   "fieldname": "trial_duration",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Service de rattachement",
+   "label": "Dur\u00e9e de la p\u00e9riode d'essai",
    "reqd": 1
   },
   {
+   "fieldname": "date_d\u00e9valuation",
+   "fieldtype": "Date",
+   "label": "Date d'\u00e9valuation"
+  },
+  {
    "fieldname": "section_break_cvxw",
-   "fieldtype": "Section Break",
-   "label": "Crit\u00e8res d\u2019\u00e9valuation \u2013 Appr\u00e9ciations"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "evaluation_details",
    "fieldtype": "Table",
    "label": "Crit\u00e8res d\u2019\u00e9valuation",
    "options": "Evaluation Periode Essai Detail"
-  },
-  {
-   "fieldname": "d\u00e9cision_finale_section",
-   "fieldtype": "Section Break",
-   "label": "D\u00e9cision finale"
   },
   {
    "fieldname": "average_score",
@@ -82,24 +93,53 @@
    "read_only": 1
   },
   {
-   "fieldname": "final_score_100",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Score final (/100)",
-   "read_only": 1
-  },
-  {
-   "fieldname": "final_appreciation",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Appreciation Finale",
-   "read_only": 1
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Evaluation Periode Essai employe",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   },
   {
    "fieldname": "commentaires",
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Autres commentaires sur les comp\u00e9tences professionnelles"
+  },
+  {
+   "fieldname": "decision_section",
+   "fieldtype": "Section Break",
+   "label": "D\u00e9cision finale"
+  },
+  {
+   "default": "0",
+   "fieldname": "decision_success",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Exp\u00e9rience r\u00e9ussie"
+  },
+  {
+   "fieldname": "column_break_oumd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "decision_failed",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Exp\u00e9rience infructueuse"
+  },
+  {
+   "fieldname": "column_break_gtnz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "decision_extend",
+   "fieldtype": "Check",
+   "label": "Prolongation de la p\u00e9riode d'essai"
   },
   {
    "fieldname": "section_break_kzza",
@@ -110,27 +150,35 @@
    "fieldname": "manager_signature",
    "fieldtype": "Signature",
    "in_list_view": 1,
-   "label": "Signature du responsable direct"
+   "label": "Signature Directeur"
   },
   {
    "fieldname": "column_break_9n29",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "hr_signature",
-   "fieldtype": "Signature",
-   "in_list_view": 1,
-   "label": "Signature de la personne concern\u00e9e par l'\u00e9valuation"
+   "fieldname": "column_break_17yj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Evaluation Periode Essai employe",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-02-04 19:38:09.160100",
+ "modified": "2026-02-04 19:41:31.234813",
  "modified_by": "Administrator",
  "module": "ISO 9001",
- "name": "Evaluation annuelle  ex et maitrise",
+ "name": "Evaluation Periode Essai cadre",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

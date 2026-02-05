@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RMDQ-{YYYY}-{MM}",
+ "creation": "2026-02-05 11:45:25.469329",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_tgs6",
+  "amelioration_validees",
+  "recommandations",
+  "plan_d_action_mois_suivant",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_tgs6",
+   "fieldtype": "Section Break",
+   "label": "D\u00e9cisions"
+  },
+  {
+   "fieldname": "amelioration_validees",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Am\u00e9liorations valid\u00e9es"
+  },
+  {
+   "fieldname": "recommandations",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Recommandations"
+  },
+  {
+   "fieldname": "plan_d_action_mois_suivant",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Plan d\u2019action mois suivant"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rapport menseul Direction et Qualite",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-05 12:29:13.991168",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Rapport menseul Direction et Qualite",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RMGS-{YYYY}-{MM}",
+ "creation": "2026-02-05 10:42:24.456616",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ip2j",
+  "produit_les_plus_deamandes",
+  "produit_a_rotation_lente",
+  "prouduit_expires",
+  "erreurs_de_livraison",
+  "inventaire_section",
+  "inventaire_effectue",
+  "ecart_constates",
+  "prouduit_endommages",
+  "analyse_section",
+  "difficultes",
+  "amelioration_proposees",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ip2j",
+   "fieldtype": "Section Break",
+   "label": "Situation"
+  },
+  {
+   "fieldname": "produit_les_plus_deamandes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Produits les plus demand\u00e9s",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "produit_a_rotation_lente",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Produits \u00e0 rotation lente"
+  },
+  {
+   "fieldname": "prouduit_expires",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Produits expir\u00e9s"
+  },
+  {
+   "fieldname": "erreurs_de_livraison",
+   "fieldtype": "Small Text",
+   "label": "Erreurs de livraison"
+  },
+  {
+   "fieldname": "inventaire_section",
+   "fieldtype": "Section Break",
+   "label": "Inventaire"
+  },
+  {
+   "default": "0",
+   "fieldname": "inventaire_effectue",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Inventaire effectu\u00e9"
+  },
+  {
+   "fieldname": "ecart_constates",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "\u00c9carts constat\u00e9s"
+  },
+  {
+   "fieldname": "prouduit_endommages",
+   "fieldtype": "Small Text",
+   "label": "Produits endommag\u00e9s"
+  },
+  {
+   "fieldname": "analyse_section",
+   "fieldtype": "Section Break",
+   "label": "Analyse"
+  },
+  {
+   "fieldname": "difficultes",
+   "fieldtype": "Small Text",
+   "label": "Difficult\u00e9s"
+  },
+  {
+   "fieldname": "amelioration_proposees",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Am\u00e9liorations propos\u00e9es"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rapport Mensuel de Gestion des Stocks",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-05 12:35:35.294004",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Rapport Mensuel de Gestion des Stocks",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

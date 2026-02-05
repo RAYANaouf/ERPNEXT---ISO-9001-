@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Evaluationannuelleexetmaitrise(Document):
+class RapportMensuelCommercial(Document):
 	pass

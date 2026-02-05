@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:evaluation annuelle  {employee_name}--{####}",
- "creation": "2026-02-04 19:31:37.987559",
+ "creation": "2026-02-04 18:17:30.029059",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -22,7 +22,8 @@
   "section_break_kzza",
   "manager_signature",
   "column_break_9n29",
-  "hr_signature"
+  "hr_signature",
+  "amended_from"
  ],
  "fields": [
   {
@@ -89,13 +90,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "final_appreciation",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Appreciation Finale",
-   "read_only": 1
-  },
-  {
    "fieldname": "commentaires",
    "fieldtype": "Small Text",
    "in_list_view": 1,
@@ -110,7 +104,7 @@
    "fieldname": "manager_signature",
    "fieldtype": "Signature",
    "in_list_view": 1,
-   "label": "Signature du responsable direct"
+   "label": "Signature Directeur"
   },
   {
    "fieldname": "column_break_9n29",
@@ -120,17 +114,34 @@
    "fieldname": "hr_signature",
    "fieldtype": "Signature",
    "in_list_view": 1,
-   "label": "Signature de la personne concern\u00e9e par l'\u00e9valuation"
+   "label": "Signature du cadre concern\u00e9 par l'\u00e9valuation"
+  },
+  {
+   "fieldname": "final_appreciation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Appreciation Finale",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Evaluation annuelle des cadres",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-02-04 19:38:09.160100",
+ "modified": "2026-02-04 18:30:36.568902",
  "modified_by": "Administrator",
  "module": "ISO 9001",
- "name": "Evaluation annuelle  ex et maitrise",
+ "name": "Evaluation annuelle des cadres",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

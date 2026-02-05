@@ -1,7 +1,7 @@
 // Copyright (c) 2026, rayan aouf and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Evaluation annuelle  ex et maitrise", {
+// frappe.ui.form.on("Rapport Mensuel Ressources Humaines", {
 // 	refresh(frm) {
 
 // 	},

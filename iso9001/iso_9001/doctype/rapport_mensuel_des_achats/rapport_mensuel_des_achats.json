@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RMAC-{YYYY}-{MM}",
+ "creation": "2026-02-05 10:52:06.126618",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_8ud1",
+  "nombre_de_commandes",
+  "respecte_delais",
+  "delais_moyen",
+  "conformit\u00e9_section",
+  "prouduit_conformes",
+  "cas_de_non_conformit\u00e9",
+  "analyse_section",
+  "difficultes",
+  "actionscorrectives",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_8ud1",
+   "fieldtype": "Section Break",
+   "label": "Importation"
+  },
+  {
+   "fieldname": "nombre_de_commandes",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Nombre de commandes"
+  },
+  {
+   "default": "0",
+   "fieldname": "respecte_delais",
+   "fieldtype": "Check",
+   "label": "Respect d\u00e9lais"
+  },
+  {
+   "fieldname": "delais_moyen",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "D\u00e9lai moyen (jours)"
+  },
+  {
+   "fieldname": "conformit\u00e9_section",
+   "fieldtype": "Section Break",
+   "label": "Conformit\u00e9"
+  },
+  {
+   "default": "0",
+   "fieldname": "prouduit_conformes",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Produits conformes"
+  },
+  {
+   "fieldname": "cas_de_non_conformit\u00e9",
+   "fieldtype": "Small Text",
+   "label": "Cas de non conformit\u00e9"
+  },
+  {
+   "fieldname": "analyse_section",
+   "fieldtype": "Section Break",
+   "label": "Analyse"
+  },
+  {
+   "fieldname": "difficultes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Difficult\u00e9s"
+  },
+  {
+   "fieldname": "actionscorrectives",
+   "fieldtype": "Small Text",
+   "label": "Actions correctives"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rapport Mensuel des Achats",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-05 12:34:39.716474",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Rapport Mensuel des Achats",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

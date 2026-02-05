@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RMRH-{YYYY}-{MM}",
+ "creation": "2026-02-05 11:24:16.227114",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ac9y",
+  "nombre_d_employes",
+  "recrutement",
+  "depart",
+  "pr\u00e9sence_section",
+  "taux_de_presence",
+  "absences",
+  "formation_section",
+  "formation_realisees",
+  "besoins_en_formation",
+  "la_discipline_et_la_s\u00e9curit\u00e9_section",
+  "accident_de_travail",
+  "commentaires",
+  "analyse",
+  "dificultes",
+  "action_correctives",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ac9y",
+   "fieldtype": "Section Break",
+   "label": "Effectif"
+  },
+  {
+   "fieldname": "nombre_d_employes",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Nombre d\u2019employ\u00e9s"
+  },
+  {
+   "default": "0",
+   "fieldname": "recrutement",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Recrutements"
+  },
+  {
+   "default": "0",
+   "fieldname": "depart",
+   "fieldtype": "Check",
+   "label": "D\u00e9parts"
+  },
+  {
+   "fieldname": "pr\u00e9sence_section",
+   "fieldtype": "Section Break",
+   "label": "Pr\u00e9sence"
+  },
+  {
+   "fieldname": "taux_de_presence",
+   "fieldtype": "Percent",
+   "label": "Taux de pr\u00e9sence"
+  },
+  {
+   "fieldname": "absences",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Absences"
+  },
+  {
+   "fieldname": "formation_section",
+   "fieldtype": "Section Break",
+   "label": "Formation"
+  },
+  {
+   "fieldname": "formation_realisees",
+   "fieldtype": "Small Text",
+   "label": "Formations r\u00e9alis\u00e9es"
+  },
+  {
+   "fieldname": "besoins_en_formation",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Besoins en formation"
+  },
+  {
+   "fieldname": "la_discipline_et_la_s\u00e9curit\u00e9_section",
+   "fieldtype": "Section Break",
+   "label": "La discipline et la s\u00e9curit\u00e9"
+  },
+  {
+   "fieldname": "accident_de_travail",
+   "fieldtype": "Select",
+   "label": "Accidents du travail",
+   "options": "oui\nnon"
+  },
+  {
+   "fieldname": "commentaires",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Commentaires"
+  },
+  {
+   "fieldname": "analyse",
+   "fieldtype": "Section Break",
+   "label": "Analyse"
+  },
+  {
+   "fieldname": "dificultes",
+   "fieldtype": "Small Text",
+   "label": "Difficult\u00e9s"
+  },
+  {
+   "fieldname": "action_correctives",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Actions correctives"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rapport Mensuel Ressources Humaines",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-05 12:33:43.989338",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Rapport Mensuel Ressources Humaines",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

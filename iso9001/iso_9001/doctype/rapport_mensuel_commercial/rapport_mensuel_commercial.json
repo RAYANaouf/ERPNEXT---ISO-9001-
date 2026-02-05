@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RMC-{YYYY}-{MM}",
+ "creation": "2026-02-05 09:07:32.951101",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dbdu",
+  "chiffre_d_affiare",
+  "objectif_mensuel",
+  "tendance",
+  "taux_de_realisation",
+  "clients_section",
+  "nombre_de_client_actifs",
+  "nouveaux_client",
+  "reclamation_client",
+  "marketing_section",
+  "offres_commerciales",
+  "visites_et_reunions",
+  "obesrvations_marche",
+  "analyse_section",
+  "difficultes",
+  "propostions_d_amelioration",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dbdu",
+   "fieldtype": "Section Break",
+   "label": "Ventes"
+  },
+  {
+   "fieldname": "chiffre_d_affiare",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Chiffre d\u2019affaires",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "objectif_mensuel",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Objectif mensuel",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "tendance",
+   "fieldtype": "Select",
+   "label": "Tendance",
+   "options": "Hausse\nStable\nBaisse"
+  },
+  {
+   "fieldname": "taux_de_realisation",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Taux de r\u00e9alisation"
+  },
+  {
+   "fieldname": "clients_section",
+   "fieldtype": "Section Break",
+   "label": "Clients"
+  },
+  {
+   "fieldname": "nombre_de_client_actifs",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Nombre de clients actifs",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "nouveaux_client",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Nouveaux clients",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "reclamation_client",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "R\u00e9clamations clients"
+  },
+  {
+   "fieldname": "marketing_section",
+   "fieldtype": "Section Break",
+   "label": "Marketing"
+  },
+  {
+   "fieldname": "offres_commerciales",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Offres commerciales"
+  },
+  {
+   "fieldname": "visites_et_reunions",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Visites & r\u00e9unions"
+  },
+  {
+   "fieldname": "obesrvations_marche",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Observations march\u00e9"
+  },
+  {
+   "fieldname": "analyse_section",
+   "fieldtype": "Section Break",
+   "label": "Analyse"
+  },
+  {
+   "fieldname": "difficultes",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Difficult\u00e9s"
+  },
+  {
+   "fieldname": "propostions_d_amelioration",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Propositions d\u2019am\u00e9lioration"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rapport Mensuel Commercial",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-05 12:35:12.626471",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Rapport Mensuel Commercial",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

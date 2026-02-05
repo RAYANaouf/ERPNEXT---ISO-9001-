@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RMIT-{YYYY}-{MM}",
+ "creation": "2026-02-05 11:06:05.151078",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ctkl",
+  "etat_erp",
+  "mises_a_jours_realisees",
+  "support_section",
+  "incidents_enregistres",
+  "duree_d_indisponibilite",
+  "s\u00e9curit\u00e9_section",
+  "sauvgardes_regulieres",
+  "obesrvation_securite",
+  "les_difficult\u00e9s_et_les_am\u00e9liorations_section",
+  "les_difficultes",
+  "proposition_d_amelioration",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ctkl",
+   "fieldtype": "Section Break",
+   "label": "Syst\u00e8mes"
+  },
+  {
+   "fieldname": "etat_erp",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "\u00c9tat ERP",
+   "options": "Stable\nInstable"
+  },
+  {
+   "fieldname": "mises_a_jours_realisees",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Mises \u00e0 jour r\u00e9alis\u00e9es"
+  },
+  {
+   "fieldname": "support_section",
+   "fieldtype": "Section Break",
+   "label": "Support"
+  },
+  {
+   "fieldname": "incidents_enregistres",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Incidents enregistr\u00e9s"
+  },
+  {
+   "fieldname": "duree_d_indisponibilite",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Dur\u00e9e d\u2019indisponibilit\u00e9"
+  },
+  {
+   "fieldname": "s\u00e9curit\u00e9_section",
+   "fieldtype": "Section Break",
+   "label": "S\u00e9curit\u00e9"
+  },
+  {
+   "default": "0",
+   "fieldname": "sauvgardes_regulieres",
+   "fieldtype": "Check",
+   "label": "Sauvegardes r\u00e9guli\u00e8res"
+  },
+  {
+   "fieldname": "obesrvation_securite",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Observations s\u00e9curit\u00e9"
+  },
+  {
+   "fieldname": "les_difficult\u00e9s_et_les_am\u00e9liorations_section",
+   "fieldtype": "Section Break",
+   "label": "les difficult\u00e9s et les am\u00e9liorations"
+  },
+  {
+   "fieldname": "les_difficultes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "les difficult\u00e9s "
+  },
+  {
+   "fieldname": "proposition_d_amelioration",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Propositions d'am\u00e9lioration"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rapport Mensuel De Systeme D Information IT",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-05 12:34:15.001886",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Rapport Mensuel De Systeme D Information IT",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

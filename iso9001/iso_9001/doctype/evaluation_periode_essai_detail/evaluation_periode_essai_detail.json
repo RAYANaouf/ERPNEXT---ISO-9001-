@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-12 19:04:04.886672",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "criteria",
+  "score_1",
+  "score_2",
+  "score_3",
+  "score_4",
+  "score_5",
+  "final_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "criteria",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Crit\u00e8re"
+  },
+  {
+   "default": "0",
+   "fieldname": "score_1",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Insuffisant 1/5"
+  },
+  {
+   "default": "0",
+   "fieldname": "score_2",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Faible 2/5"
+  },
+  {
+   "default": "0",
+   "fieldname": "score_3",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Acceptable 3/5"
+  },
+  {
+   "default": "0",
+   "fieldname": "score_4",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Satisfaisant 4/5"
+  },
+  {
+   "default": "0",
+   "fieldname": "score_5",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Excellent 5/5"
+  },
+  {
+   "fieldname": "final_score",
+   "fieldtype": "Int",
+   "label": "Note",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-13 11:01:48.067335",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Evaluation Periode Essai Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

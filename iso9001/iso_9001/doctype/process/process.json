@@ -18,7 +18,6 @@
   "inputs",
   "outputs",
   "section_management",
-  "kpis",
   "status"
  ],
  "fields": [
@@ -87,12 +86,6 @@
    "label": " Pilotage"
   },
   {
-   "fieldname": "kpis",
-   "fieldtype": "Table",
-   "label": "KPI",
-   "options": "KPI Process"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Statut",
@@ -102,7 +95,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-30 08:33:52.573995",
+ "modified": "2026-03-30 08:51:43.221257",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Process",

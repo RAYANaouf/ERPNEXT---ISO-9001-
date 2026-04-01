@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-31 15:26:21.622830",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ppah",
+  "critere",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ppah",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "critere",
+   "fieldtype": "Data",
+   "label": "Critère de performance",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Select",
+   "label": "Note",
+   "options": "\n2\n5\n8\n10",
+   "in_list_view": 1,
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "module": "ISO 9001",
+ "name": "Evaluation Froid Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

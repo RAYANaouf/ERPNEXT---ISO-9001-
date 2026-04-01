@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-31 15:00:01",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "theme_formation",
+  "objectif_formation",
+  "nature_formation",
+  "personnel_concerne",
+  "delai_propose"
+ ],
+ "fields": [
+  {
+   "fieldname": "theme_formation",
+   "fieldtype": "Data",
+   "label": "Thème de formation",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "objectif_formation",
+   "fieldtype": "Small Text",
+   "label": "Objectif de la formation"
+  },
+  {
+   "fieldname": "nature_formation",
+   "fieldtype": "Select",
+   "label": "Interne ou externe",
+   "options": "Interne\nExterne",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "personnel_concerne",
+   "fieldtype": "Small Text",
+   "label": "Personnel concerné"
+  },
+  {
+   "fieldname": "delai_propose",
+   "fieldtype": "Date",
+   "label": "Délai proposé",
+   "in_list_view": 1
+  }
+ ],
+ "istable": 1,
+ "module": "ISO 9001",
+ "name": "Besoin Formation Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-31 15:12:29.376962",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_latd",
+  "theme",
+  "type_formation",
+  "personnel_concerne",
+  "nombre_d_agent_prevu",
+  "date_formation",
+  "duree",
+  "organisme",
+  "periode_d_evaluation_a_froid"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_latd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "theme",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Thème ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_formation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type ",
+   "options": "Interne\nExterne"
+  },
+  {
+   "fieldname": "personnel_concerne",
+   "fieldtype": "Small Text",
+   "label": "Personnel concerné "
+  },
+  {
+   "fieldname": "nombre_d_agent_prevu",
+   "fieldtype": "Int",
+   "label": "Nombre d’agent Prévu "
+  },
+  {
+   "fieldname": "date_formation",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date "
+  },
+  {
+   "fieldname": "duree",
+   "fieldtype": "Data",
+   "label": "Durée "
+  },
+  {
+   "fieldname": "organisme",
+   "fieldtype": "Data",
+   "label": "Organisme "
+  },
+  {
+   "fieldname": "periode_d_evaluation_a_froid",
+   "fieldtype": "Data",
+   "label": "Période d’évaluation à froid "
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "modified": "2026-03-31 15:12:29.376962",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Plan Formation Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

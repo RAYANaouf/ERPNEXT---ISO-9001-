@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ECH-{nom_et_prenom}",
+ "creation": "2026-03-31 15:24:31.151215",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fgbw",
+  "nom_et_prenom",
+  "fonction",
+  "formation_suivie",
+  "organisme_formateur",
+  "section_evaluation",
+  "table_evaluation",
+  "section_resultats",
+  "score_pourcentage",
+  "mention",
+  "section_avis",
+  "avis_contenu_organisation",
+  "satisfaction_generale",
+  "observations_suggestions",
+  "section_signature",
+  "signature_employe",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_fgbw",
+   "fieldtype": "Section Break",
+   "label": "Informations G\u00e9n\u00e9rales"
+  },
+  {
+   "fieldname": "nom_et_prenom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nom et Pr\u00e9nom",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nom_et_prenom.designation",
+   "fieldname": "fonction",
+   "fieldtype": "Data",
+   "label": "Fonction"
+  },
+  {
+   "fieldname": "formation_suivie",
+   "fieldtype": "Link",
+   "label": "Formation suivie",
+   "options": "Training Event"
+  },
+  {
+   "fieldname": "organisme_formateur",
+   "fieldtype": "Data",
+   "label": "Organisme formateur"
+  },
+  {
+   "fieldname": "section_evaluation",
+   "fieldtype": "Section Break",
+   "label": "\u00c9valuation des th\u00e8mes"
+  },
+  {
+   "fieldname": "table_evaluation",
+   "fieldtype": "Table",
+   "label": "Crit\u00e8res d'\u00e9valuation",
+   "options": "Evaluation Chaud Item"
+  },
+  {
+   "fieldname": "section_resultats",
+   "fieldtype": "Section Break",
+   "label": "R\u00e9sultat"
+  },
+  {
+   "fieldname": "score_pourcentage",
+   "fieldtype": "Percent",
+   "label": "R\u00e9sultat du score (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mention",
+   "fieldtype": "Data",
+   "label": "Mention finale",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_avis",
+   "fieldtype": "Section Break",
+   "label": "Commentaires"
+  },
+  {
+   "fieldname": "avis_contenu_organisation",
+   "fieldtype": "Small Text",
+   "label": "Avis sur le contenu et l'organisation"
+  },
+  {
+   "fieldname": "satisfaction_generale",
+   "fieldtype": "Small Text",
+   "label": "Satisfaction g\u00e9n\u00e9rale"
+  },
+  {
+   "fieldname": "observations_suggestions",
+   "fieldtype": "Small Text",
+   "label": "Observations et suggestions"
+  },
+  {
+   "fieldname": "section_signature",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signature_employe",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Evaluation a Chaud",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-31 18:54:15.964762",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Evaluation a Chaud",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

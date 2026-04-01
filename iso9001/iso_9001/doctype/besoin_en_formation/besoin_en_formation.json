@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-31 15:02:06",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_entete",
+  "structure",
+  "responsable_ou_pilote",
+  "column_break_date",
+  "date",
+  "section_tableau",
+  "liste_des_besoins",
+  "section_signature",
+  "visa_demandeur"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_entete",
+   "fieldtype": "Section Break",
+   "label": "Informations Générales"
+  },
+  {
+   "fieldname": "structure",
+   "fieldtype": "Link",
+   "label": "Structure",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsable_ou_pilote",
+   "fieldtype": "Link",
+   "label": "Responsable ou Pilote",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_date",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "section_tableau",
+   "fieldtype": "Section Break",
+   "label": "Détails des Besoins"
+  },
+  {
+   "fieldname": "liste_des_besoins",
+   "fieldtype": "Table",
+   "label": "Liste des Besoins",
+   "options": "Besoin Formation Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_signature",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "visa_demandeur",
+   "fieldtype": "Signature",
+   "label": "Visa Demandeur"
+  }
+ ],
+ "istable": 0,
+ "module": "ISO 9001",
+ "name": "Besoin en Formation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

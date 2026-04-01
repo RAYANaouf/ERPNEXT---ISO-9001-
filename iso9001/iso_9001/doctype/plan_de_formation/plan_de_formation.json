@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "PF-{annee_du_plan}",
  "creation": "2026-03-31 15:13:04",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -26,13 +27,14 @@
   {
    "fieldname": "date_planification",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date",
    "reqd": 1
   },
   {
    "fieldname": "annee_du_plan",
    "fieldtype": "Data",
-   "label": "Année du Plan"
+   "label": "Ann\u00e9e du Plan"
   },
   {
    "fieldname": "section_tableau",
@@ -42,7 +44,7 @@
   {
    "fieldname": "liste_des_formations",
    "fieldtype": "Table",
-   "label": "Détail des formations",
+   "label": "D\u00e9tail des formations",
    "options": "Plan Formation Item"
   },
   {
@@ -50,10 +52,10 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": "Le plan de formation est sujet \u00e0 r\u00e9vision et mise \u00e0 jour selon les cas pr\u00e9vus par les proc\u00e9dures de formation.",
    "fieldname": "note_de_revision",
    "fieldtype": "Small Text",
-   "label": "Note de révision",
-   "default": "Le plan de formation est sujet à révision et mise à jour selon les cas prévus par les procédures de formation.",
+   "label": "Note de r\u00e9vision",
    "read_only": 1
   },
   {
@@ -73,15 +75,17 @@
   {
    "fieldname": "signature_directeur_general",
    "fieldtype": "Signature",
-   "label": "Signature Directeur Général"
+   "label": "Signature Directeur G\u00e9n\u00e9ral"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "modified": "2026-03-31 15:30:00",
+ "links": [],
+ "modified": "2026-04-01 17:36:42.804224",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Plan de Formation",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -100,5 +104,6 @@
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

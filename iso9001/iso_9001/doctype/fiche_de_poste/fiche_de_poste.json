@@ -17,7 +17,8 @@
   "formation_de_base",
   "formation_professionnelle",
   "experience_professionnelle",
-  "conditions_particulieres"
+  "conditions_particulieres",
+  "amended_from"
  ],
  "fields": [
   {
@@ -88,12 +89,23 @@
    "fieldname": "conditions_particulieres",
    "fieldtype": "Small Text",
    "label": "Conditions Particuli\u00e8res"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fiche de poste",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-04-11 14:35:29.680010",
+ "modified": "2026-04-11 15:54:29.158055",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Fiche de poste",

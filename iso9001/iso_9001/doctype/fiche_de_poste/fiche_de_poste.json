@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:FP-{intitule_du_poste}",
  "creation": "2026-04-11 16:15:31.853836",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -17,7 +18,8 @@
   "formation_de_base",
   "formation_professionnelle",
   "experience_professionnelle",
-  "conditions_particulieres"
+  "conditions_particulieres",
+  "amended_from"
  ],
  "fields": [
   {
@@ -90,16 +92,27 @@
    "fieldname": "conditions_particulieres",
    "fieldtype": "Small Text",
    "label": "Conditions Particuli\u00e8res"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fiche De Poste",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-11 16:22:32.211810",
+ "modified": "2026-04-11 17:28:57.241497",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Fiche De Poste",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

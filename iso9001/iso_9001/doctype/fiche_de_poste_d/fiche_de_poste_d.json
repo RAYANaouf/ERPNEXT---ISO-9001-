@@ -1,7 +1,7 @@
 {
  "actions": [],
- "allow_rename": 1,
- "creation": "2026-04-11 16:15:31.853836",
+ "autoname": "format:FP-{intitule_du_poste}",
+ "creation": "2026-04-11 14:01:46.837532",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -17,22 +17,21 @@
   "formation_de_base",
   "formation_professionnelle",
   "experience_professionnelle",
-  "conditions_particulieres"
+  "conditions_particulieres",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "intitule_du_poste",
    "fieldtype": "Data",
-   "label": "Intitul\u00e9 du Poste"
+   "in_list_view": 1,
+   "label": "Intitul\u00e9 du Poste",
+   "reqd": 1
   },
   {
    "fieldname": "relation_hierarchique",
    "fieldtype": "Data",
-   "label": "Relation Hi\u00e9rarchique",
-   "no_copy": 1,
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
+   "label": "Relation Hi\u00e9rarchique"
   },
   {
    "fieldname": "relation_fonctionnelle",
@@ -58,13 +57,13 @@
    "fieldname": "autorites",
    "fieldtype": "Table",
    "label": "Autorit\u00e9s",
-   "options": "Fiche de poste article"
+   "options": "Fiche de Poste Item"
   },
   {
    "fieldname": "description_des_taches",
    "fieldtype": "Table",
    "label": "Description des T\u00e2ches",
-   "options": "Fiche de poste article"
+   "options": "Fiche de Poste Item"
   },
   {
    "fieldname": "sb_profil",
@@ -90,16 +89,27 @@
    "fieldname": "conditions_particulieres",
    "fieldtype": "Small Text",
    "label": "Conditions Particuli\u00e8res"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fiche de poste",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-11 16:22:32.211810",
+ "modified": "2026-04-11 15:54:29.158055",
  "modified_by": "Administrator",
  "module": "ISO 9001",
- "name": "Fiche De Poste",
+ "name": "Fiche de poste d",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -112,12 +122,10 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
  "row_format": "Dynamic",
- "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

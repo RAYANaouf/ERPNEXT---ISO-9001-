@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class KPIProcess(Document):
+class FPActiviteItem(Document):
 	pass

@@ -39,7 +39,7 @@
   },
   {
    "fieldname": "relation_fonctionnelle",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "Relation Fonctionnelle"
   },
   {
@@ -86,7 +86,7 @@
   },
   {
    "fieldname": "experience_professionnelle",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Exp\u00e9rience Professionnelle"
   },
   {
@@ -106,7 +106,7 @@
   },
   {
    "fieldname": "relation_herachique",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "Relation Hi\u00e9rarchique"
   }
  ],
@@ -114,7 +114,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-12 13:17:37.766207",
+ "modified": "2026-04-12 17:42:53.340046",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Fiche De Poste",

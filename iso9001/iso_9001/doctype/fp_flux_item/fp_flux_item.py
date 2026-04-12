@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Process(Document):
+class FPFluxItem(Document):
 	pass

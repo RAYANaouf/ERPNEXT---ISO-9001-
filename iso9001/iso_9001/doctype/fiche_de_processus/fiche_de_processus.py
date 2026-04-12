@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class EntryProcess(Document):
+class Fichedeprocessus(Document):
 	pass

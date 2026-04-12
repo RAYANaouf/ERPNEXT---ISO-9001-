@@ -8,6 +8,7 @@
  "field_order": [
   "intitule_du_poste",
   "relation_hierarchique",
+  "relation_herachique",
   "relation_fonctionnelle",
   "sb_mission",
   "mission_generale",
@@ -102,13 +103,18 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "relation_herachique",
+   "fieldtype": "Small Text",
+   "label": "Relation Hi\u00e9rarchique"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-11 17:28:57.241497",
+ "modified": "2026-04-12 13:17:37.766207",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Fiche De Poste",

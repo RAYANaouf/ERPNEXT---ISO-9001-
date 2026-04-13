@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Fichedepostearticle(Document):
+class Jobdescriptionarticle(Document):
 	pass

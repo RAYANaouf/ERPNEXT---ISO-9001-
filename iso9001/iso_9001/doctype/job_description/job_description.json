@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:FP-{job_title}",
+ "creation": "2026-04-13 23:38:13.806266",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_title",
+  "hierarchical_reporting",
+  "hierarchical_relation_alt",
+  "functional_reporting",
+  "sb_mission",
+  "general_mission",
+  "sb_details",
+  "authorities",
+  "tasks_description",
+  "sb_profile",
+  "basic_education",
+  "professional_training",
+  "professional_experience",
+  "special_conditions",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "hierarchical_reporting",
+   "fieldtype": "Data",
+   "label": "Hierarchical Reporting",
+   "no_copy": 1,
+   "options": "Job description",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "hierarchical_relation_alt",
+   "fieldtype": "Data",
+   "label": "Hierarchical Relation"
+  },
+  {
+   "fieldname": "functional_reporting",
+   "fieldtype": "Data",
+   "label": "Functional Reporting"
+  },
+  {
+   "fieldname": "sb_mission",
+   "fieldtype": "Section Break",
+   "label": "General Mission"
+  },
+  {
+   "fieldname": "general_mission",
+   "fieldtype": "Text Editor",
+   "label": "General Mission"
+  },
+  {
+   "fieldname": "sb_details",
+   "fieldtype": "Section Break",
+   "label": "Job Details"
+  },
+  {
+   "fieldname": "authorities",
+   "fieldtype": "Table",
+   "label": "Authorities",
+   "options": "Job description article"
+  },
+  {
+   "fieldname": "tasks_description",
+   "fieldtype": "Table",
+   "label": "Description of Tasks",
+   "options": "Job description article"
+  },
+  {
+   "fieldname": "sb_profile",
+   "fieldtype": "Section Break",
+   "label": "Job Access Criteria"
+  },
+  {
+   "fieldname": "basic_education",
+   "fieldtype": "Small Text",
+   "label": "Basic Education"
+  },
+  {
+   "fieldname": "professional_training",
+   "fieldtype": "Small Text",
+   "label": "Professional Training"
+  },
+  {
+   "fieldname": "professional_experience",
+   "fieldtype": "Small Text",
+   "label": "Professional Experience"
+  },
+  {
+   "fieldname": "special_conditions",
+   "fieldtype": "Small Text",
+   "label": "Special Conditions"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job description",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-13 23:47:45.458398",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Job description",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

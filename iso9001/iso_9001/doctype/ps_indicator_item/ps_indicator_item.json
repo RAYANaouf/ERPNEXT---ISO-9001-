@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "indicator",
+  "calculation_formula",
+  "target",
+  "frequency"
+ ],
+ "fields": [
+  {
+   "fieldname": "indicator",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Indicator"
+  },
+  {
+   "fieldname": "calculation_formula",
+   "fieldtype": "Small Text",
+   "label": "Calculation Formula"
+  },
+  {
+   "fieldname": "target",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target / Objective"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Frequency"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "module": "ISO 9001",
+ "name": "Ps indicator item",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class FPActiviteItem(Document):
+class Processsheet(Document):
 	pass

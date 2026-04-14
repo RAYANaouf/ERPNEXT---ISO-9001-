@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "responsible",
+  "input_elements",
+  "activities",
+  "output_elements",
+  "operational_documents",
+  "records"
+ ],
+ "fields": [
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Responsible"
+  },
+  {
+   "fieldname": "input_elements",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Input Elements"
+  },
+  {
+   "fieldname": "activities",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Activities"
+  },
+  {
+   "fieldname": "output_elements",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Output Elements"
+  },
+  {
+   "fieldname": "operational_documents",
+   "fieldtype": "Small Text",
+   "label": "Operational Documents"
+  },
+  {
+   "fieldname": "records",
+   "fieldtype": "Small Text",
+   "label": "Records"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "module": "ISO 9001",
+ "name": "Ps activity item",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

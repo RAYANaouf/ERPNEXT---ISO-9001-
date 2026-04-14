@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PS-{process_name}",
+ "creation": "2026-04-14 14:48:39.243072",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "process_name",
+  "process_owner",
+  "process_type",
+  "mission_section",
+  "process_purpose",
+  "resources_section",
+  "human_resources",
+  "material_resources",
+  "flow_section",
+  "suppliers_and_inputs",
+  "customers_and_outputs",
+  "activities_section",
+  "activities",
+  "indicators_section",
+  "indicators",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "process_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Process Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_owner",
+   "fieldtype": "Data",
+   "label": "Process Owner"
+  },
+  {
+   "fieldname": "process_type",
+   "fieldtype": "Select",
+   "label": "Process Type",
+   "options": "Realization\nSupport\nManagement"
+  },
+  {
+   "fieldname": "mission_section",
+   "fieldtype": "Section Break",
+   "label": "Identification and Missions"
+  },
+  {
+   "fieldname": "process_purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose and Missions"
+  },
+  {
+   "fieldname": "resources_section",
+   "fieldtype": "Section Break",
+   "label": "Resources"
+  },
+  {
+   "fieldname": "human_resources",
+   "fieldtype": "Small Text",
+   "label": "Human Resources"
+  },
+  {
+   "fieldname": "material_resources",
+   "fieldtype": "Small Text",
+   "label": "Material Resources"
+  },
+  {
+   "fieldname": "flow_section",
+   "fieldtype": "Section Break",
+   "label": "Process Flow"
+  },
+  {
+   "fieldname": "suppliers_and_inputs",
+   "fieldtype": "Table",
+   "label": "Suppliers and Inputs",
+   "options": "Ps flow item"
+  },
+  {
+   "fieldname": "customers_and_outputs",
+   "fieldtype": "Table",
+   "label": "Customers and Outputs",
+   "options": "Ps flow item"
+  },
+  {
+   "fieldname": "activities_section",
+   "fieldtype": "Section Break",
+   "label": "Activities Description"
+  },
+  {
+   "fieldname": "activities",
+   "fieldtype": "Table",
+   "label": "Process Activities",
+   "options": "Ps activity item"
+  },
+  {
+   "fieldname": "indicators_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Measurement"
+  },
+  {
+   "fieldname": "indicators",
+   "fieldtype": "Table",
+   "label": "Measurement Indicators",
+   "options": "Ps indicator item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Process sheet",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-14 14:52:12.632370",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Process sheet",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

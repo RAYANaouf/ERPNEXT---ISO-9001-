@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class FPFluxItem(Document):
+class Psindicatoritem(Document):
 	pass

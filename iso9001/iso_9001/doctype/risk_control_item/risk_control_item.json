@@ -1,0 +1,33 @@
+{
+ "doctype": "DocType",
+ "name": "Risk Control Item",
+ "module": "ISO 9001",
+ "istable": 1,
+ "editable_grid": 1,
+ "field_order": [
+  "control_description",
+  "responsible_party",
+  "control_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "control_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Control Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsible_party",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Responsible (Name & Role)"
+  },
+  {
+   "fieldname": "control_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nIn Progress\nImplemented\nEffective"
+  }
+ ]
+}

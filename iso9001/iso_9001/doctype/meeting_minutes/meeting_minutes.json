@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-04-14 20:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "meeting_type",
+  "date_and_time",
+  "location",
+  "facilitator",
+  "sb_attendees",
+  "attendees",
+  "sb_content",
+  "agenda",
+  "discussion_points",
+  "sb_actions",
+  "action_plan",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ISO-MTG-.YYYY.-.####"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Meeting Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Management Review\nQuality Committee\nDepartment Meeting\nEmergency Meeting"
+  },
+  {
+   "fieldname": "date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Date and Time"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "facilitator",
+   "fieldtype": "Data",
+   "label": "Facilitator (Organizer)"
+  },
+  {
+   "fieldname": "sb_attendees",
+   "fieldtype": "Section Break",
+   "label": "Attendance List"
+  },
+  {
+   "fieldname": "attendees",
+   "fieldtype": "Table",
+   "label": "Attendees",
+   "options": "Meeting Attendee Item"
+  },
+  {
+   "fieldname": "sb_content",
+   "fieldtype": "Section Break",
+   "label": "Meeting Content"
+  },
+  {
+   "fieldname": "agenda",
+   "fieldtype": "Text Editor",
+   "label": "Agenda"
+  },
+  {
+   "fieldname": "discussion_points",
+   "fieldtype": "Text Editor",
+   "label": "Minutes / Discussion"
+  },
+  {
+   "fieldname": "sb_actions",
+   "fieldtype": "Section Break",
+   "label": "Decisions & Action Plan"
+  },
+  {
+   "fieldname": "action_plan",
+   "fieldtype": "Table",
+   "label": "Actions to be Taken",
+   "options": "Meeting Action Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Meeting Minutes",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "module": "ISO 9001",
+ "name": "Meeting Minutes",
+ "naming_rule": "By \"Naming Series\" field",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ]
+}

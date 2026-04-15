@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "RM : {client}",
+ "autoname": "format:RM-{client}-{#####}",
  "creation": "2025-12-03 00:03:38.658666",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -24,7 +24,7 @@
   {
    "fieldname": "client",
    "fieldtype": "Data",
-   "label": "client"
+   "label": "Client"
   },
   {
    "fieldname": "date_reception",
@@ -91,11 +91,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-08 11:00:42.631223",
+ "modified": "2026-04-15 11:01:25.977589",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "reclamtion client",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

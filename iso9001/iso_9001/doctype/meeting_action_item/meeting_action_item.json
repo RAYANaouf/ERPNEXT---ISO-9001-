@@ -1,0 +1,36 @@
+{
+ "doctype": "DocType",
+ "name": "Meeting Action Item",
+ "module": "ISO 9001",
+ "istable": 1,
+ "editable_grid": 1,
+ "fields": [
+  {
+   "fieldname": "action",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Action / Task",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Responsible"
+  },
+  {
+   "fieldname": "deadline",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Deadline"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nIn Progress\nCompleted\nCancelled"
+  }
+ ]
+}

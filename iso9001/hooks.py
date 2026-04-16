@@ -245,25 +245,39 @@ app_license = "mit"
 fixtures = [
     {
         'dt': 'DocType',
-       
+        'filters': [
+            ["istable" , "=" ,  1],
+            ["module" , "in" , ["ISO 9001"]],
+        ]
     },
     {
         'dt': 'Custom Field',
-        
+        'filters': [
+            ["module" , "in" , ["ISO 9001"]],
+        ]
     },
     {
         'dt': 'Client Script',
-      
+        'filters': [
+            ["module" , "in" , ["ISO 9001"]],
+        ]
     },
     {
         'dt': 'Server Script',
-    
+        'filters': [
+            ["module" , "in" , ["ISO 9001"]],
+        ]
     },
     {
         'dt': 'Report',
-       
+        'filters': [
+            ["module" , "in" , ["ISO 9001"]],
+        ]
     },
     {
         'dt': 'Workflow',
+         'filters': [
+            ["module" , "in" , ["ISO 9001"]],
+        ]
     }
 ]

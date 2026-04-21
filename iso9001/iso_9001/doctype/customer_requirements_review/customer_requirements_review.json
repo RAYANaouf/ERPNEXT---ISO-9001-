@@ -20,7 +20,8 @@
   "dg_section",
   "dg_decision",
   "dg_reason",
-  "dg_signature"
+  "dg_signature",
+  "amended_from"
  ],
  "fields": [
   {
@@ -106,13 +107,23 @@
   {
    "fieldname": "column_break_77a1",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Requirements Review",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-21 11:49:26.918309",
+ "modified": "2026-04-21 16:23:38.757796",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Customer Requirements Review",
@@ -127,6 +138,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
    "share": 1,
    "write": 1
   }

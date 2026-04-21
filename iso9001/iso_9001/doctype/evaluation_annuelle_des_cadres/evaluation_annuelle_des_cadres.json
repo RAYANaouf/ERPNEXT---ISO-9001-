@@ -139,7 +139,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-26 17:56:01.728297",
+ "modified": "2026-04-21 16:22:52.614454",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Evaluation annuelle des cadres",
@@ -157,6 +157,18 @@
    "role": "System Manager",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
+   "share": 1,
    "write": 1
   }
  ],

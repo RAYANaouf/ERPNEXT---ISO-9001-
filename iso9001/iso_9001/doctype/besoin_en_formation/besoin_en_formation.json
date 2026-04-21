@@ -69,7 +69,7 @@
   }
  ],
  "links": [],
- "modified": "2026-04-01 17:41:49.940129",
+ "modified": "2026-04-21 16:18:54.321391",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Besoin en Formation",
@@ -85,6 +85,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
    "share": 1,
    "write": 1
   }

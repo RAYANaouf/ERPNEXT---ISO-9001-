@@ -16,7 +16,6 @@
   "section_break_cvxw",
   "evaluation_details",
   "average_score",
-  "amended_from",
   "commentaires",
   "decision_section",
   "decision_success",
@@ -94,16 +93,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Evaluation Periode Essai employe",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
    "fieldname": "commentaires",
    "fieldtype": "Small Text",
    "in_list_view": 1,
@@ -160,23 +149,13 @@
   {
    "fieldname": "column_break_17yj",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Evaluation Periode Essai employe",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-26 17:56:54.774344",
+ "modified": "2026-04-21 16:21:48.584283",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Evaluation Periode Essai cadre",
@@ -194,6 +173,18 @@
    "role": "System Manager",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
+   "share": 1,
    "write": 1
   }
  ],

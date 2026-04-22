@@ -275,9 +275,14 @@ fixtures = [
         ]
     },
     {
-        'dt': 'Workflow',
-         'filters': [
-            ["module" , "in" , ["ISO 9001"]],
-        ]
-    }
+        'dt': 'Workflow',   
+    },
+    {
+    'dt': 'Role',
+    'filters': [
+        ["name", "in", [
+           "consultant iso"
+        ]]
+    ]
+}
 ]

@@ -96,7 +96,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-22 07:48:46.049879",
+ "modified": "2026-04-22 07:51:07.796972",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Supplier Evaluation",
@@ -111,6 +111,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
    "share": 1,
    "write": 1
   }

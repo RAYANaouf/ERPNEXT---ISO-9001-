@@ -69,7 +69,7 @@
   }
  ],
  "links": [],
- "modified": "2026-04-21 16:18:54.321391",
+ "modified": "2026-04-22 06:46:16.265551",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Besoin en Formation",
@@ -90,7 +90,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,

@@ -179,7 +179,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-21 16:20:26.292771",
+ "modified": "2026-04-22 06:45:13.792648",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Evaluation Periode Essai employe",
@@ -209,6 +209,7 @@
    "report": 1,
    "role": "consultant iso",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

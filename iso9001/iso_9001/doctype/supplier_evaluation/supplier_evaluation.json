@@ -96,7 +96,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-21 16:23:26.307101",
+ "modified": "2026-04-22 06:44:04.721948",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Supplier Evaluation",
@@ -116,7 +116,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,

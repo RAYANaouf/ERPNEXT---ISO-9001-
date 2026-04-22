@@ -277,12 +277,4 @@ fixtures = [
     {
         'dt': 'Workflow',   
     },
-    {
-    'dt': 'Role',
-    'filters': [
-        ["name", "in", [
-           "consultant iso"
-        ]]
-    ]
-}
 ]

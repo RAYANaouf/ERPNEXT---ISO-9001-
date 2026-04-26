@@ -11,6 +11,7 @@
   "date",
   "sb_employee",
   "category",
+  "employe",
   "subject",
   "details",
   "attachment",
@@ -55,7 +56,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Category",
-   "options": "Work Environment\nPayroll\nEquipment\nConflict\nOther",
+   "options": "Work Environment\nPayroll\nEquipment\nConflict\nEmployee\nOther",
    "reqd": 1
   },
   {
@@ -94,16 +95,23 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "employe",
+   "fieldtype": "Link",
+   "label": "Employee Name",
+   "options": "Employee"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-22 19:46:34.205190",
+ "modified": "2026-04-22 20:39:15.726926",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Employe Complaint",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

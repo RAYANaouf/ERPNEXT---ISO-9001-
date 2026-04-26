@@ -1,162 +1,83 @@
 {
  "actions": [],
- "autoname": "naming_series:",
+ "autoname": "format:RSK-{process_ref_name}-{####}",
  "creation": "2026-04-14 18:41:54.705925",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
+  "process_ref",
+  "process_ref_name",
+  "date_last_updated",
+  "updated_by",
   "type",
-  "status",
-  "assessment_date",
-  "sb_analysis",
-  "risk_description",
-  "causes_and_consequences",
-  "owner_name",
-  "owner_role",
-  "sb_inherent",
-  "inherent_probability",
-  "inherent_impact",
-  "initial_score",
-  "initial_risk_level",
-  "sb_mitigation",
-  "controls",
-  "sb_residual",
-  "residual_probability",
-  "residual_impact",
-  "residual_score",
-  "residual_risk_level"
+  "sb_risks",
+  "risks",
+  "sb_opportunities",
+  "opportunities"
  ],
  "fields": [
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Series",
-   "options": "RSK-.YYYY.-.####"
+   "fieldname": "process_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Process",
+   "options": "Process sheet",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_ref_name",
+   "fieldtype": "Data",
+   "label": "Process Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_last_updated",
+   "fieldtype": "Date",
+   "label": "Date Last Updated"
+  },
+  {
+   "fieldname": "updated_by",
+   "fieldtype": "Link",
+   "label": "Updated By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "sb_risks",
+   "fieldtype": "Section Break",
+   "label": "Risks Register"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Risk\"",
+   "fieldname": "risks",
+   "fieldtype": "Table",
+   "label": "Risks",
+   "options": "Risk Assessment Item"
+  },
+  {
+   "fieldname": "sb_opportunities",
+   "fieldtype": "Section Break",
+   "label": "Opportunities Register"
+  },
+  {
+   "depends_on": "eval:doc.type=='Opportunities'",
+   "fieldname": "opportunities",
+   "fieldtype": "Table",
+   "label": "Opportunities",
+   "options": "Opportunity Assessment Item"
   },
   {
    "fieldname": "type",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Type",
-   "options": "Risk\nOpportunity",
-   "reqd": 1
-  },
-  {
-   "default": "Open",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Open\nIn Progress\nClosed\nCancelled"
-  },
-  {
-   "fieldname": "assessment_date",
-   "fieldtype": "Date",
-   "label": "Assessment Date"
-  },
-  {
-   "fieldname": "sb_analysis",
-   "fieldtype": "Section Break",
-   "label": "Risk Analysis"
-  },
-  {
-   "fieldname": "risk_description",
-   "fieldtype": "Small Text",
-   "in_list_view": 1,
-   "label": "Risk Description",
-   "reqd": 1
-  },
-  {
-   "fieldname": "causes_and_consequences",
-   "fieldtype": "Text Editor",
-   "label": "Caused By & Consequences"
-  },
-  {
-   "fieldname": "owner_name",
-   "fieldtype": "Data",
-   "label": "Owner Name"
-  },
-  {
-   "fieldname": "owner_role",
-   "fieldtype": "Data",
-   "label": "Owner Role"
-  },
-  {
-   "fieldname": "sb_inherent",
-   "fieldtype": "Section Break",
-   "label": "Inherent Risk Assessment (Initial)"
-  },
-  {
-   "fieldname": "inherent_probability",
-   "fieldtype": "Select",
-   "label": "Probability",
-   "options": "1\n2\n3\n4\n5"
-  },
-  {
-   "fieldname": "inherent_impact",
-   "fieldtype": "Select",
-   "label": "Impact",
-   "options": "1\n2\n3\n4\n5"
-  },
-  {
-   "fieldname": "initial_score",
-   "fieldtype": "Int",
-   "label": "Risk Rating",
-   "read_only": 1
-  },
-  {
-   "fieldname": "initial_risk_level",
-   "fieldtype": "Data",
-   "label": "Risk Level",
-   "read_only": 1
-  },
-  {
-   "fieldname": "sb_mitigation",
-   "fieldtype": "Section Break",
-   "label": "Control Measures"
-  },
-  {
-   "fieldname": "controls",
-   "fieldtype": "Table",
-   "label": "Controls",
-   "options": "Risk Control Item"
-  },
-  {
-   "fieldname": "sb_residual",
-   "fieldtype": "Section Break",
-   "label": "Residual Risk Assessment (With Controls)"
-  },
-  {
-   "fieldname": "residual_probability",
-   "fieldtype": "Select",
-   "label": "Residual Probability",
-   "options": "1\n2\n3\n4\n5"
-  },
-  {
-   "fieldname": "residual_impact",
-   "fieldtype": "Select",
-   "label": "Residual Impact",
-   "options": "1\n2\n3\n4\n5"
-  },
-  {
-   "fieldname": "residual_score",
-   "fieldtype": "Int",
-   "label": "Residual Rating",
-   "read_only": 1
-  },
-  {
-   "fieldname": "residual_risk_level",
-   "fieldtype": "Data",
-   "label": "Residual Level",
-   "read_only": 1
+   "options": "Risk\nOpportunities"
   }
  ],
  "links": [],
- "modified": "2026-04-22 07:54:53.267994",
+ "modified": "2026-04-26 16:08:13.046244",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Risk and Opportunity",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "creation": "2026-04-25 16:46:35.991305",
+ "modified": "2026-04-25 16:46:35.991305",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "risk_description",
+  "causes_and_consequences",
+  "risk_owner",
+  "risk_owner_role",
+  "cb_inherent",
+  "inherent_probability",
+  "inherent_impact",
+  "initial_risk_level",
+  "cb_residual",
+  "controls",
+  "control_owner",
+  "residual_probability",
+  "residual_impact",
+  "residual_risk_level"
+ ],
+ "fields": [
+  {
+   "fieldname": "risk_description",
+   "fieldtype": "Small Text",
+   "label": "Risk Description",
+   "in_list_view": 1,
+   "reqd": 1,
+   "columns": 3
+  },
+  {
+   "fieldname": "causes_and_consequences",
+   "fieldtype": "Small Text",
+   "label": "Caused By & Consequences"
+  },
+  {
+   "fieldname": "risk_owner",
+   "fieldtype": "Data",
+   "label": "Risk Owner Name",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "risk_owner_role",
+   "fieldtype": "Data",
+   "label": "Role"
+  },
+  {
+   "fieldname": "cb_inherent",
+   "fieldtype": "Column Break",
+   "label": "Inherent Risk"
+  },
+  {
+   "fieldname": "inherent_probability",
+   "fieldtype": "Select",
+   "label": "Probability",
+   "options": "Very Low\nLow\nMedium\nHigh\nVery High",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "inherent_impact",
+   "fieldtype": "Select",
+   "label": "Impact",
+   "options": "Very Low\nLow\nMedium\nHigh\nVery High",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "initial_risk_level",
+   "fieldtype": "Data",
+   "label": "Risk Rating",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "cb_residual",
+   "fieldtype": "Column Break",
+   "label": "Residual Risk"
+  },
+  {
+   "fieldname": "controls",
+   "fieldtype": "Small Text",
+   "label": "Control(s)"
+  },
+  {
+   "fieldname": "control_owner",
+   "fieldtype": "Data",
+   "label": "Control Owner(s) Name and Role"
+  },
+  {
+   "fieldname": "residual_probability",
+   "fieldtype": "Select",
+   "label": "Res. Probability",
+   "options": "Very Low\nLow\nMedium\nHigh\nVery High",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "residual_impact",
+   "fieldtype": "Select",
+   "label": "Res. Impact",
+   "options": "Very Low\nLow\nMedium\nHigh\nVery High",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "residual_risk_level",
+   "fieldtype": "Data",
+   "label": "Res. Risk Rating",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "module": "ISO 9001",
+ "name": "Risk Assessment Item",
+ "permissions": []
+}

@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class RiskControlItem(Document):
+class OpportunityAssessmentItem(Document):
 	pass

@@ -42,12 +42,12 @@
    "options": "Employee"
   },
   {
+   "depends_on": "eval:doc.type==\"Risk\"",
    "fieldname": "sb_risks",
    "fieldtype": "Section Break",
    "label": "Risks Register"
   },
   {
-   "depends_on": "eval:doc.type==\"Risk\"",
    "fieldname": "risks",
    "fieldtype": "Table",
    "label": "Risks",
@@ -73,7 +73,7 @@
   }
  ],
  "links": [],
- "modified": "2026-04-26 16:08:13.046244",
+ "modified": "2026-04-26 20:23:46.250076",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Risk and Opportunity",

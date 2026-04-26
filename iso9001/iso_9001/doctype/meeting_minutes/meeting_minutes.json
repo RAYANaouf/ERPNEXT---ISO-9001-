@@ -32,7 +32,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Type",
-   "options": "Management Review\nQuality Committee\nDepartment Meeting\nEmergency Meeting"
+   "options": "Management Review\nQuality Committee\nDepartment Meeting\nEmergency Meeting\nWeekly Management Meeting"
   },
   {
    "fieldname": "date_and_time",
@@ -98,7 +98,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-22 07:54:43.078318",
+ "modified": "2026-04-26 23:11:50.501720",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Meeting Minutes",

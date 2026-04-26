@@ -1,9 +1,6 @@
 {
  "actions": [],
  "creation": "2026-04-25 16:46:35.991305",
- "modified": "2026-04-25 16:46:35.991305",
- "modified_by": "Administrator",
- "owner": "Administrator",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -25,12 +22,11 @@
  ],
  "fields": [
   {
+   "columns": 3,
    "fieldname": "risk_description",
    "fieldtype": "Small Text",
-   "label": "Risk Description",
    "in_list_view": 1,
-   "reqd": 1,
-   "columns": 3
+   "label": "Risk Description"
   },
   {
    "fieldname": "causes_and_consequences",
@@ -38,11 +34,11 @@
    "label": "Caused By & Consequences"
   },
   {
+   "columns": 2,
    "fieldname": "risk_owner",
    "fieldtype": "Data",
-   "label": "Risk Owner Name",
    "in_list_view": 1,
-   "columns": 2
+   "label": "Risk Owner Name"
   },
   {
    "fieldname": "risk_owner_role",
@@ -55,28 +51,28 @@
    "label": "Inherent Risk"
   },
   {
+   "columns": 1,
    "fieldname": "inherent_probability",
    "fieldtype": "Select",
-   "label": "Probability",
-   "options": "Very Low\nLow\nMedium\nHigh\nVery High",
    "in_list_view": 1,
-   "columns": 1
+   "label": "Probability",
+   "options": "Very Low\nLow\nMedium\nHigh\nVery High"
   },
   {
+   "columns": 1,
    "fieldname": "inherent_impact",
    "fieldtype": "Select",
-   "label": "Impact",
-   "options": "Very Low\nLow\nMedium\nHigh\nVery High",
    "in_list_view": 1,
-   "columns": 1
+   "label": "Impact",
+   "options": "Very Low\nLow\nMedium\nHigh\nVery High"
   },
   {
+   "columns": 1,
    "fieldname": "initial_risk_level",
    "fieldtype": "Data",
-   "label": "Risk Rating",
-   "read_only": 1,
    "in_list_view": 1,
-   "columns": 1
+   "label": "Risk Rating",
+   "read_only": 1
   },
   {
    "fieldname": "cb_residual",
@@ -94,33 +90,40 @@
    "label": "Control Owner(s) Name and Role"
   },
   {
+   "columns": 1,
    "fieldname": "residual_probability",
    "fieldtype": "Select",
-   "label": "Res. Probability",
-   "options": "Very Low\nLow\nMedium\nHigh\nVery High",
    "in_list_view": 1,
-   "columns": 1
+   "label": "Res. Probability",
+   "options": "Very Low\nLow\nMedium\nHigh\nVery High"
   },
   {
+   "columns": 1,
    "fieldname": "residual_impact",
    "fieldtype": "Select",
-   "label": "Res. Impact",
-   "options": "Very Low\nLow\nMedium\nHigh\nVery High",
    "in_list_view": 1,
-   "columns": 1
+   "label": "Res. Impact",
+   "options": "Very Low\nLow\nMedium\nHigh\nVery High"
   },
   {
+   "columns": 1,
    "fieldname": "residual_risk_level",
    "fieldtype": "Data",
-   "label": "Res. Risk Rating",
-   "read_only": 1,
    "in_list_view": 1,
-   "columns": 1
+   "label": "Res. Risk Rating",
+   "read_only": 1
   }
  ],
  "istable": 1,
- "issingle": 0,
+ "links": [],
+ "modified": "2026-04-26 16:58:25.213597",
+ "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Risk Assessment Item",
- "permissions": []
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }

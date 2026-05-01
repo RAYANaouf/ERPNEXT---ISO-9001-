@@ -6,21 +6,53 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "section_break_pjha"
+  "document_title",
+  "identification_code",
+  "revision_date",
+  "storage_location",
+  "retention_period",
+  "archiving_period"
  ],
-"fields": [
-  { "fieldname": "document_title", "fieldtype": "Data", "label": "Document Title", "in_list_view": 1, "reqd": 1 },
-  { "fieldname": "identification_code", "fieldtype": "Data", "label": "Identification / Code", "in_list_view": 1 },
-  { "fieldname": "revision_date", "fieldtype": "Date", "label": "Creation / Revision Date", "in_list_view": 1 },
-  { "fieldname": "storage_location", "fieldtype": "Data", "label": "Storage Location" },
-  { "fieldname": "retention_period", "fieldtype": "Data", "label": "Retention Period" },
-  { "fieldname": "archiving_period", "fieldtype": "Data", "label": "Archiving Period" }
+ "fields": [
+  {
+   "fieldname": "document_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Title"
+  },
+  {
+   "fieldname": "identification_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Identification / Code"
+  },
+  {
+   "fieldname": "revision_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Creation / Revision Date"
+  },
+  {
+   "fieldname": "storage_location",
+   "fieldtype": "Data",
+   "label": "Storage Location"
+  },
+  {
+   "fieldname": "retention_period",
+   "fieldtype": "Data",
+   "label": "Retention Period"
+  },
+  {
+   "fieldname": "archiving_period",
+   "fieldtype": "Data",
+   "label": "Archiving Period"
+  }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-04-26 18:16:20.313586",
+ "modified": "2026-05-01 19:06:10.027782",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Process External Document",

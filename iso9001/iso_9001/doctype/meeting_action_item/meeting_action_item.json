@@ -1,9 +1,16 @@
 {
+ "actions": [],
+ "creation": "2026-04-27 14:44:13.581274",
  "doctype": "DocType",
- "name": "Meeting Action Item",
- "module": "ISO 9001",
- "istable": 1,
  "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "action",
+  "responsible",
+  "deadline",
+  "piority",
+  "status"
+ ],
  "fields": [
   {
    "fieldname": "action",
@@ -31,6 +38,24 @@
    "in_list_view": 1,
    "label": "Status",
    "options": "Open\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "piority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical"
   }
- ]
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-27 14:47:50.369670",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Meeting Action Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }

@@ -9,6 +9,7 @@
   "process_name",
   "process_owner",
   "process_type",
+  "company",
   "mission_section",
   "process_purpose",
   "resources_section",
@@ -30,15 +31,17 @@
  "fields": [
   {
    "fieldname": "process_name",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Process Name",
+   "options": "SUPPORT IT\nRH\nGESTION DES STOCKS\nCOMMERCIAL\nACHAT LOCAL & IMPORTATION",
    "reqd": 1
   },
   {
    "fieldname": "process_owner",
-   "fieldtype": "Data",
-   "label": "Process Owner"
+   "fieldtype": "Link",
+   "label": "Process Owner",
+   "options": "Employee"
   },
   {
    "fieldname": "process_type",
@@ -141,13 +144,20 @@
    "fieldtype": "Table",
    "label": "External Documents List",
    "options": "Process External Document"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-26 18:26:47.568837",
+ "modified": "2026-05-01 18:29:46.227847",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Process sheet",

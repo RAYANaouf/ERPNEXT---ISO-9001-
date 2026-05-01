@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:PS-{process_name}",
+ "autoname": "format:PS-{process_name}-{company}",
  "creation": "2026-04-14 14:48:39.243072",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -157,7 +157,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-01 18:29:46.227847",
+ "modified": "2026-05-01 18:53:39.132694",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Process sheet",

@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-05 19:27:26.538296",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_jypm"
+ ],
+"fields": [
+  {"fieldname": "month", "label": "Month", "fieldtype": "Select"},
+  {"fieldname": "general_status_section", "label": "General Status", "fieldtype": "Section Break"},
+  {"fieldname": "employee_count", "label": "Number of Employees", "fieldtype": "Int"},
+  {"fieldname": "hiring_this_month", "label": "Hiring during the month", "fieldtype": "Check"},
+  {"fieldname": "departures_this_month", "label": "Departures during the month", "fieldtype": "Check"},
+  {"fieldname": "attendance_section", "label": "Attendance & Discipline", "fieldtype": "Section Break"},
+  {"fieldname": "attendance_percentage", "label": "Attendance Percentage (%)", "fieldtype": "Percent"},
+  {"fieldname": "recorded_absences", "label": "Recorded Absences", "fieldtype": "Small Text"},
+  {"fieldname": "training_section", "label": "Training", "fieldtype": "Section Break"},
+  {"fieldname": "completed_trainings", "label": "Completed Training Sessions", "fieldtype": "Small Text"},
+  {"fieldname": "training_needs", "label": "Training Needs", "fieldtype": "Small Text"},
+  {"fieldname": "safety_section", "label": "Discipline & Safety", "fieldtype": "Section Break"},
+  {"fieldname": "work_accidents", "label": "Work Accidents", "fieldtype": "Check"},
+  {"fieldname": "safety_notes", "label": "Safety Remarks", "fieldtype": "Small Text"},
+  {"fieldname": "difficulties", "label": "Difficulties", "fieldtype": "Small Text"},
+  {"fieldname": "improvement_suggestions", "label": "Improvement Suggestions", "fieldtype": "Small Text"}
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-05 19:27:26.538296",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Monthly HR Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,490 @@
+{
+  "name": "Monthly Activity Report",
+  "doctype": "DocType",
+  "module": "Custom",
+  "custom": 1,
+  "is_submittable": 1,
+  "track_changes": 1,
+  "document_type": "Document",
+  "description": "Monthly Activity Report covering all departments: Commercial, Purchases, Stock, IT, HR, and General Management.",
+  "fields": [
+
+
+    {
+      "fieldname": "report_month",
+      "label": "Report Month",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1,
+      "description": "e.g. January 2026"
+    },
+    {
+      "fieldname": "report_date",
+      "label": "Report Preparation Date",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "default": "Today"
+    },
+    {
+      "fieldname": "prepared_by",
+      "label": "Prepared By",
+      "fieldtype": "Link",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "report_objective",
+      "label": "Report Objective",
+      "fieldtype": "Small Text",
+      "default": "This report presents a comprehensive summary of the company's activities during the relevant month, highlighting key achievements, operational indicators, recorded difficulties, and proposed corrective measures across all main company operations."
+    },
+
+  
+    {
+      "fieldname": "section_commercial",
+      "label": "Commercial Activity",
+      "fieldtype": "Section Break",
+      "collapsible": 0
+    },
+
+  
+    {
+      "fieldname": "sales_heading",
+      "label": "Sales",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "revenue_vs_target",
+      "label": "Revenue vs Target",
+      "fieldtype": "Select",
+      "options": "\nIncrease\nStable\nDecrease",
+      "reqd": 1
+    },
+    {
+      "fieldname": "success_rate",
+      "label": "Success Rate (%)",
+      "fieldtype": "Float",
+      "description": "Percentage of target achieved"
+    },
+
+
+    {
+      "fieldname": "col_customers",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "active_customers",
+      "label": "Active Customers",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "new_customers",
+      "label": "New Customers",
+      "fieldtype": "Int"
+    },
+
+
+    {
+      "fieldname": "section_marketing",
+      "label": "Marketing & Commercial Relations",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "commercial_offers",
+      "label": "Commercial Offers Submitted",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "field_visits_meetings",
+      "label": "Field Visits / Meetings",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "market_competition_notes",
+      "label": "Market & Competition Notes",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "customer_complaints",
+      "label": "Customer Complaints",
+      "fieldtype": "Small Text"
+    },
+
+  
+    {
+      "fieldname": "commercial_difficulties",
+      "label": "Difficulties (Commercial)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "commercial_improvements",
+      "label": "Improvement Suggestions (Commercial)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "commercial_signatory",
+      "label": "Commercial Manager Signature",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "commercial_sign_date",
+      "label": "Commercial Sign Date",
+      "fieldtype": "Date"
+    },
+
+
+    {
+      "fieldname": "section_purchases",
+      "label": "Purchases",
+      "fieldtype": "Section Break",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "import_operations_heading",
+      "label": "Import Operations",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "purchase_orders_in_progress",
+      "label": "Purchase Orders In Progress",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "delivery_deadlines_met",
+      "label": "Delivery Deadlines Met",
+      "fieldtype": "Select",
+      "options": "\nYes\nNo"
+    },
+    {
+      "fieldname": "average_supply_duration",
+      "label": "Average Supply Duration",
+      "fieldtype": "Data",
+      "description": "e.g. 15 days"
+    },
+
+
+    {
+      "fieldname": "col_conformity",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "product_conformity",
+      "label": "Product Conformity",
+      "fieldtype": "Select",
+      "options": "\nConforming\nNon-Conforming"
+    },
+    {
+      "fieldname": "non_conformity_cases",
+      "label": "Non-Conformity Cases Recorded",
+      "fieldtype": "Small Text"
+    },
+
+
+    {
+      "fieldname": "purchases_difficulties",
+      "label": "Difficulties (Purchases)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "purchases_improvements",
+      "label": "Improvement Suggestions (Purchases)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "purchases_signatory",
+      "label": "Purchases Manager Signature",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "purchases_sign_date",
+      "label": "Purchases Sign Date",
+      "fieldtype": "Date"
+    },
+
+
+    {
+      "fieldname": "section_stock",
+      "label": "Stock Management",
+      "fieldtype": "Section Break",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "most_requested_items",
+      "label": "Most Requested Items",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "slow_moving_items",
+      "label": "Slow-Moving Items",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "expired_or_near_expiry",
+      "label": "Expired or Near-Expiry Products",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "order_dispatch_errors",
+      "label": "Order Dispatch Errors",
+      "fieldtype": "Small Text"
+    },
+
+
+    {
+      "fieldname": "col_inventory",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "periodic_inventory_done",
+      "label": "Periodic Inventory Conducted",
+      "fieldtype": "Select",
+      "options": "\nYes\nNo"
+    },
+    {
+      "fieldname": "inventory_discrepancies",
+      "label": "Inventory Discrepancies",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "damaged_products_count",
+      "label": "Number of Damaged Products",
+      "fieldtype": "Int"
+    },
+
+
+    {
+      "fieldname": "stock_difficulties",
+      "label": "Difficulties (Stock)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "stock_improvements",
+      "label": "Improvement Suggestions (Stock)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "stock_signatory",
+      "label": "Stock Manager Signature",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "stock_sign_date",
+      "label": "Stock Sign Date",
+      "fieldtype": "Date"
+    },
+
+    {
+      "fieldname": "section_it",
+      "label": "Information Systems (IT)",
+      "fieldtype": "Section Break",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "erp_system_status",
+      "label": "ERP / Stock / Billing System Status",
+      "fieldtype": "Select",
+      "options": "\nStable\nUnstable"
+    },
+    {
+      "fieldname": "updates_done",
+      "label": "Updates Completed",
+      "fieldtype": "Small Text"
+    },
+
+  
+    {
+      "fieldname": "col_it_support",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "recorded_failures",
+      "label": "Recorded Failures",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "downtime_duration",
+      "label": "Downtime Duration (if any)",
+      "fieldtype": "Data"
+    },
+
+
+    {
+      "fieldname": "data_backup_status",
+      "label": "Data Backup Status",
+      "fieldtype": "Select",
+      "options": "\nRegular\nIrregular"
+    },
+    {
+      "fieldname": "security_notes",
+      "label": "Security Notes",
+      "fieldtype": "Small Text"
+    },
+
+
+    {
+      "fieldname": "it_difficulties",
+      "label": "Difficulties (IT)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "it_improvements",
+      "label": "Improvement Suggestions (IT)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "it_signatory",
+      "label": "IT Manager Signature",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "it_sign_date",
+      "label": "IT Sign Date",
+      "fieldtype": "Date"
+    },
+
+
+    {
+      "fieldname": "section_hr",
+      "label": "Human Resources",
+      "fieldtype": "Section Break",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "total_employees",
+      "label": "Total Employees",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "hiring_this_month",
+      "label": "Hiring This Month",
+      "fieldtype": "Select",
+      "options": "\nYes\nNo"
+    },
+    {
+      "fieldname": "departures_this_month",
+      "label": "Departures This Month",
+      "fieldtype": "Select",
+      "options": "\nYes\nNo"
+    },
+
+
+    {
+      "fieldname": "col_attendance",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "attendance_rate",
+      "label": "Attendance Rate (%)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "recorded_absences",
+      "label": "Recorded Absences",
+      "fieldtype": "Small Text"
+    },
+
+
+    {
+      "fieldname": "training_sessions_done",
+      "label": "Training Sessions Completed",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "training_needs",
+      "label": "Training Needs",
+      "fieldtype": "Small Text"
+    },
+
+
+    {
+      "fieldname": "work_accidents",
+      "label": "Work Accidents",
+      "fieldtype": "Select",
+      "options": "\nYes\nNo"
+    },
+    {
+      "fieldname": "hr_notes",
+      "label": "HR Notes",
+      "fieldtype": "Small Text"
+    },
+
+
+    {
+      "fieldname": "hr_difficulties",
+      "label": "Difficulties (HR)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "hr_improvements",
+      "label": "Improvement Suggestions (HR)",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "hr_signatory",
+      "label": "HR Manager Signature",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "hr_sign_date",
+      "label": "HR Sign Date",
+      "fieldtype": "Date"
+    },
+
+
+    {
+      "fieldname": "section_general_management",
+      "label": "General Management & Quality",
+      "fieldtype": "Section Break",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "approved_improvement_suggestions",
+      "label": "Approved Improvement Suggestions",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "recommendations_action_plan",
+      "label": "Recommendations & Action Plan for Next Month",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "gm_signatory",
+      "label": "General Manager Signature",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "gm_sign_date",
+      "label": "General Manager Sign Date",
+      "fieldtype": "Date"
+    }
+
+  ],
+
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1,
+      "submit": 1, "cancel": 1, "amend": 1, "print": 1
+    },
+    {
+      "role": "Department User",
+      "read": 1, "write": 1, "create": 1, "print": 1
+    },
+    {
+      "role": "All",
+      "read": 1
+    }
+  ],
+
+  "title_field": "report_month",
+  "sort_field": "report_date",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "MAR-.report_month.-.####"
+}

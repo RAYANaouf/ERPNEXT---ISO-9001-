@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-05 19:27:13.205431",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "month",
+  "systems_section",
+  "erp_status",
+  "updates_performed",
+  "support_section",
+  "recorded_faults",
+  "downtime_duration",
+  "security_section",
+  "data_backup",
+  "security_notes",
+  "difficulties",
+  "improvement_suggestions",
+  "report_date",
+  "prepared_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "systems_section",
+   "fieldtype": "Section Break",
+   "label": "Systems & Software"
+  },
+  {
+   "fieldname": "erp_status",
+   "fieldtype": "Select",
+   "label": "ERP/Stock/Facturation System Status",
+   "options": "Stable\nUnstable"
+  },
+  {
+   "fieldname": "updates_performed",
+   "fieldtype": "Small Text",
+   "label": "Updates Performed"
+  },
+  {
+   "fieldname": "support_section",
+   "fieldtype": "Section Break",
+   "label": "Technical Support"
+  },
+  {
+   "fieldname": "recorded_faults",
+   "fieldtype": "Small Text",
+   "label": "Recorded Faults"
+  },
+  {
+   "fieldname": "downtime_duration",
+   "fieldtype": "Data",
+   "label": "Downtime Duration"
+  },
+  {
+   "fieldname": "security_section",
+   "fieldtype": "Section Break",
+   "label": "Information Security"
+  },
+  {
+   "fieldname": "data_backup",
+   "fieldtype": "Select",
+   "label": "Data Backup",
+   "options": "Regular\nIrregular"
+  },
+  {
+   "fieldname": "security_notes",
+   "fieldtype": "Small Text",
+   "label": "Security Notes"
+  },
+  {
+   "fieldname": "difficulties",
+   "fieldtype": "Small Text",
+   "label": "Difficulties"
+  },
+  {
+   "fieldname": "improvement_suggestions",
+   "fieldtype": "Small Text",
+   "label": "Improvement Suggestions"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Preparation Date"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "Employee"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-05 19:52:44.751724",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Monthly IT Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

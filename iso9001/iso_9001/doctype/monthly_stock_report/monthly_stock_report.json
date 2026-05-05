@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-05 19:26:53.487775",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "month",
+  "prepared_by",
+  "report_date",
+  "stock_status_section",
+  "most_requested_items",
+  "slow_moving_items",
+  "expired_items",
+  "order_errors",
+  "inventory_section",
+  "periodic_inventory",
+  "inventory_differences",
+  "damaged_products_count",
+  "difficulties",
+  "improvement_suggestions"
+ ],
+ "fields": [
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "stock_status_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Status"
+  },
+  {
+   "fieldname": "most_requested_items",
+   "fieldtype": "Small Text",
+   "label": "Most Requested Items"
+  },
+  {
+   "fieldname": "slow_moving_items",
+   "fieldtype": "Small Text",
+   "label": "Slow Moving Items"
+  },
+  {
+   "fieldname": "expired_items",
+   "fieldtype": "Small Text",
+   "label": "Expired or Near-Expiry Products"
+  },
+  {
+   "fieldname": "order_errors",
+   "fieldtype": "Small Text",
+   "label": "Order Dispatch Errors"
+  },
+  {
+   "fieldname": "inventory_section",
+   "fieldtype": "Section Break",
+   "label": "Inventory"
+  },
+  {
+   "default": "0",
+   "fieldname": "periodic_inventory",
+   "fieldtype": "Check",
+   "label": "Periodic Inventory Conducted"
+  },
+  {
+   "fieldname": "inventory_differences",
+   "fieldtype": "Small Text",
+   "label": "Recorded Differences"
+  },
+  {
+   "fieldname": "damaged_products_count",
+   "fieldtype": "Int",
+   "label": "Number of Damaged Products"
+  },
+  {
+   "fieldname": "difficulties",
+   "fieldtype": "Small Text",
+   "label": "Difficulties"
+  },
+  {
+   "fieldname": "improvement_suggestions",
+   "fieldtype": "Small Text",
+   "label": "Improvement Suggestions"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "report_date",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Preparation Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-05 20:19:18.964609",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Monthly Stock Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

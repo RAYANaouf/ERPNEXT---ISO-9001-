@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-05 19:26:40.241676",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "month",
+  "report_date",
+  "prepared_by",
+  "imports_section",
+  "pending_po_count",
+  "delivery_commitment",
+  "avg_supply_time",
+  "local_compliance_section",
+  "is_compliant",
+  "non_compliance_cases",
+  "difficulties",
+  "improvement_suggestions"
+ ],
+ "fields": [
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Preparation Date"
+  },
+  {
+   "fieldname": "imports_section",
+   "fieldtype": "Section Break",
+   "label": "Import Operations"
+  },
+  {
+   "fieldname": "pending_po_count",
+   "fieldtype": "Int",
+   "label": "Number of Pending POs"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_commitment",
+   "fieldtype": "Check",
+   "label": "Commitment to Delivery Times"
+  },
+  {
+   "fieldname": "avg_supply_time",
+   "fieldtype": "Data",
+   "label": "Average Supply Lead Time"
+  },
+  {
+   "fieldname": "local_compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Local Product Compliance"
+  },
+  {
+   "fieldname": "is_compliant",
+   "fieldtype": "Select",
+   "label": "Product Compliance Status",
+   "options": "Compliant\nNon-Compliant"
+  },
+  {
+   "fieldname": "non_compliance_cases",
+   "fieldtype": "Small Text",
+   "label": "Recorded Non-Compliance Cases"
+  },
+  {
+   "fieldname": "difficulties",
+   "fieldtype": "Small Text",
+   "label": "Difficulties"
+  },
+  {
+   "fieldname": "improvement_suggestions",
+   "fieldtype": "Small Text",
+   "label": "Improvement Suggestions"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "Employee"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-05 20:17:46.418316",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Monthly Purchase Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

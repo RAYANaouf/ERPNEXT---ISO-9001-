@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ACT-.YYYY.-.MM.-.#####",
+ "creation": "2026-05-14 18:01:22.952306",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "doc_type",
+  "column_break_mus9",
+  "date",
+  "process_link",
+  "sb_attendance",
+  "attendance_list",
+  "sb_done",
+  "done_list",
+  "sb_issues",
+  "issue_list",
+  "sb_tasks",
+  "task_list"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Report Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doc_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "Weekly Report\nMonthly Report",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.doc_type=='Monthly Report'",
+   "fieldname": "process_link",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Process",
+   "options": "Process sheet"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "depends_on": "eval:doc.doc_type=='Weekly Report'",
+   "fieldname": "sb_attendance",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "attendance_list",
+   "fieldtype": "Table",
+   "label": "Present Members",
+   "options": "Activity Report Attendee"
+  },
+  {
+   "fieldname": "sb_done",
+   "fieldtype": "Section Break",
+   "label": "Activities Done"
+  },
+  {
+   "fieldname": "done_list",
+   "fieldtype": "Table",
+   "label": "Accomplishments",
+   "options": "Activity Report Simple Item"
+  },
+  {
+   "fieldname": "sb_issues",
+   "fieldtype": "Section Break",
+   "label": "Issues & Blockers"
+  },
+  {
+   "fieldname": "issue_list",
+   "fieldtype": "Table",
+   "label": "Recorded Issues",
+   "options": "Activity Report Simple Item"
+  },
+  {
+   "fieldname": "sb_tasks",
+   "fieldtype": "Section Break",
+   "label": "Action Plan (Linked Tasks)"
+  },
+  {
+   "fieldname": "task_list",
+   "fieldtype": "Table",
+   "label": "Tasks Tracking",
+   "options": "Activity Report Task Link"
+  },
+  {
+   "fieldname": "column_break_mus9",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-14 21:42:59.068891",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Activity Report",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:SBI-.#####",
  "creation": "2026-05-18 22:49:24.539818",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -69,10 +70,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-18 23:20:33.688144",
+ "modified": "2026-05-20 21:07:56.646142",
  "modified_by": "Administrator",
  "module": "Controle",
  "name": "System Brain Instruction",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

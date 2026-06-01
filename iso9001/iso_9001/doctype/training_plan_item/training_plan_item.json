@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-31 15:12:29.376962",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_latd",
+  "training_topic",
+  "training_type",
+  "target_personnel",
+  "number_of_participants",
+  "scheduled_date",
+  "duration",
+  "training_provider",
+  "cold_evaluation_period"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_latd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "training_topic",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Training Topic",
+   "reqd": 1
+  },
+  {
+   "fieldname": "training_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Training Type",
+   "options": "Internal\nExternal"
+  },
+  {
+   "fieldname": "target_personnel",
+   "fieldtype": "Small Text",
+   "label": "Target Personnel"
+  },
+  {
+   "fieldname": "number_of_participants",
+   "fieldtype": "Int",
+   "label": "Number of Participants (Planned)"
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Scheduled Date"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "training_provider",
+   "fieldtype": "Data",
+   "label": "Training Provider / Institution"
+  },
+  {
+   "fieldname": "cold_evaluation_period",
+   "fieldtype": "Data",
+   "label": "Post-Training Cold Evaluation Period"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "modified": "2026-03-31 15:12:29.376962",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Training Plan Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: TEH-{full_name}",
+ "creation": "2026-03-31 15:24:31.151215",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_info_section",
+  "full_name",
+  "job_title",
+  "training_attended",
+  "training_provider",
+  "evaluation_section",
+  "evaluation_table",
+  "results_section",
+  "score_percentage",
+  "rating",
+  "comments_section",
+  "content_organization_opinion",
+  "overall_satisfaction",
+  "observations_suggestions",
+  "signature_section",
+  "employee_signature",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_info_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "full_name.designation",
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "training_attended",
+   "fieldtype": "Link",
+   "label": "Training Attended",
+   "options": "Training Event"
+  },
+  {
+   "fieldname": "training_provider",
+   "fieldtype": "Data",
+   "label": "Training Provider"
+  },
+  {
+   "fieldname": "evaluation_section",
+   "fieldtype": "Section Break",
+   "label": "Evaluation of Themes"
+  },
+  {
+   "fieldname": "evaluation_table",
+   "fieldtype": "Table",
+   "label": "Evaluation Criteria",
+   "options": "Training Evaluation Hot Item"
+  },
+  {
+   "fieldname": "results_section",
+   "fieldtype": "Section Break",
+   "label": "Result"
+  },
+  {
+   "fieldname": "score_percentage",
+   "fieldtype": "Percent",
+   "label": "Score Result (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Data",
+   "label": "Final Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "comments_section",
+   "fieldtype": "Section Break",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "content_organization_opinion",
+   "fieldtype": "Small Text",
+   "label": "Opinion on Content and Organization"
+  },
+  {
+   "fieldname": "overall_satisfaction",
+   "fieldtype": "Small Text",
+   "label": "Overall Satisfaction"
+  },
+  {
+   "fieldname": "observations_suggestions",
+   "fieldtype": "Small Text",
+   "label": "Observations and Suggestions"
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Training Evaluation Hot",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-01 15:12:56.129425",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Training Evaluation Hot",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

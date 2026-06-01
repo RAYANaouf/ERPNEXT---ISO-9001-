@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: EF-{direct_manager}",
+ "creation": "2026-03-31 15:26:41.851024",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ywgk",
+  "direct_manager",
+  "evaluated_employee",
+  "evaluated_training",
+  "evaluation_section",
+  "criteria_table",
+  "results_section",
+  "score_percentage_result",
+  "iso_rating",
+  "decision_section",
+  "objectives_achieved",
+  "decision_corrective_action",
+  "signature_section",
+  "manager_name_and_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ywgk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "direct_manager",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Direct Manager Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evaluated_employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Evaluated Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evaluated_training",
+   "fieldtype": "Link",
+   "label": "Evaluated Training",
+   "options": "Training Event"
+  },
+  {
+   "fieldname": "evaluation_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Evaluation"
+  },
+  {
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Evaluation Grid",
+   "options": "Training Evaluation Cold Item"
+  },
+  {
+   "fieldname": "results_section",
+   "fieldtype": "Section Break",
+   "label": "Evaluation Result"
+  },
+  {
+   "fieldname": "score_percentage_result",
+   "fieldtype": "Percent",
+   "label": "Score Result (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "iso_rating",
+   "fieldtype": "Data",
+   "label": "Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "decision_section",
+   "fieldtype": "Section Break",
+   "label": "Objectives Achievement"
+  },
+  {
+   "fieldname": "objectives_achieved",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Were the training objectives achieved?",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.objectives_achieved == 'No'",
+   "fieldname": "decision_corrective_action",
+   "fieldtype": "Small Text",
+   "label": "Decision or corrective action to take"
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "manager_name_and_signature",
+   "fieldtype": "Signature",
+   "label": "Direct Manager Signature"
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-01 15:20:15.979035",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Training Evaluation Cold",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

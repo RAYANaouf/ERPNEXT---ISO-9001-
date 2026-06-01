@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: TP-{plan_year}",
+ "creation": "2026-03-31 15:13:04",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "identification_section",
+  "planning_date",
+  "plan_year",
+  "training_program_section",
+  "training_items",
+  "revision_note_section",
+  "revision_note",
+  "validation_section",
+  "hr_manager_signature",
+  "column_break_dg",
+  "general_director_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "identification_section",
+   "fieldtype": "Section Break",
+   "label": "Identification"
+  },
+  {
+   "fieldname": "planning_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planning Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_year",
+   "fieldtype": "Data",
+   "label": "Plan Year"
+  },
+  {
+   "fieldname": "training_program_section",
+   "fieldtype": "Section Break",
+   "label": "Training Program"
+  },
+  {
+   "fieldname": "training_items",
+   "fieldtype": "Table",
+   "label": "Training Schedule Details",
+   "options": "Training Plan Item"
+  },
+  {
+   "fieldname": "revision_note_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "The training plan is subject to revision and update in accordance with the cases provided for by the training procedures.",
+   "fieldname": "revision_note",
+   "fieldtype": "Small Text",
+   "label": "Revision Note",
+   "read_only": 1
+  },
+  {
+   "fieldname": "validation_section",
+   "fieldtype": "Section Break",
+   "label": "Approvals & Validations"
+  },
+  {
+   "fieldname": "hr_manager_signature",
+   "fieldtype": "Signature",
+   "label": "HR Manager Signature"
+  },
+  {
+   "fieldname": "column_break_dg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "general_director_signature",
+   "fieldtype": "Signature",
+   "label": "General Director Signature"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-01 17:26:19.991232",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Training Plan",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

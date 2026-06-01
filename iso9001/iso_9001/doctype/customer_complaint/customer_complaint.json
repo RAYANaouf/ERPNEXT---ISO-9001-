@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CC-{customer}-{#####}",
+ "creation": "2025-12-03 00:03:38.658666",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "identification_section",
+  "customer",
+  "receipt_date",
+  "reference_documents",
+  "complaint_description_section",
+  "complaint_description",
+  "immediate_correction_section",
+  "immediate_customer_correction",
+  "correction_date",
+  "root_cause_section",
+  "probable_cause_category",
+  "root_cause_analysis",
+  "corrective_action_section",
+  "corrective_action",
+  "action_owner",
+  "effectiveness_section",
+  "effectiveness_evaluation",
+  "closure_date",
+  "lessons_learned_section",
+  "lessons_learned"
+ ],
+ "fields": [
+  {
+   "fieldname": "identification_section",
+   "fieldtype": "Section Break",
+   "label": "Complaint Identification"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "receipt_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Receipt",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_documents",
+   "fieldtype": "Data",
+   "label": "Reference Documents"
+  },
+  {
+   "fieldname": "complaint_description_section",
+   "fieldtype": "Section Break",
+   "label": "Complaint Description"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Complaint Description"
+  },
+  {
+   "fieldname": "immediate_correction_section",
+   "fieldtype": "Section Break",
+   "label": "Immediate Correction"
+  },
+  {
+   "fieldname": "immediate_customer_correction",
+   "fieldtype": "Small Text",
+   "label": "Immediate Correction Applied to Customer"
+  },
+  {
+   "fieldname": "correction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Correction Date"
+  },
+  {
+   "fieldname": "root_cause_section",
+   "fieldtype": "Section Break",
+   "label": "Root Cause Analysis (RCA)"
+  },
+  {
+   "fieldname": "probable_cause_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Probable Cause Category (5M)",
+   "options": "Manpower\nMaterial\nMethod\nMachine\nMilieu (Environment)"
+  },
+  {
+   "fieldname": "root_cause_analysis",
+   "fieldtype": "Small Text",
+   "label": "Root Cause Analysis"
+  },
+  {
+   "fieldname": "corrective_action_section",
+   "fieldtype": "Section Break",
+   "label": "Corrective Action Plan"
+  },
+  {
+   "fieldname": "corrective_action",
+   "fieldtype": "Small Text",
+   "label": "Corrective Action"
+  },
+  {
+   "fieldname": "action_owner",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action Owner (Responsible)"
+  },
+  {
+   "fieldname": "effectiveness_section",
+   "fieldtype": "Section Break",
+   "label": "Effectiveness & Closure"
+  },
+  {
+   "fieldname": "effectiveness_evaluation",
+   "fieldtype": "Small Text",
+   "label": "Effectiveness Evaluation of Corrective Action"
+  },
+  {
+   "fieldname": "closure_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Closure Date"
+  },
+  {
+   "fieldname": "lessons_learned_section",
+   "fieldtype": "Section Break",
+   "label": "Value Added & Lessons Learned"
+  },
+  {
+   "fieldname": "lessons_learned",
+   "fieldtype": "Small Text",
+   "label": "Value Added & Lessons Learned"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-22 07:55:05.303887",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Customer Complaint",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

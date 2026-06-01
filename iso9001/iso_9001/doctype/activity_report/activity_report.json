@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:ACT-.YYYY.-.MM.-.#####",
+ "autoname": "{doc_type}.-.YYYY.-.MM.-.#",
  "creation": "2026-05-14 18:01:22.952306",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -102,11 +102,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-14 21:42:59.068891",
+ "modified": "2026-05-25 14:53:58.187077",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Activity Report",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

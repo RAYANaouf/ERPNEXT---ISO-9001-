@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TN-.{date}",
+ "creation": "2026-03-31 15:02:06",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "header_section",
+  "structure",
+  "manager_or_pilot",
+  "column_break_date",
+  "date",
+  "table_section",
+  "needs_list",
+  "signature_section",
+  "requester_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "structure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Structure",
+   "options": "Process sheet",
+   "reqd": 1
+  },
+  {
+   "fieldname": "manager_or_pilot",
+   "fieldtype": "Link",
+   "label": "Manager or Pilot",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_date",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "table_section",
+   "fieldtype": "Section Break",
+   "label": "Needs Details"
+  },
+  {
+   "fieldname": "needs_list",
+   "fieldtype": "Table",
+   "label": "List of Needs",
+   "options": "Training Need Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requester_signature",
+   "fieldtype": "Signature",
+   "label": "Requester Signature"
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-01 14:58:51.144808",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Training Need",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "consultant iso",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

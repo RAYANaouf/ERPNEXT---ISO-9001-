@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-31 15:00:01",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "training_theme",
+  "training_objective",
+  "training_nature",
+  "concerned_personnel",
+  "proposed_deadline"
+ ],
+ "fields": [
+  {
+   "fieldname": "training_theme",
+   "fieldtype": "Data",
+   "label": "Training Theme",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "training_objective",
+   "fieldtype": "Small Text",
+   "label": "Training Objective"
+  },
+  {
+   "fieldname": "training_nature",
+   "fieldtype": "Select",
+   "label": "Internal or External",
+   "options": "Internal\nExternal",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "concerned_personnel",
+   "fieldtype": "Small Text",
+   "label": "Concerned Personnel"
+  },
+  {
+   "fieldname": "proposed_deadline",
+   "fieldtype": "Date",
+   "label": "Proposed Deadline",
+   "in_list_view": 1
+  }
+ ],
+ "istable": 1,
+ "module": "ISO 9001",
+ "name": "Training Need Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

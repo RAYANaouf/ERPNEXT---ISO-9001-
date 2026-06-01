@@ -13,206 +13,588 @@ Professional Experience,Expérience professionnelle
 Special Conditions,Conditions particulières
 Amended From,Modifié depuis
 Job description,Fiche de poste
-"Process sheet","Fiche de processus"
-"Process Name","Nom du Processus"
-"Process Owner","Pilote du Processus"
-"Process Type","Type du Processus"
-"Realization","Réalisation"
-"Support","Support"
-"Management","Management"
-"Identification and Missions","Identification et Missions"
-"Purpose and Missions","Finalité et Missions"
-"Resources","Ressources"
-"Human Resources","Ressources Humaines"
-"Material Resources","Ressources Matérielles"
-"Process Flow","Flux du Processus"
-"Suppliers and Inputs","Fournisseurs et Éléments d'entrée"
-"Customers and Outputs","Clients et Éléments de sortie"
-"Activities Description","Description des Activités"
-"Process Activities","Activités du Processus"
-"Performance Measurement","Mesure de la Performance"
-"Measurement Indicators","Indicateurs de Mesure"
-"Ps activity item","Élément d'activité"
-"Responsible","Responsable"
-"Input Elements","Éléments d'entrée"
-"Activities","Activités"
-"Output Elements","Éléments de sortie"
-"Operational Documents","Documents Opératoires"
-"Records","Enregistrements"
-"Ps flow item","Élément de flux"
-"Entity (Supplier/Customer)","Entité (Fournisseur/Client)"
-"Elements (Input/Output)","Éléments (Entrée/Sortie)"
-"Ps indicator item","Élément d'indicateur"
-"Indicator","Indicateur"
-"Calculation Formula","Formule de Calcul"
-"Target / Objective","Cible / Objectif"
-"Frequency","Fréquence"
-"Amended From","Modifié de"
-"Risk and Opportunity","Risque et Opportunité"
-"Risk Control Item","Élément de Contrôle des Risques"
-"Unique ID","ID Unique"
-"Risk Description","Description du Risque"
-"Caused By & Consequences","Origines & Conséquences"
-"Owner Name","Nom du Pilote"
-"Owner Role","Rôle du Pilote"
-"Inherent Risk Assessment (Initial)","Évaluation du Risque Inhérent (Initial)"
-"Probability","Probabilité"
-"Impact","Impact"
-"Risk Rating","Score de Risque"
-"Risk Level","Niveau de Risque"
-"Control Measures","Mesures de Maîtrise"
-"Controls","Contrôles"
-"Residual Risk Assessment (With Controls)","Évaluation du Risque Résiduel (Avec Contrôles)"
-"Residual Probability","Probabilité Résiduelle"
-"Residual Impact","Impact Résiduel"
-"Residual Rating","Score Résiduel"
-"Residual Level","Niveau Résiduel"
-"Control Description","Description du Contrôle"
-"Responsible (Name & Role)","Responsable (Nom & Rôle)"
-"Sustainable","Soutenable"
-"Moderate","Modéré"
-"Severe","Sévère"
-"Critical","Critique"
-"Planned","Planifié"
-"In Progress","En cours"
-"Implemented","Réalisé"
-"Effective","Efficace"
-"Meeting Minutes","Comptes-rendus de Réunion"
-"Meeting Attendee Item","Élément de Participant"
-"Meeting Action Item","Élément du Plan d'Action"
-"Meeting Title","Titre de la Réunion"
-"Type","Type"
-"Date and Time","Date et Heure"
-"Location","Lieu"
-"Facilitator (Organizer)","Animateur (Organisateur)"
-"Attendance List","Liste de Présence"
-"Attendees","Participants"
-"Meeting Content","Contenu de la Réunion"
-"Agenda","Ordre du jour"
-"Minutes / Discussion","Notes / Discussions"
-"Decisions & Action Plan","Décisions & Plan d'Action"
-"Actions to be Taken","Actions à entreprendre"
-"Attendee Name","Nom du Participant"
-"Department","Département"
-"Present","Présent"
-"Action / Task","Action / Tâche"
-"Responsible","Responsable"
-"Deadline","Échéance"
-"Status","Statut"
-"Management Review","Revue de Direction"
-"Quality Committee","Comité Qualité"
-"Department Meeting","Réunion de Service"
-"Emergency Meeting","Réunion d'Urgence"
-"Employe Complaint","Réclamation Employé"
-"Series","Série"
-"Employee Name","Nom de l'employé"
-"Date","Date"
-"Your Complaint","Votre Réclamation"
-"Category","Catégorie"
-"Work Environment","Environnement de travail"
-"Payroll","Paie"
-"Equipment","Équipement"
-"Conflict","Conflit"
-"Other","Autre"
-"Subject","Objet"
-"Description","Description"
-"Add Photo/File","Ajouter Photo/Fichier"
-"Management Review","Examen de la Direction"
-"Action Taken","Mesure prise / Action corrective"
-"Risk Description","Description du risque"
-"Very High","Très élevé"
-"Moderate","Modéré"
-"Process Internal Document","Élément d'Information Documentée Interne"
-"Process External Document","Élément d'Information Documentée Externe"
-"Internal Documented Information","Informations Documentées Internes"
-"External Documented Information","Informations Documentées Externes"
-"Internal Documents List","Liste des Informations Documentaires Internes"
-"External Documents List","Liste des Documents d'Origines Externes"
-"Document Title","Intitulé de l'ID"
-"Identification / Code","Identification"
-"Creation / Revision Date","Date Création / MAJ"
-"Storage Location","Lieu de Classement"
-"Retention Period","Durée de Classement"
-"Archiving Period","Durée d'Archivage"
-"Source","Source"
-"Distribution","Diffusion"
-"Very Low","Très faible"
-"Process","Processus"
-"Risk","Risque"
-"Updated By","Mis à jour par"
-"Date Last Updated","Date de dernière mise à jour"
-"Risk Owner Name","Nom du responsable du risque"
-"Likelihood","Probabilité"
-"Target Date","Date cible"
-"Weekly Management Meeting","Réunion hebdomadaire des responsables"
-"Priority","Priorité"
-"Low","Faible"
-"Medium","Moyenne"
-"High","Élevée"
-"Critical","Critique"
-"Month","Mois"
-"Preparation Date","Date d'établissement du rapport"
-"Prepared By","Préparé par"
-"Sales","Activités Commerciales"
-"Turnover vs Target","Chiffre d'affaires par rapport à l'objectif"
-"Increase","Augmentation"
-"Stable","Stabilité"
-"Decrease","Baisse"
-"Success Rate (%)","Taux de réussite (%)"
-"Customers","Clients"
-"Active Customers Count","Nombre de clients actifs"
-"New Customers","Nouveaux clients"
-"Marketing & Relations","Marketing et relations commerciales"
-"Commercial Offers Provided","Offres commerciales présentées"
-"Field Visits / Meetings","Visites de terrain / Réunions"
-"Market & Competition Notes","Remarques sur le marché et la concurrence"
-"Customer Complaints","Réclamations clients"
-"Difficulties","Difficultés"
-"Improvement Suggestions","Suggestions d'amélioration"
-"Import Operations","Opérations d'importation"
-"Number of Pending POs","Nombre de bons de commande en cours"
-"Commitment to Delivery Times","Respect des délais de livraison"
-"Average Supply Lead Time","Délai moyen d'approvisionnement"
-"Local Product Compliance","Conformité des produits locaux"
-"Product Compliance Status","Statut de conformité des produits"
-"Compliant","Conforme"
-"Non-Compliant","Non conforme"
-"Recorded Non-Compliance Cases","Cas de non-conformité enregistrés"
-"Stock Status","État des stocks"
-"Most Requested Items","Articles les plus demandés"
-"Slow Moving Items","Articles à rotation lente"
-"Expired or Near-Expiry Products","Produits périmés ou proches de l'expiration"
-"Order Dispatch Errors","Erreurs d'envoi de commandes"
-"Inventory","Inventaire"
-"Periodic Inventory Conducted","Inventaire périodique effectué"
-"Recorded Differences","Écarts enregistrés"
-"Number of Damaged Products","Nombre de produits endommagés"
-"Systems & Software","Systèmes et logiciels"
-"ERP/Stock/Facturation System Status","État du système de gestion (ERP/Stock/Facturation)"
-"Unstable","Instable"
-"Updates Performed","Mises à jour effectuées"
-"Technical Support","Support technique"
-"Recorded Faults","Pannes enregistrées"
-"Downtime Duration","Durée d'indisponibilité"
-"Information Security","Sécurité informatique"
-"Data Backup","Sauvegarde des données"
-"Regular","Régulière"
-"Irregular","Irrégulière"
-"Security Notes","Notes de sécurité"
-"General Status","Situation générale"
-"Number of Employees","Nombre d'employés"
-"Hiring during the month","Recrutement durant le mois"
-"Departures during the month","Départs durant le mois"
-"Attendance & Discipline","Présence et discipline"
-"Attendance Percentage (%)","Taux de présence (%)"
-"Recorded Absences","Absences enregistrées"
-"Training","Formation"
-"Completed Training Sessions","Sessions de formation réalisées"
-"Training Needs","Besoins en formation"
-"Discipline & Safety","Discipline et sécurité"
-"Work Accidents","Accidents du travail"
-"Safety Remarks","Notes sur la sécurité"
-"Approved Improvement Suggestions","Suggestions d'amélioration approuvées"
-"Recommendations & Action Plan for Next Month","Recommandations et plan d'action pour le mois prochain"
-
-
+Process sheet,Fiche de processus
+Process Name,Nom du Processus
+Process Owner,Pilote du Processus
+Process Type,Type du Processus
+Realization,Réalisation
+Identification and Missions,Identification et Missions
+Purpose and Missions,Finalité et Missions
+Resources,Ressources
+Human Resources,Ressources Humaines
+Material Resources,Ressources Matérielles
+Process Flow,Flux du Processus
+Suppliers and Inputs,Fournisseurs et Éléments d'entrée
+Customers and Outputs,Clients et Éléments de sortie
+Activities Description,Description des Activités
+Process Activities,Activités du Processus
+Performance Measurement,Mesure de la Performance
+Measurement Indicators,Indicateurs de Mesure
+Ps activity item,Élément d'activité
+Responsible,Responsable
+Input Elements,Éléments d'entrée
+Activities,Activités
+Output Elements,Éléments de sortie
+Operational Documents,Documents Opératoires
+Records,Enregistrements
+Ps flow item,Élément de flux
+Entity (Supplier/Customer),Entité (Fournisseur/Client)
+Elements (Input/Output),Éléments (Entrée/Sortie)
+Ps indicator item,Élément d'indicateur
+Indicator,Indicateur
+Calculation Formula,Formule de Calcul
+Target / Objective,Cible / Objectif
+Frequency,Fréquence
+Risk and Opportunity,Risque et Opportunité
+Risk Control Item,Élément de Contrôle des Risques
+Unique ID,ID Unique
+Risk Description,Description du Risque
+Caused By & Consequences,Origines & Conséquences
+Owner Name,Nom du Pilote
+Owner Role,Rôle du Pilote
+Inherent Risk Assessment (Initial),Évaluation du Risque Inhérent (Initial)
+Probability,Probabilité
+Risk Rating,Score de Risque
+Risk Level,Niveau de Risque
+Control Measures,Mesures de Maîtrise
+Controls,Contrôles
+Residual Risk Assessment (With Controls),Évaluation du Risque Résiduel (Avec Contrôles)
+Residual Probability,Probabilité Résiduelle
+Residual Impact,Impact Résiduel
+Residual Rating,Score Résiduel
+Residual Level,Niveau Résiduel
+Control Description,Description du Contrôle
+Responsible (Name & Role),Responsable (Nom & Rôle)
+Sustainable,Soutenable
+Moderate,Modéré
+Severe,Sévère
+Critical,Critique
+Planned,Planifié
+In Progress,En cours
+Implemented,Réalisé
+Effective,Efficace
+Meeting Minutes,Comptes-rendus de Réunion
+Meeting Attendee Item,Élément de Participant
+Meeting Action Item,Élément du Plan d'Action
+Meeting Title,Titre de la Réunion
+Date and Time,Date et Heure
+Location,Lieu
+Facilitator (Organizer),Animateur (Organisateur)
+Attendance List,Liste de Présence
+Attendees,Participants
+Meeting Content,Contenu de la Réunion
+Agenda,Ordre du jour
+Minutes / Discussion,Notes / Discussions
+Decisions & Action Plan,Décisions & Plan d'Action
+Actions to be Taken,Actions à entreprendre
+Attendee Name,Nom du Participant
+Department,Département
+Present,Présent
+Action / Task,Action / Tâche
+Deadline,Échéance
+Status,Statut
+Management Review,Revue de Direction
+Quality Committee,Comité Qualité
+Department Meeting,Réunion de Service
+Emergency Meeting,Réunion d'Urgence
+Employe Complaint,Réclamation Employé
+Series,Série
+Employee Name,Nom de l'employé
+Your Complaint,Votre Réclamation
+Category,Catégorie
+Work Environment,Environnement de travail
+Payroll,Paie
+Equipment,Équipement
+Conflict,Conflit
+Other,Autre
+Subject,Objet
+Add Photo/File,Ajouter Photo/Fichier
+Action Taken,Mesure prise / Action corrective
+Very High,Très élevé
+Process Internal Document,Élément d'Information Documentée Interne
+Process External Document,Élément d'Information Documentée Externe
+Internal Documented Information,Informations Documentées Internes
+External Documented Information,Informations Documentées Externes
+Internal Documents List,Liste des Informations Documentaires Internes
+External Documents List,Liste des Documents d'Origines Externes
+Document Title,Intitulé de l'ID
+Identification / Code,Identification
+Creation / Revision Date,Date Création / MAJ
+Storage Location,Lieu de Classement
+Retention Period,Durée de Classement
+Archiving Period,Durée d'Archivage
+Distribution,Diffusion
+Very Low,Très faible
+Process,Processus
+Risk,Risque
+Updated By,Mis à jour par
+Date Last Updated,Date de dernière mise à jour
+Risk Owner Name,Nom du responsable du risque
+Likelihood,Probabilité
+Target Date,Date cible
+Weekly Management Meeting,Réunion hebdomadaire des responsables
+Priority,Priorité
+Low,Faible
+Medium,Moyenne
+High,Élevée
+Month,Mois
+Preparation Date,Date d'établissement du rapport
+Prepared By,Préparé par
+Sales,Activités Commerciales
+Turnover vs Target,Chiffre d'affaires par rapport à l'objectif
+Increase,Augmentation
+Stable,Stabilité
+Decrease,Baisse
+Success Rate (%),Taux de réussite (%)
+Customers,Clients
+Active Customers Count,Nombre de clients actifs
+New Customers,Nouveaux clients
+Marketing & Relations,Marketing et relations commerciales
+Commercial Offers Provided,Offres commerciales présentées
+Field Visits / Meetings,Visites de terrain / Réunions
+Market & Competition Notes,Remarques sur le marché et la concurrence
+Customer Complaints,Réclamations clients
+Difficulties,Difficultés
+Improvement Suggestions,Suggestions d'amélioration
+Import Operations,Opérations d'importation
+Number of Pending POs,Nombre de bons de commande en cours
+Commitment to Delivery Times,Respect des délais de livraison
+Average Supply Lead Time,Délai moyen d'approvisionnement
+Local Product Compliance,Conformité des produits locaux
+Product Compliance Status,Statut de conformité des produits
+Compliant,Conforme
+Non-Compliant,Non conforme
+Recorded Non-Compliance Cases,Cas de non-conformité enregistrés
+Stock Status,État des stocks
+Most Requested Items,Articles les plus demandés
+Slow Moving Items,Articles à rotation lente
+Expired or Near-Expiry Products,Produits périmés ou proches de l'expiration
+Order Dispatch Errors,Erreurs d'envoi de commandes
+Inventory,Inventaire
+Periodic Inventory Conducted,Inventaire périodique effectué
+Recorded Differences,Écarts enregistrés
+Number of Damaged Products,Nombre de produits endommagés
+Systems & Software,Systèmes et logiciels
+ERP/Stock/Facturation System Status,État du système de gestion (ERP/Stock/Facturation)
+Unstable,Instable
+Updates Performed,Mises à jour effectuées
+Technical Support,Support technique
+Recorded Faults,Pannes enregistrées
+Downtime Duration,Durée d'indisponibilité
+Information Security,Sécurité informatique
+Data Backup,Sauvegarde des données
+Regular,Régulière
+Irregular,Irrégulière
+Security Notes,Notes de sécurité
+General Status,Situation générale
+Number of Employees,Nombre d'employés
+Hiring during the month,Recrutement durant le mois
+Departures during the month,Départs durant le mois
+Attendance & Discipline,Présence et discipline
+Attendance Percentage (%),Taux de présence (%)
+Recorded Absences,Absences enregistrées
+Training,Formation
+Completed Training Sessions,Sessions de formation réalisées
+Training Needs,Besoins en formation
+Discipline & Safety,Discipline et sécurité
+Work Accidents,Accidents du travail
+Safety Remarks,Notes sur la sécurité
+Approved Improvement Suggestions,Suggestions d'amélioration approuvées
+Recommendations & Action Plan for Next Month,Recommandations et plan d'action pour le mois prochain
+Product Conformity,Conformité du Produit
+Email,E-mail
+Closure Date,Date de clôture
+Attendance Rate (%),Taux de présence (%)
+Non-Conformity Cases Recorded,Cas de non-conformité enregistrés
+Probation Duration,Durée de la période d'essai
+Commercial Activity,Activité commerciale
+Week,Semaine
+Training Provider,Prestataire de formation
+New,Nouveau
+Approvals & Validations,Approbations et Validations
+Prospector,Prospecteur
+General Manager Sign Date,Date de signature (DG)
+Improving,En amélioration
+Open,Ouvert
+Root Cause Analysis (RCA),Analyse des causes racines
+Manager or Pilot,Manager ou Pilote
+Prospect Details,Détails du prospect
+Departures This Month,Départs du mois
+Indicator Name,Nom de l'indicateur
+Probation Extension,Prolongation de la période d'essai
+Contact Phone,Téléphone de contact
+Customer,Client
+Revision Note,Note de révision
+Report Preparation Date,Date de préparation du rapport
+Date of Receipt,Date de réception
+Commercial Sign Date,Date de signature commerciale
+Milieu (Environment),Milieu (Environnement)
+Present Members,Membres présents
+Insufficient 1/5,Insuffisant 1/5
+Prospection Date,Date de prospection
+Other comments on professional skills,Autres commentaires (compétences)
+Post-Training Cold Evaluation Period,Période d'évaluation à froid post-formation
+Risks Register,Registre des risques
+Objectives Achievement,Atteinte des objectifs
+Evaluation,Évaluation
+General Management & Quality,Direction Générale & Qualité
+Website,Site Web
+Prospect Type,Type de prospect
+HR Signature,Signature RH
+Corrective Action Plan,Plan d'action correctif
+Contact Email,E-mail de contact
+Satisfactory 4/5,Satisfaisant 4/5
+Prospect Name,Nom du prospect
+Interest Level,Niveau d'intérêt
+IT Manager Signature,Signature du Responsable IT
+Training Theme,Thème de la formation
+Commercial Offers Submitted,Offres commerciales soumises
+Residual Risk,Risque résiduel
+Risks,Risques
+Planning Date,Date de planification
+Stock Manager Signature,Signature du Responsable des stocks
+Training Objective,Objectif de la formation
+Performance Evaluation,Évaluation de la performance
+Training Attended,Formation suivie
+Employee,Employé
+Proposed Deadline,Échéance proposée
+Hour,Heure
+Revenue vs Target,Chiffre d'affaires vs Objectif
+Task / Action,Tâche / Action
+Acceptable 3/5,Acceptable 3/5
+Direct Manager Signature,Signature du Manager direct
+Marketing & Commercial Relations,Marketing & Relations Commerciales
+Final Score (/100),Score Final (/100)
+Average Supply Duration,Délai moyen d'approvisionnement
+Director Signature,Signature du Directeur
+ERP / Stock / Billing System Status,État du système ERP / Stock / Facturation
+Slow-Moving Items,Articles à rotation lente
+No,Non
+List of Needs,Liste des besoins
+User Info,Informations utilisateur
+Additional Note,Note additionnelle
+Immediate Correction Applied to Customer,Correction immédiate appliquée pour le client
+Decision or corrective action to take,Décision ou action corrective à prendre
+Improvement Suggestions (Stock),Suggestions d'amélioration (Stock)
+Action Plan (Linked Tasks),Plan d'action (Tâches liées)
+Successful Experience,Expérience réussie
+Purchases,Achats
+Criterion,Critère
+Monthly Report,Rapport mensuel
+Evaluated Person Signature,Signature de l'évalué
+System Brain Instruction,Instruction système
+Plan Year,Année du plan
+Stock Management,Gestion des stocks
+Remarks,Remarques
+Needs Details,Détails des besoins
+Phone Call,Appel téléphonique
+Hiring Date,Date d'embauche
+Recorded Failures,Pannes enregistrées
+Corrective Action,Action corrective
+Role,Rôle
+Concerned Personnel,Personnel concerné
+Score Result (%),Résultat du score (%)
+Done,Terminé
+Action Owner (Responsible),Responsable de l'action
+Evaluated Training,Formation évaluée
+Non-Conforming,Non conforme
+Purchases Sign Date,Date de signature (Achats)
+Trend,Tendance
+Individual,Individuel
+Improvement Suggestions (Purchases),Suggestions d'amélioration (Achats)
+Prospection Details,Détails de prospection
+Correction Date,Date de correction
+Attendance,Présence
+Total Employees,Effectif total
+Period Type,Type de période
+Inventory Discrepancies,Écarts d'inventaire
+Method,Méthode
+Complaint Identification,Identification de la réclamation
+Feedback,Retour d'information
+Effectiveness Evaluation of Corrective Action,Évaluation de l'efficacité de l'action corrective
+Current Value,Valeur actuelle
+Target / Goal,Cible / Objectif
+Performance Criterion,Critère de performance
+Opinion on Content and Organization,Avis sur le contenu et l'organisation
+Improvement Suggestions (Commercial),Suggestions d'amélioration (Commercial)
+Active Customers,Clients actifs
+Document Type,Type de document
+Report Month行业,Mois du rapport
+Yes,Oui
+Information Systems (IT),Systèmes d'Information (IT)
+Comments,Commentaires
+Requester Signature,Signature du demandeur
+Training Sessions Completed,Sessions de formation réalisées
+Target Personnel,Personnel cible
+Purchases Manager Signature,Signature du Responsable Achats
+Linked Customer,Client lié
+Evaluation of Themes,Évaluation des thèmes
+External,Externe
+e.g. 15 days,ex: 15 jours
+Name,Nom
+General Information,Informations générales
+Issues & Blockers,Problèmes & Points bloquants
+Manpower,Main d'œuvre
+Rating,Évaluation
+IT Sign Date,Date de signature (IT)
+Were the training objectives achieved?,Les objectifs de formation ont-ils été atteints ?
+Reference Documents,Documents de référence
+Evaluation Criteria,Critères d'évaluation
+"Monthly Activity Report covering all departments: Commercial, Purchases, Stock, IT, HR, and General Management.","Rapport mensuel d'activité couvrant les départements : Commercial, Achats, Stock, IT, RH et Direction Générale."
+Effectiveness & Closure,Efficacité & Clôture
+Report Title,Titre du rapport
+Project Title,Titre du projet
+Probable Cause Category (5M),Catégorie de cause probable (5M)
+HR Sign Date,Date de signature (RH)
+Downtime Duration (if any),Durée d'indisponibilité (si applicable)
+General Manager Signature,Signature du Directeur Général
+Res. Probability,Probabilité Résiduelle
+Activities Done,Activités réalisées
+Task ID,ID de la tâche
+Hiring This Month,Recrutements du mois
+Res. Impact,Impact Résiduel
+Cancelled,Annulé
+Training Schedule Details,Détails du planning de formation
+Benefit,Bénéfice
+Final Decision,Décision finale
+Improvement Suggestions (IT),Suggestions d'amélioration (IT)
+Material,Matériel
+Period,Période
+Training Type,Type de formation
+Full Name,Nom complet
+Manager Signature,Signature du Manager
+Value Added & Lessons Learned,Valeur ajoutée & Leçons tirées
+Purchase Orders In Progress,Bons de commande en cours
+Excellent 5/5,Excellent 5/5
+Number of Participants (Planned),Nombre de participants (Planifié)
+Commercial Manager Signature,Signature du Responsable Commercial
+Evaluation Date,Date d'évaluation
+Action Plan,Plan d'action
+Report Objective,Objectif du rapport
+Duration,Durée
+Organization,Organisation
+Average Score,Score moyen
+Training Topic,Sujet de formation
+Internal or External,Interne ou Externe
+Poor 2/5,Faible 2/5
+Recorded Issues,Problèmes enregistrés
+Res. Risk Rating,Score du risque résiduel
+Weekly Report,Rapport hebdomadaire
+Difficulties (HR),Difficultés (RH)
+Control Owner(s) Name and Role,Nom et rôle du responsable du contrôle
+Percentage of target achieved,Pourcentage de l'objectif atteint
+Created By,Créé par
+Difficulties (Stock),Difficultés (Stock)
+Difficulties (IT),Difficultés (IT)
+Observations and Suggestions,Observations et Suggestions
+General Director Signature,Signature du Directeur Général
+Completed,Terminé
+Report,Rapport
+Improvement Suggestions (HR),Suggestions d'amélioration (RH)
+Difficulties (Purchases),Difficultés (Achats)
+Difficulties (Commercial),Difficultés (Commercial)
+Updates Completed,Mises à jour terminées
+Unsuccessful Experience,Expérience infructueuse
+face to face,En présentiel
+Tasks Tracking,Suivi des tâches
+Overall Satisfaction,Satisfaction globale
+Evaluation Result,Résultat de l'évaluation
+Root Cause Analysis,Analyse des causes racines
+e.g. January 2026,ex: Janvier 2026
+Status & Follow-up,Statut & Suivi
+Delivery Deadlines Met,Respect des délais de livraison
+Opportunity Description,Description de l'opportunité
+HR Notes,Notes RH
+Day,Jour
+Accomplishments,Réalisations
+Data Backup Status,Statut de la sauvegarde des données
+Training Program,Programme de formation
+Evaluated Employee,Employé évalué
+Training Provider / Institution,Prestataire de formation / Institution
+Final Rating,Évaluation finale
+Opportunity Owner,Responsable de l'opportunité
+Cron Job,Tâche Cron
+Immediate Correction,Correction immédiate
+Control(s),Contrôle(s)
+Inherent Risk,Risque inhérent
+Evaluation Grid,Grille d'évaluation
+Note(0-5),Note (0-5)
+Declining,En déclin
+Opportunities,Opportunités
+Complaint Description行业,Description de la réclamation
+Company,Entreprise
+HR Manager Signature,Signature du Responsable RH
+Social Media,Réseaux sociaux
+Internal,Interne
+Conforming,Conforme
+Direct Manager Name,Nom du manager direct
+Final Appreciation,Appréciation finale
+Opportunities Register,Registre des opportunités
+Risk Assessment Item,Élément d'Évaluation des Risques
+Opportunity Assessment Item,Élément d'Évaluation des Opportunités
+Training Evaluation Hot,Évaluation à Chaud de la Formation
+Training Evaluation Hot Item,Élément d'Évaluation à Chaud
+Training Evaluation Cold,Évaluation à Froid de la Formation
+Training Evaluation Cold Item,Élément d'Évaluation à Froid
+Supplier Evaluation,Évaluation des Fournisseurs
+Supplier Evaluation Criteria,Critères d'Évaluation Fournisseur
+Activity Report,Rapport d'Activité
+Activity Report Task Link,Lien de Tâche du Rapport d'Activité
+Annual Evaluation Staff,Évaluation Annuelle du Personnel
+Annual Evaluation Manager,Évaluation Annuelle des Cadres
+Probation Evaluation Employee,Évaluation de Période d'Essai Employé
+Probation Evaluation Manager,Évaluation de Période d'Essai Cadre
+Probation Evaluation Detail,Détails de l'Évaluation de Période d'Essai
+Work Volume,Volume de travail
+Work Quality,Qualité du travail
+Execution of Job-Related Tasks,Exécution des tâches liées au poste
+Professional Engagement and Involvement,Engagement et implication professionnelle
+Maintenance and Preservation of Work Tools,Entretien et préservation des outils de travail
+Compliance with Management Instructions,Respect des consignes de la hiérarchie
+Versatility in Task Execution,Polyvalence dans l’exécution des tâches
+Attendance and Professional Discipline,Assiduité et discipline professionnelle
+Team Spirit,Esprit d’équipe
+Sense of Initiative,Esprit d’initiative
+Physical Capacity and Endurance,Capacité physique et endurance
+Mastery of IT Tools,Maîtrise des outils informatiques
+Availability and Responsiveness,Disponibilité et réactivité
+Leadership and Team Management,Capacité à diriger et encadrer une équipe
+Ability to Make Thoughtful and Relevant Decisions,Capacité à prendre des décisions réfléchies et pertinentes
+Effective Time Management,Maîtrise de la gestion efficace du temps
+Clear and Professional Communication Skills,Capacité à communiquer de manière claire et professionnelle
+Ability to Plan and Organize Work,Aptitude à planifier et organiser le travail
+Analytical and Problem-Solving Skills,Capacité d’analyse et de résolution des problèmes
+Results-Oriented,Orientation vers l’atteinte des résultats
+Contribution to a Collaborative Work Environment,Contribution à un environnement de travail collaboratif
+Adaptability to Change,Capacité d’adaptation aux changements
+Respect for Professional Ethics and Integrity,Respect de l’éthique professionnelle et intégrité
+Conflict Management Skills,Capacité à gérer les conflits
+Strategic Vision and Anticipation Skills,Vision stratégique et capacité d’anticipation
+Fournisseur excellent,Fournisseur Excellent
+Fournisseur approuvé,Fournisseur Approuvé
+Sous surveillance,Sous Surveillance
+Non approuvé,Non Approuvé
+Maintenir et developper,Maintenir et Développer
+Suivi normal,Suivi Normal
+Actions correctives exigées,Actions Correctives Exigées
+Retirer de la liste ou plan,Retirer de la Liste
+Satisfactory,Satisfaisant
+Meets Expectations,Acceptable
+Needs Improvement,Faible
+Unsatisfactory,Insuffisant
+Training Quality,Qualité de la Formation
+Subject Mastery,Maîtrise du Sujet
+Trainer's Attentiveness,Écoute du Formateur
+Time Management,Gestion du Temps
+Program Compliance,Conformité du Programme
+Provided Documents,Documents Fournis
+Educational Resources,Ressources Pédagogiques
+Teaching Methods,Méthodes d'Enseignement
+Acquisition of Theoretical Knowledge,Acquisition des Connaissances Théoriques
+Acquisition of Applied Knowledge,Acquisition des Connaissances Pratiques
+Improvement of Work Quality,Amélioration de la Qualité du Travail
+Impact on Motivation and Professional Engagement,Impact sur la Motivation et l'Engagement
+Scheduled Date,Date planifiée
+Customer Complaint,Réclamation Client
+🟢 1 à 3 ans,🟢 1 à 3 ans
+✅ Q4 – Êtes-vous satisfait des Produits mis à votre disposition ?,✅ Q4 – Êtes-vous satisfait des Produits mis à votre disposition ?
+🟣 Plus de 5 ans,🟣 Plus de 5 ans
+🟡 Moins d’un an,🟡 Moins d’un an
+🔮 Assez probable,🔮 Assez probable
+Complaint Description,Description de la réclamation
+✅ Q7 – Pensez-vous que vous continuerez à entretenir des relations commerciales avec nous dans le futur ?,✅ Q7 – Pensez-vous que vous continuerez à entretenir des relations commerciales avec nous dans le futur ?
+⚠️ Avec difficultés,⚠️ Avec difficultés
+Pondération(%),Pondération(%)
+Contribution to continuous improvement initiatives,Contribution à l'amélioration continue
+👍 Assez réactifs,👍 Assez réactifs
+✅ Q5 – Avons-nous été réactifs pour répondre à vos questions ou préoccupations ?,✅ Q5 – Avons-nous été réactifs pour répondre à vos questions ou préoccupations ?
+Active participation in training initiatives,Participation active aux formations
+✅ Q8 – Recommanderiez-vous notre entreprise ?,✅ Q8 – Recommanderiez-vous notre entreprise ?
+Application of current policies and regulations,Application des politiques et réglementations en vigueur
+Training Plan,Plan de formation
+Agility and responsiveness to organizational changes,Agilité et réactivité face aux changements organisationnels
+🙂 Partiellement,🙂 Partiellement
+👍 Assez probable,👍 Assez probable
+Professional communication with peers and superiors,Communication professionnelle avec les collègues et supérieurs
+"✅ Oui, totalement","✅ Oui, totalement"
+❌ Pas du tout réactifs,❌ Pas du tout réactifs
+Job description article,Article de fiche de poste
+💯 Tout à fait,💯 Tout à fait
+Appropriate utilization of tools and operational equipment,Utilisation appropriée des outils et équipements opérationnels
+Training Need,Besoin en formation
+😕 Pas très bien,😕 Pas très bien
+Adherence to set deadlines,Respect des délais impartis
+😄 Extrêmement satisfait,😄 Extrêmement satisfait
+Adherence to corporate values and regulatory compliance,Respect des valeurs de l'entreprise et de la conformité réglementaire
+Effective management of unforeseen events and contingencies,Gestion efficace des imprévus et aléas
+🌟 Extrêmement bien,🌟 Extrêmement bien
+😕 Insatisfait,😕 Insatisfait
+✅ Q6 – Depuis combien de temps votre organisation est-elle cliente ?,✅ Q6 – Depuis combien de temps votre organisation est-elle cliente ?
+Core technical competencies relative to the field of activity,Compétences techniques essentielles
+🌓 Partiellement,🌓 Partiellement
+Professional engagement and workplace motivation,Engagement professionnel et motivation
+Training Need Item,Élément de besoin en formation
+Professional discipline and respect for organizational hierarchy,Discipline professionnelle et respect de la hiérarchie
+Note Finale (%),Note Finale (%)
+🙂 Assez satisfait,🙂 Assez satisfait
+🟦 SECTION 4 — Décision Direction Générale,🟦 SECTION 4 — Décision Direction Générale
+Activity Report KPI,Indicateur (KPI) du rapport d'activité
+⚡ Très réactifs,⚡ Très réactifs
+Activity Report Simple Item,Élément simple du rapport d'activité
+🤔 Peu probable,🤔 Peu probable
+Training Plan Item,Élément du plan de formation
+Stock Sign Date,Date de signature des stocks
+🔵 3 à 5 ans,🔵 3 à 5 ans
+Reliability and consistency in delivered outcomes,Fiabilité et constance des résultats livrés
+NO GO 🔴,NO GO 🔴
+❌ Pas du tout,❌ Pas du tout
+😐 Pas trop,😐 Pas trop
+👍 Très bien,👍 Très bien
+Customer Satisfaction Survey,Enquête de satisfaction client
+✅ Q2 – Nos rapports qualité/prix répondent-elles à vos besoins ?,✅ Q2 – Nos rapports qualité/prix répondent-elles à vos besoins ?
+"Precision, rigor, and thoroughness in task execution","Précision, rigueur et minutie dans l'exécution"
+Aptitude for driving process improvement and innovation,Aptitude à stimuler l'amélioration des processus
+Activity Report Attendee,Participant au rapport d'activité
+Verification of timely task completion and deliverables,Vérification de l'achèvement des tâches dans les délais
+Level of professional commitment and dedication,Niveau d'engagement et de dévouement professionnel
+GO 🟢,GO 🟢
+Compliance with operational instructions,Conformité aux consignes opérationnelles
+Demonstration of professional initiative,Démonstration d'initiative professionnelle
+Result,Résultat
+Compliance with defined quality standards,Conformité aux normes de qualité
+😕 Pas très réactifs,😕 Pas très réactifs
+"✅ Q1 – Globalement, êtes-vous satisfait(e) de notre entreprise ?","✅ Q1 – Globalement, êtes-vous satisfait(e) de notre entreprise ?"
+Cross-functional collaboration and teamwork synergy,Collaboration interfonctionnelle et synergie d'équipe
+Organizational skills and workflow management,Compétences organisationnelles et gestion du flux de travail
+Clarity and efficiency in organizational communication,Clarté et efficacité de la communication organisationnelle
+Decision-making efficiency and relevance,Efficacité et pertinence de la prise de décision
+Achievement rate of assigned objectives,Taux d'atteinte des objectifs assignés
+Strict adherence to established standard operating procedures,Respect strict des procédures opératoires
+🙂 Assez bien,🙂 Assez bien
+Proactive problem-solving and anticipation of potential risks,Résolution proactive des problèmes et anticipation des risques
+Leadership and team motivation capabilities,Capacités de leadership et de motivation d'équipe
+Receptiveness to constructive feedback and capacity for self-assessment,Réceptivité aux retours constructifs et auto-évaluation
+Nom & Prénom,Nom & Prénom
+Report Month,Mois du rapport
+🟦 SECTION 2 — Exigences,🟦 SECTION 2 — Exigences
+Execution efficiency and speed,Efficacité et rapidité d'exécution
+Punctuality and strict adherence to work schedules,Ponctualité et respect strict des horaires
+Customer Requirements Review,Revue des exigences client
+Meticulousness and operational rigor in execution,Minutie et rigueur opérationnelle
+Clarity of professional goals and efforts deployed towards their achievement,Clarté des objectifs professionnels et efforts déployés
+Monthly Activity Report,Rapport d'activité mensuel
+❌ Certainement pas,❌ Certainement pas
+🟦 SECTION 3 — Avis du Commercial,🟦 SECTION 3 — Avis du Commercial
+😠 Très insatisfait,😠 Très insatisfait
+Quality of executed work,Qualité du travail exécuté
+🟦 SECTION 1 — Informations Client,🟦 SECTION 1 — Informations Client
+Adaptability to operational changes,Adaptabilité aux changements opérationnels
+ACHAT LOCAL & IMPORTATION,ACHAT LOCAL & IMPORTATION
+😊 Très satisfait,😊 Très satisfait
+Conflict management and resolution skills within the team,Gestion et résolution de conflits au sein de l'équipe
+"✅ Q3 – Globalement, nos commerciaux répondent-ils à vos besoins ?","✅ Q3 – Globalement, nos commerciaux répondent-ils à vos besoins ?"
+Capacity for effective teamwork,Capacité à travailler efficacement en équipe
+Diligent tracking and monitoring of defined objectives,Suivi assidu et contrôle des objectifs
+Engagement in continuous professional development and training,Engagement dans le développement professionnel continu
+Prospection Sheet,Fiche de prospection
+Ability to deliver outcomes within prescribed deadlines,Capacité à livrer des résultats dans les délais

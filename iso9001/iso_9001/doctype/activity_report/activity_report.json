@@ -102,8 +102,8 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-25 14:53:58.187077",
- "modified_by": "Administrator",
+ "modified": "2026-06-11 10:33:20.610940",
+ "modified_by": "farid-info@gmail.com",
  "module": "ISO 9001",
  "name": "Activity Report",
  "naming_rule": "Expression",
@@ -118,6 +118,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
    "share": 1,
    "write": 1
   }

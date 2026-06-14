@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PR-{title}",
+ "creation": "2026-06-14 16:43:21.928816",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identification",
+  "title",
+  "department",
+  "column_break_id_1",
+  "version",
+  "status",
+  "section_validation",
+  "creation_date",
+  "author",
+  "author_role",
+  "column_break_val_1",
+  "approval_date",
+  "approver",
+  "approver_role",
+  "section_content",
+  "purpose",
+  "scope",
+  "references",
+  "definitions_abbreviations",
+  "activity_description",
+  "section_responsibilities",
+  "responsibility_table",
+  "section_files",
+  "original_file",
+  "associated_documents",
+  "section_history",
+  "revision_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identification",
+   "fieldtype": "Section Break",
+   "label": "Identification"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_id_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "V0",
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nUnder Review\nApproved\nArchived\nObsolete"
+  },
+  {
+   "fieldname": "section_validation",
+   "fieldtype": "Section Break",
+   "label": "Creation and Approval"
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Link",
+   "label": "Author",
+   "options": "Employee"
+  },
+  {
+   "default": "QMR",
+   "fieldname": "author_role",
+   "fieldtype": "Data",
+   "label": "Author Role"
+  },
+  {
+   "fieldname": "column_break_val_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver",
+   "options": "Employee"
+  },
+  {
+   "default": "General Manager",
+   "fieldname": "approver_role",
+   "fieldtype": "Data",
+   "label": "Approver Role"
+  },
+  {
+   "fieldname": "section_content",
+   "fieldtype": "Section Break",
+   "label": "Procedure Content"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Text Editor",
+   "label": "1. Purpose / Principle"
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Text Editor",
+   "label": "2. Scope of Application"
+  },
+  {
+   "fieldname": "references",
+   "fieldtype": "Small Text",
+   "label": "3. References "
+  },
+  {
+   "fieldname": "definitions_abbreviations",
+   "fieldtype": "Text Editor",
+   "label": "4. Definitions and Abbreviations"
+  },
+  {
+   "fieldname": "activity_description",
+   "fieldtype": "Text Editor",
+   "label": "5. Description of Activities / Process Flow"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_responsibilities",
+   "fieldtype": "Section Break",
+   "label": "6. Responsibilities"
+  },
+  {
+   "fieldname": "responsibility_table",
+   "fieldtype": "Table",
+   "label": "Responsibility Table",
+   "options": "Procedure Responsibility"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_files",
+   "fieldtype": "Section Break",
+   "label": "7. Associated Documents and Files"
+  },
+  {
+   "fieldname": "original_file",
+   "fieldtype": "Attach",
+   "label": "Original File (.docx)"
+  },
+  {
+   "fieldname": "associated_documents",
+   "fieldtype": "Small Text",
+   "label": "Associated Documents (forms, records...)"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_history",
+   "fieldtype": "Section Break",
+   "label": "8. Revision History"
+  },
+  {
+   "fieldname": "revision_history",
+   "fieldtype": "Table",
+   "label": "Revision History",
+   "options": "Procedure Revision History"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Process",
+   "options": "Process sheet",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-14 18:24:27.173401",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Procedure",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

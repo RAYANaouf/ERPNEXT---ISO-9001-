@@ -17,7 +17,11 @@
   "service_reactivity",
   "customer_duration",
   "future_relationship",
-  "recommendation_probability"
+  "recommendation_probability",
+  "results_section",
+  "satisfaction_score",
+  "satisfaction_level",
+  "recommended_action"
  ],
  "fields": [
   {
@@ -95,12 +99,40 @@
    "fieldtype": "Select",
    "label": "\u2705 Q8 \u2013 Recommanderiez-vous notre entreprise ?",
    "options": "\ud83d\udc4d Assez probable\n\ud83e\udd14 Peu probable\n\u274c Certainement pas"
+  },
+  {
+   "fieldname": "results_section",
+   "fieldtype": "Section Break",
+   "label": "R\u00e9sultats"
+  },
+  {
+   "bold": 1,
+   "fieldname": "satisfaction_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Note de satisfaction (%)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "satisfaction_level",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Niveau de satisfaction",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "recommended_action",
+   "fieldtype": "Data",
+   "label": "D\u00e9cision",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-22 07:50:37.189314",
+ "modified": "2026-09-16 15:56:01.842455",
  "modified_by": "Administrator",
  "module": "ISO 9001",
  "name": "Customer Satisfaction Survey",

@@ -3,52 +3,34 @@
 
 const IT_INDICATORS = [
 	{
-		indicator: "Taux de disponibilité ERP / réseau",
-		calculation_formula: "(Temps de fonctionnement / Temps total prévu) × 100",
+		indicator: "Taux de disponibilité ERP",
+		calculation_formula: "(Heures d'accessibilité ERP / Heures de travail prévues) × 100",
 		target: "≥ 98 %",
 		frequency: "Mensuelle",
 	},
 	{
-		indicator: "Nombre de pannes majeures",
-		calculation_formula: "Nombre de pannes bloquantes (ERP, serveur, réseau) sur la période",
-		target: "≤ 3 / mois",
-		frequency: "Mensuelle",
-	},
-	{
-		indicator: "Délai moyen de rétablissement (MTTR)",
-		calculation_formula: "(Somme des durées d'arrêt / Nombre de pannes)",
-		target: "≤ 4 heures",
-		frequency: "Mensuelle",
-	},
-	{
 		indicator: "Taux de sauvegardes réussies",
-		calculation_formula: "(Nombre de sauvegardes réussies / Nombre de sauvegardes planifiées) × 100",
+		calculation_formula: "(Sauvegardes réussies / Sauvegardes prévues) × 100",
 		target: "100 %",
 		frequency: "Mensuelle",
 	},
 	{
-		indicator: "Nombre d'incidents de sécurité",
-		calculation_formula: "Nombre d'incidents de sécurité (accès non autorisé, virus, perte de données)",
-		target: "0 incident majeur",
-		frequency: "Mensuelle",
-	},
-	{
-		indicator: "Taux de réalisation des mises à jour / maintenances",
-		calculation_formula: "(Mises à jour réalisées / Mises à jour planifiées) × 100",
-		target: "100 %",
-		frequency: "Mensuelle",
-	},
-	{
-		indicator: "Taux de traitement des demandes IT",
-		calculation_formula: "(Demandes clôturées dans le délai / Demandes reçues) × 100",
+		indicator: "Taux de demandes utilisateurs traitées",
+		calculation_formula: "(Demandes clôturées / Demandes reçues) × 100 — anomalies, demandes d'assistance et accompagnement utilisateurs",
 		target: "≥ 90 %",
 		frequency: "Mensuelle",
 	},
 	{
-		indicator: "Réalisation du test PRA / continuité d'activité",
-		calculation_formula: "Test du plan de reprise réalisé selon la planification annuelle",
-		target: "1 test / an conforme",
-		frequency: "Annuelle",
+		indicator: "Taux de réalisation des évolutions ERP",
+		calculation_formula: "(Évolutions livrées / Évolutions planifiées) × 100 — rapports, fonctions, applications",
+		target: "≥ 80 %",
+		frequency: "Mensuelle",
+	},
+	{
+		indicator: "Formations IT / ERP réalisées",
+		calculation_formula: "Nombre de sessions de formation ERP réalisées dans la période",
+		target: "≥ 1 / trimestre",
+		frequency: "Trimestrielle",
 	},
 ];
 

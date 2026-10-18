@@ -1,0 +1,51 @@
+{
+ "cards": [
+  {
+   "card": "TBQ Disponibilite ERP"
+  },
+  {
+   "card": "TBQ Sauvegardes"
+  },
+  {
+   "card": "TBQ Demandes Support"
+  },
+  {
+   "card": "TBQ Evolutions ERP"
+  },
+  {
+   "card": "TBQ Formations IT"
+  },
+  {
+   "card": "TBQ Support Ouvert"
+  },
+  {
+   "card": "TBQ Pannes ERP"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "TBQ Issues par type",
+   "width": "Half"
+  },
+  {
+   "chart": "TBQ Support par statut",
+   "width": "Half"
+  },
+  {
+   "chart": "TBQ Evolutions par statut",
+   "width": "Full"
+  }
+ ],
+ "creation": "2026-10-04 18:20:00.000000",
+ "dashboard_name": "TBQ IT",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2026-10-04 18:20:00.000000",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "TBQ IT",
+ "owner": "Administrator"
+}

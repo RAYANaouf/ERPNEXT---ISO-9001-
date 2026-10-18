@@ -84,6 +84,7 @@ app_license = "mit"
 
 # before_install = "iso9001.install.before_install"
 # after_install = "iso9001.install.after_install"
+after_migrate = ["iso9001.iso_9001.it_kpi.after_migrate"]
 
 # Uninstallation
 # ------------
@@ -276,6 +277,12 @@ fixtures = [
     },
     {
         'dt': 'Workflow',   
+    },
+    {
+        'dt': 'Workspace',
+        'filters': [
+            ["module" , "in" , ["ISO 9001"]],
+        ]
     },
 ]
 

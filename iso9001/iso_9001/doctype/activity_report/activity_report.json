@@ -132,6 +132,10 @@
    "role": "Stock Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
   }
  ],
  "row_format": "Dynamic",

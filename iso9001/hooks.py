@@ -126,6 +126,14 @@ after_migrate = ["iso9001.iso_9001.it_kpi.after_migrate"]
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
+permission_query_conditions = {
+	"Activity Report": "iso9001.iso_9001.doctype.activity_report.activity_report.activity_report_query_conditions"
+}
+
+has_permission = {
+	"Activity Report": "iso9001.iso_9001.doctype.activity_report.activity_report.activity_report_has_permission"
+}
+
 # DocType Class
 # ---------------
 # Override standard doctype classes

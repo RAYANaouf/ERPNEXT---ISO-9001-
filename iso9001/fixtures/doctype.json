@@ -6161,7 +6161,7 @@
     "bold": 0,
     "collapsible": 0,
     "collapsible_depends_on": null,
-    "columns": 0,
+    "columns": 6,
     "default": null,
     "depends_on": null,
     "description": null,
@@ -6217,6 +6217,23 @@
     "trigger": null,
     "unique": 0,
     "width": null
+   },
+   {
+    "columns": 2,
+    "fieldname": "user",
+    "fieldtype": "Link",
+    "in_list_view": 1,
+    "label": "User",
+    "options": "User"
+   },
+   {
+    "columns": 2,
+    "fetch_from": "user.full_name",
+    "fieldname": "user_name",
+    "fieldtype": "Data",
+    "in_list_view": 1,
+    "label": "Full Name",
+    "read_only": 1
    }
   ],
   "force_re_route_to_default_view": 0,

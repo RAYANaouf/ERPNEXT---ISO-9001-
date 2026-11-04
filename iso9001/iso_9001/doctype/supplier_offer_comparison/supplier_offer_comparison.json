@@ -1,0 +1,246 @@
+{
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Supplier Offer Comparison",
+ "module": "ISO 9001",
+ "field_order": [
+  "purchase_invoice",
+  "company",
+  "invoice_column",
+  "invoice_date",
+  "families_section",
+  "optical_lenses",
+  "accessories",
+  "family_column",
+  "products",
+  "miscellaneous",
+  "scoring_section",
+  "price_weight",
+  "delivery_weight",
+  "weights_column",
+  "quality_weight",
+  "payment_weight",
+  "offers_section",
+  "offers",
+  "result_section",
+  "scoring_summary",
+  "opinion_section",
+  "department_opinion",
+  "visas_section",
+  "department_visa_name",
+  "department_visa_date",
+  "visa_column",
+  "purchase_visa_name",
+  "purchase_visa_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Posting Date",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "families_section",
+   "fieldtype": "Section Break",
+   "label": "Product Families"
+  },
+  {
+   "fieldname": "optical_lenses",
+   "fieldtype": "Check",
+   "label": "Optical Lenses",
+   "default": "0"
+  },
+  {
+   "fieldname": "accessories",
+   "fieldtype": "Check",
+   "label": "Accessories",
+   "default": "0"
+  },
+  {
+   "fieldname": "family_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "products",
+   "fieldtype": "Check",
+   "label": "Products",
+   "default": "0"
+  },
+  {
+   "fieldname": "miscellaneous",
+   "fieldtype": "Check",
+   "label": "Miscellaneous",
+   "default": "0"
+  },
+  {
+   "fieldname": "scoring_section",
+   "fieldtype": "Section Break",
+   "label": "Offer Scoring"
+  },
+  {
+   "fieldname": "price_weight",
+   "fieldtype": "Int",
+   "label": "Price Weight (%)",
+   "default": "25",
+   "non_negative": 1,
+   "description": "The weighted score is out of 100. A weight of 0 excludes the criterion."
+  },
+  {
+   "fieldname": "delivery_weight",
+   "fieldtype": "Int",
+   "label": "Delivery Weight (%)",
+   "default": "25",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "weights_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quality_weight",
+   "fieldtype": "Int",
+   "label": "Product Quality Weight (%)",
+   "default": "25",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "payment_weight",
+   "fieldtype": "Int",
+   "label": "Payment Terms Weight (%)",
+   "default": "25",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "offers_section",
+   "fieldtype": "Section Break",
+   "label": "Supplier Offers"
+  },
+  {
+   "fieldname": "offers",
+   "fieldtype": "Table",
+   "label": "Supplier Offers",
+   "options": "Supplier Comparison Offer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "result_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scoring_summary",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "opinion_section",
+   "fieldtype": "Section Break",
+   "label": "User Department Opinion"
+  },
+  {
+   "fieldname": "department_opinion",
+   "fieldtype": "Small Text",
+   "label": "User Department Opinion"
+  },
+  {
+   "fieldname": "visas_section",
+   "fieldtype": "Section Break",
+   "label": "Visas"
+  },
+  {
+   "fieldname": "department_visa_name",
+   "fieldtype": "Data",
+   "label": "User Department Visa Name"
+  },
+  {
+   "fieldname": "department_visa_date",
+   "fieldtype": "Date",
+   "label": "User Department Visa Date"
+  },
+  {
+   "fieldname": "visa_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchase_visa_name",
+   "fieldtype": "Data",
+   "label": "Purchasing Manager Visa Name"
+  },
+  {
+   "fieldname": "purchase_visa_date",
+   "fieldtype": "Date",
+   "label": "Purchasing Manager Visa Date"
+  }
+ ],
+ "autoname": "format:TCO-{#####}",
+ "naming_rule": "Expression",
+ "default_print_format": "Tableau comparatif des offres",
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "permissions": [
+  {
+   "role": "Accounts User",
+   "read": 1,
+   "create": 1,
+   "write": 1,
+   "print": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "create": 1,
+   "write": 1,
+   "print": 1
+  },
+  {
+   "role": "Purchase User",
+   "read": 1,
+   "create": 1,
+   "write": 1,
+   "print": 1
+  },
+  {
+   "role": "Purchase Manager",
+   "read": 1,
+   "create": 1,
+   "write": 1,
+   "print": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "create": 1,
+   "write": 1,
+   "print": 1,
+   "delete": 1
+  },
+  {
+   "role": "Auditor",
+   "read": 1,
+   "print": 1
+  }
+ ]
+}

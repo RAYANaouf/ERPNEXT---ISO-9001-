@@ -1,0 +1,275 @@
+<style>
+	.print-format {
+		page-size: A4;
+		orientation: Landscape;
+		margin-top: 37mm;
+		margin-right: 23mm;
+		margin-bottom: 15mm;
+		margin-left: 7mm;
+		header-spacing: 1;
+		width: auto !important;
+		max-width: none !important;
+		min-height: 0 !important;
+		padding: 0 !important;
+		font-family: Arial, "Liberation Sans", sans-serif;
+		color: #000;
+	}
+
+	/* The PDF engine also reads the paper margins from .print-format. */
+	body { padding: 0 !important; }
+	.print-format-gutter > .print-format, body > .print-format { margin: 0 !important; }
+
+	@page { size: A4 landscape; margin: 18mm 23mm 15mm 7mm; }
+
+	.word-form, .word-masthead { font-family: Arial, "Liberation Sans", sans-serif; color: #000; font-weight: normal; }
+	.word-form { font-size: 12pt; line-height: 1.15; }
+	.word-form p { margin: 0; }
+
+	.word-masthead {
+		width: 237.6mm;
+		margin: 0 0 0 22.6mm;
+		border-collapse: collapse;
+		table-layout: fixed;
+		font-size: 11pt;
+		line-height: 1.05;
+	}
+	.print-format .word-masthead td {
+		border: 1px solid #000 !important;
+		padding: 0.25mm 1mm !important;
+	}
+	.print-format .word-masthead .masthead-logo { text-align: center; vertical-align: middle !important; }
+	.print-format .word-masthead .masthead-logo img {
+		display: block;
+		width: 41mm !important;
+		height: auto;
+		margin: 0 auto;
+	}
+	.print-format .word-masthead .masthead-title {
+		text-align: center;
+		vertical-align: top;
+		padding-top: 4.6mm !important;
+		font-size: 10.4pt;
+		font-weight: bold;
+	}
+	.word-masthead .masthead-ref { height: 4.65mm; vertical-align: middle; }
+	.word-masthead .masthead-page { height: 8mm; vertical-align: top; }
+
+	.word-first-body { padding-top: 15mm; }
+	.word-inset { margin-left: 18mm; margin-right: 2mm; }
+	.word-form .word-record {
+		margin-bottom: 8.5mm;
+		font-size: 9pt;
+		line-height: 1.1;
+	}
+	.word-form .word-families { margin-bottom: 5.4mm; font-size: 11.5pt; }
+	.word-families strong { font-size: 11pt; }
+	.word-family { display: inline-block; margin-left: 3mm; white-space: nowrap; }
+	.word-checkbox {
+		display: inline-block;
+		box-sizing: border-box;
+		width: 5mm;
+		height: 4.4mm;
+		line-height: 3.9mm;
+		margin-right: 1.7mm;
+		border: 1px solid #000 !important;
+		text-align: center;
+		font-size: 10pt;
+		vertical-align: 0.1mm;
+	}
+
+	.word-grid { width: 100%; border-collapse: collapse; table-layout: fixed; }
+	.print-format .word-grid th, .print-format .word-grid td {
+		border: 1px solid #000 !important;
+		padding: 0.6mm 1.9mm !important;
+		line-height: 1.12;
+		vertical-align: middle !important;
+		word-wrap: break-word;
+	}
+	.print-format .word-grid th { font-size: 11pt; text-align: left; color: #000 !important; font-weight: bold; }
+	.word-grid td { font-size: 9.5pt; white-space: pre-line; }
+	.word-grid tr { page-break-inside: avoid; }
+	.word-grid .word-suppliers { height: 9.7mm; }
+	.print-format .word-grid .word-suppliers th { font-size: 12pt; }
+	.word-grid .word-short-row { height: 5.3mm; }
+	.word-grid .word-tall-row { height: 7.4mm; }
+	.word-weight, .word-rating { font-size: 8.5pt; font-weight: normal; white-space: nowrap; }
+
+	.word-form .word-scores { font-size: 8.5pt; margin-bottom: 4.8mm; }
+	.word-with-scores .word-record { margin-bottom: 0.8mm; }
+	.word-delivery-label { font-size: 10.3pt; }
+	.word-opinion { margin-top: 9.5mm; }
+	.word-with-scores .word-opinion { margin-top: 3.5mm; }
+	.word-opinion h2 {
+		font-family: inherit;
+		font-size: 14pt;
+		font-weight: bold;
+		text-decoration: underline;
+		margin: 0;
+	}
+	.word-form .word-line {
+		min-height: 4.5mm;
+		padding: 0.6mm 0;
+		border-bottom: 0.75pt dotted #000;
+		white-space: pre-line;
+		overflow-wrap: break-word;
+	}
+	.word-form .word-filled { font-size: 10pt; }
+	.word-form .word-preamble { font-size: 10.5pt; letter-spacing: -0.1px; }
+	.word-user-visa {
+		margin-top: 5.5mm;
+		text-align: right;
+		page-break-inside: avoid;
+	}
+	.word-selected { margin-top: 19mm; page-break-inside: avoid; }
+	.word-with-scores .word-user-visa, .word-with-scores .word-selected { margin-top: 3mm; }
+	.word-second { page-break-before: always; }
+	.word-purchase-visa { width: 74mm; margin: 1.5mm 0 0 auto; }
+	.word-visa-tag { float: right; }
+
+	@media screen {
+		body > .print-format.print-format-preview,
+		.print-format-gutter > .print-format {
+			width: 100% !important;
+			max-width: 297mm !important;
+			margin: 0 auto !important;
+			background-color: #ebebeb;
+		}
+		.word-form { overflow-wrap: anywhere; }
+		.word-sheet {
+			box-sizing: border-box;
+			min-height: min(70.71vw, 210mm);
+			padding: 6.06% 7.74% 5.05% 2.36%;
+			background: #fff;
+		}
+		.word-sheet + .word-sheet { margin-top: 20px; }
+		.word-masthead { width: 89%; margin-left: 8.45%; }
+		.word-masthead td { overflow-wrap: anywhere; }
+		.print-format .word-masthead .masthead-logo img { max-width: 85% !important; }
+		.word-first-body { padding-top: clamp(15px, 5vw, 15mm); }
+		.word-purchase-visa { max-width: 100%; }
+	}
+</style>
+
+{% macro masthead(page_number) %}
+<table class="word-masthead" aria-label="En-tête Optilens">
+	<colgroup><col style="width: 21.6%;"><col style="width: 58.5%;"><col style="width: 19.9%;"></colgroup>
+	<tr>
+		<td rowspan="3" class="masthead-logo"><img src="/assets/iso9001/images/optilens.png" alt="Optilens"></td>
+		<td rowspan="3" class="masthead-title">TABLEAU COMPARATIF DES OFFRES</td>
+		<td class="masthead-ref">N°&nbsp;: {{ (doc.name or "") | e }}</td>
+	</tr>
+	<tr><td class="masthead-ref">Date&nbsp;: {{ frappe.utils.formatdate(doc.creation, "dd.MM.yyyy") | e if doc.creation else "" }}</td></tr>
+	<tr><td class="masthead-page">Page&nbsp;: <span class="page">{{ page_number }}</span> sur <span class="topage">2</span></td></tr>
+</table>
+{% endmacro %}
+
+{% set scoring = doc.get_scoring_result() %}
+{% macro criterion(label, field, key, row_class) %}
+	<tr class="{{ row_class }}">
+		<th scope="row">{{ label }}{% if scoring.has_ratings %} <span class="word-weight">({{ scoring.weights[key] }}&nbsp;%)</span>{% endif %}</th>
+		{% for index in range(3) %}
+			{% set offer = doc.offers[index] if index < doc.offers|length else none %}
+			<td>
+				{%- if offer and field == "price" -%}
+					{{ frappe.utils.fmt_money(offer.price, precision=offer.precision("price")) | e }} {{ offer.currency | e }}
+				{%- elif offer and field == "delivery_days" -%}
+					{{ offer.delivery_days if offer.delivery_days is not none else "" }}
+				{%- elif offer -%}
+					{{ (offer.get(field) or "") | e }}
+				{%- endif -%}
+				{%- if offer and offer.get(key ~ "_rating") -%}
+					{% if field in ("price", "delivery_days") %} · {% elif offer.get(field) %}<br>{% endif %}<span class="word-rating">Note {{ offer.get(key ~ "_rating")[0] | e }}/5</span>
+				{%- endif -%}
+			</td>
+		{% endfor %}
+	</tr>
+{% endmacro %}
+
+<div class="word-form{% if scoring.has_ratings %} word-with-scores{% endif %}">
+	<section class="word-sheet">
+		<div id="header-html" class="hidden-pdf">{{ masthead(1) }}</div>
+		<div class="word-first-body">
+			<div class="word-inset">
+				<p class="word-record">
+					{{ doc.company | e }} &nbsp;·&nbsp; {{ doc.name | e }} &nbsp;·&nbsp;
+					Facture d’achat {{ doc.purchase_invoice | e }} du {{ frappe.utils.formatdate(doc.invoice_date, "dd.MM.yyyy") | e }}
+				</p>
+				{% if scoring.has_ratings %}
+					<p class="word-scores">
+						<strong>Scores / 100</strong>
+						{% for offer in doc.offers %}
+							{% set score = scoring.scores[loop.index0] %}
+							{{ " · " }}{{ offer.supplier_name | e }} {{ frappe.utils.fmt_money(score, precision=1, format="# ###,##") | e if score is not none else "à compléter" }}
+						{% endfor %}
+						{% if scoring.winners %}
+							&nbsp;·&nbsp;<strong>{{ "Fournisseur recommandé" if scoring.winners|length == 1 else "Fournisseurs ex æquo" }}</strong> · {{ scoring.winners | join(", ") | e }}
+						{% else %}
+							&nbsp;·&nbsp; Évaluation des offres à compléter.
+						{% endif %}
+					</p>
+				{% endif %}
+				<p class="word-families">
+					<strong><u>Famille de Produit</u></strong>&nbsp;:
+					{% for chosen, label in [
+						(doc.optical_lenses, "Verres optiques."),
+						(doc.accessories, "Accessoires"),
+						(doc.products, "Produits"),
+						(doc.miscellaneous, "Divers")
+					] %}
+						<span class="word-family"><span class="word-checkbox">{{ "X" if chosen else "&nbsp;" | safe }}</span>{{ label }}</span>
+					{% endfor %}
+				</p>
+			</div>
+
+			<table class="word-grid">
+				<colgroup><col style="width: 19.65%;"><col style="width: 26.78%;"><col style="width: 26.78%;"><col style="width: 26.79%;"></colgroup>
+				<thead>
+					<tr class="word-suppliers">
+						<th scope="col">FOURNISSEURS</th>
+						{% for index in range(3) %}
+							<th scope="col">{{ doc.offers[index].supplier_name | e if index < doc.offers|length else "" }}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+					{{ criterion("QUALITE DE PRODUIT", "product_quality", "quality", "word-short-row") }}
+					{{ criterion("PRIX", "price", "price", "word-short-row") }}
+					{{ criterion("MODALITE ET DELAIS<br>DE PAIEMENT" | safe, "payment_terms", "payment", "word-tall-row") }}
+					{{ criterion("<span class='word-delivery-label'>DELAIS LIVRAISON(JRS)</span>" | safe, "delivery_days", "delivery", "word-tall-row") }}
+				</tbody>
+			</table>
+
+			<div class="word-inset">
+				<div class="word-opinion">
+					<h2>Avis service utilisateur&nbsp;:</h2>
+					<p class="word-preamble">Après analyse en matière de qualité les produits ci-dessus cités, nous, service utilisateur optant pour le(s) fournisseur(s) suivant(s)</p>
+					<p class="word-line word-filled">{{ (doc.department_opinion or "") | e }}</p>
+				</div>
+
+				<div class="word-user-visa">
+					<p>Visa du service utilisateur</p>
+					{% if doc.department_visa_name or doc.department_visa_date %}
+						<p class="word-filled">{{ (doc.department_visa_name or "") | e }}{% if doc.department_visa_date %} · {{ frappe.utils.formatdate(doc.department_visa_date, "dd.MM.yyyy") | e }}{% endif %}</p>
+					{% endif %}
+				</div>
+
+				<div class="word-selected">
+					<p><strong><u>Fournisseur(s) sélectionné(s)&nbsp;:</u></strong></p>
+					<p class="word-line">{% for offer in doc.offers if offer.selected_supplier %}{{ offer.supplier_name | e }}{{ ", " if not loop.last else "" }}{% endfor %}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="word-sheet word-second">
+		<div class="hidden-pdf">{{ masthead(2) }}</div>
+		<div class="word-inset">
+			<div class="word-purchase-visa">
+				<p>Responsable d’achat <span class="word-visa-tag">VISA</span></p>
+				{% if doc.purchase_visa_name or doc.purchase_visa_date %}
+					<p class="word-filled">{{ (doc.purchase_visa_name or "") | e }}{% if doc.purchase_visa_date %} · {{ frappe.utils.formatdate(doc.purchase_visa_date, "dd.MM.yyyy") | e }}{% endif %}</p>
+				{% endif %}
+			</div>
+		</div>
+	</section>
+</div>

@@ -53,6 +53,8 @@ app_license = "mit"
 # include app icons in desk
 # app_include_icons = "iso9001/public/icons.svg"
 
+doctype_js = {"Purchase Invoice": "public/js/purchase_invoice.js"}
+
 # Home Pages
 # ----------
 
@@ -84,7 +86,9 @@ app_license = "mit"
 
 # before_install = "iso9001.install.before_install"
 # after_install = "iso9001.install.after_install"
-after_migrate = ["iso9001.iso_9001.it_kpi.after_migrate"]
+after_migrate = [
+    "iso9001.iso_9001.it_kpi.after_migrate",
+]
 
 # Uninstallation
 # ------------
@@ -117,21 +121,14 @@ after_migrate = ["iso9001.iso_9001.it_kpi.after_migrate"]
 # Permissions
 # -----------
 # Permissions evaluated in scripted ways
-
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
-
 permission_query_conditions = {
-	"Activity Report": "iso9001.iso_9001.doctype.activity_report.activity_report.activity_report_query_conditions"
+    "Activity Report": "iso9001.iso_9001.doctype.activity_report.activity_report.activity_report_query_conditions",
+    "Employe Complaint": "iso9001.iso_9001.doctype.employe_complaint.employe_complaint.employee_complaint_query_conditions",
 }
 
 has_permission = {
-	"Activity Report": "iso9001.iso_9001.doctype.activity_report.activity_report.activity_report_has_permission"
+    "Activity Report": "iso9001.iso_9001.doctype.activity_report.activity_report.activity_report_has_permission",
+    "Employe Complaint": "iso9001.iso_9001.doctype.employe_complaint.employe_complaint.employee_complaint_has_permission",
 }
 
 # DocType Class
@@ -285,6 +282,14 @@ fixtures = [
     },
     {
         'dt': 'Workflow',   
+    },
+    {
+        'dt': 'Workflow State',
+        'filters': [["name", "in", ["Draft", "Submitted", "In Progress", "Resolved", "Closed", "Rejected", "Approved"]]],
+    },
+    {
+        'dt': 'Workflow Action Master',
+        'filters': [["name", "in", ["Submit Complaint", "Continue Processing", "Take in Charge", "Reject", "Resolve", "Reopen", "Close"]]],
     },
     {
         'dt': 'Workspace',

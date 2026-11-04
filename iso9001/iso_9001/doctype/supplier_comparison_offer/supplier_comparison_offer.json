@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 17:08:33.412119",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "supplier_name",
+  "product_quality",
+  "quality_rating",
+  "price",
+  "currency",
+  "price_rating",
+  "payment_terms",
+  "payment_rating",
+  "delivery_days",
+  "delivery_rating",
+  "selected_supplier"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "supplier_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier Name",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_quality",
+   "fieldtype": "Small Text",
+   "label": "Product Quality"
+  },
+  {
+   "fieldname": "quality_rating",
+   "fieldtype": "Select",
+   "label": "Product Quality Rating",
+   "options": "\n1 - Non-compliant\n2 - Poor\n3 - Acceptable quality\n4 - Good\n5 - Excellent"
+  },
+  {
+   "columns": 2,
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "options": "currency"
+  },
+  {
+   "columns": 2,
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_rating",
+   "fieldtype": "Select",
+   "label": "Price Rating",
+   "options": "\n1 - Very expensive\n2 - Expensive\n3 - Fair price\n4 - Competitive\n5 - Very competitive"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Small Text",
+   "label": "Payment Terms and Period"
+  },
+  {
+   "fieldname": "payment_rating",
+   "fieldtype": "Select",
+   "label": "Payment Terms Rating",
+   "options": "\n1 - Very unfavorable\n2 - Unfavorable\n3 - Acceptable terms\n4 - Favorable\n5 - Very favorable"
+  },
+  {
+   "columns": 2,
+   "fieldname": "delivery_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Delivery Lead Time (Days)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "delivery_rating",
+   "fieldtype": "Select",
+   "label": "Delivery Rating",
+   "options": "\n1 - Far too slow\n2 - Slow\n3 - Acceptable lead time\n4 - Fast\n5 - Very fast"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "selected_supplier",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Selected Supplier"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-04 17:17:31.747221",
+ "modified_by": "Administrator",
+ "module": "ISO 9001",
+ "name": "Supplier Comparison Offer",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

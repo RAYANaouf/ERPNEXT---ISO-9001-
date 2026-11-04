@@ -607,3 +607,63 @@ Actions d'amélioration exigées,Actions d'amélioration exigées
 Type,Type
 Partner,Partenaire
 Client,Client
+Supplier Offer Comparison,Tableau comparatif des offres
+Supplier Comparison Offer,Offre fournisseur à comparer
+Create Offer Comparison,Créer le tableau comparatif
+Invoice Posting Date,Date de comptabilisation de la facture
+Product Families,Familles de produits
+Optical Lenses,Verres optiques
+Accessories,Accessoires
+Miscellaneous,Divers
+Supplier Offers,Offres fournisseurs
+User Department Opinion,Avis du service utilisateur
+Visas,Visas
+User Department Visa Name,Nom pour le visa du service utilisateur
+User Department Visa Date,Date du visa du service utilisateur
+Purchasing Manager Visa Name,Nom pour le visa du responsable achats
+Purchasing Manager Visa Date,Date du visa du responsable achats
+Product Quality,Qualité du produit
+Payment Terms and Period,Modalités et délais de paiement
+Delivery Lead Time (Days),Délai de livraison (jours)
+Selected Supplier,Fournisseur sélectionné
+A purchase invoice is required.,Une facture d’achat est requise.
+Create the comparison from a submitted purchase invoice.,Créez le tableau à partir d’une facture d’achat validée.
+The source invoice details cannot be changed.,Les informations de la facture liée ne peuvent pas être modifiées.
+The comparison is read-only because the purchase invoice was cancelled.,La facture d’achat a été annulée. Le tableau est en lecture seule.
+Enter between one and three supplier offers.,Saisissez entre une et trois offres fournisseurs.
+Offer Scoring,Évaluation des offres
+Price Weight (%),Poids du prix (%)
+Delivery Weight (%),Poids du délai de livraison (%)
+Product Quality Weight (%),Poids de la qualité du produit (%)
+Payment Terms Weight (%),Poids des conditions de paiement (%)
+Price Rating,Note du prix
+Delivery Rating,Note du délai de livraison
+Product Quality Rating,Note de la qualité du produit
+Payment Terms Rating,Note des conditions de paiement
+The weights must be between 0 and 100 and add up to 100%.,Les poids doivent être compris entre 0 et 100 et totaliser 100 %.
+Rate all weighted criteria for each offer to see the recommendation.,Notez les critères pondérés de chaque offre pour afficher la recommandation.
+Recommended supplier,Fournisseur recommandé
+Tied for first place,Fournisseurs ex æquo
+Offer {0},Offre {0}
+Rating incomplete,Notation incomplète
+The weighted score is out of 100. A weight of 0 excludes the criterion.,Le score pondéré est sur 100. Un poids de 0 écarte le critère.
+1 - Very expensive,1 - Très cher
+2 - Expensive,2 - Cher
+3 - Fair price,3 - Prix correct
+4 - Competitive,4 - Compétitif
+5 - Very competitive,5 - Très compétitif
+1 - Far too slow,1 - Beaucoup trop long
+2 - Slow,2 - Long
+3 - Acceptable lead time,3 - Délai acceptable
+4 - Fast,4 - Rapide
+5 - Very fast,5 - Très rapide
+1 - Non-compliant,1 - Non conforme
+2 - Poor,2 - Insuffisante
+3 - Acceptable quality,3 - Qualité acceptable
+4 - Good,4 - Bonne
+5 - Excellent,5 - Excellente
+1 - Very unfavorable,1 - Très défavorables
+2 - Unfavorable,2 - Défavorables
+3 - Acceptable terms,3 - Conditions acceptables
+4 - Favorable,4 - Favorables
+5 - Very favorable,5 - Très favorables

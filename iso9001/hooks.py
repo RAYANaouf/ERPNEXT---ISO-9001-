@@ -53,6 +53,8 @@ app_license = "mit"
 # include app icons in desk
 # app_include_icons = "iso9001/public/icons.svg"
 
+doctype_js = {"Purchase Invoice": "public/js/purchase_invoice.js"}
+
 # Home Pages
 # ----------
 

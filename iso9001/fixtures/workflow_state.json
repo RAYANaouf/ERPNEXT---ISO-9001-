@@ -1,51 +1,65 @@
 [
  {
+  "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Draft",
-  "workflow_state_name": "Draft",
   "style": "",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_state_name": "Draft"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Submitted",
-  "workflow_state_name": "Submitted",
   "style": "Primary",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_state_name": "Submitted"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "In Progress",
-  "workflow_state_name": "In Progress",
   "style": "Warning",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_state_name": "In Progress"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Resolved",
-  "workflow_state_name": "Resolved",
   "style": "Success",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_state_name": "Resolved"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Closed",
-  "workflow_state_name": "Closed",
   "style": "Success",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_state_name": "Closed"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Rejected",
-  "workflow_state_name": "Rejected",
   "style": "Danger",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_state_name": "Rejected"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Approved",
-  "workflow_state_name": "Approved",
   "style": "Success",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_state_name": "Approved"
  }
 ]

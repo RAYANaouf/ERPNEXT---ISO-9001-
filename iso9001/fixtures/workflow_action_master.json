@@ -1,44 +1,51 @@
 [
  {
+  "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Submit Complaint",
-  "workflow_action_name": "Submit Complaint",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_action_name": "Submit Complaint"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Continue Processing",
-  "workflow_action_name": "Continue Processing",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_action_name": "Continue Processing"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Take in Charge",
-  "workflow_action_name": "Take in Charge",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_action_name": "Take in Charge"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Reject",
-  "workflow_action_name": "Reject",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_action_name": "Reject"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Resolve",
-  "workflow_action_name": "Resolve",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_action_name": "Resolve"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Reopen",
-  "workflow_action_name": "Reopen",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_action_name": "Reopen"
  },
  {
+  "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2026-10-21 18:10:32.376219",
   "name": "Close",
-  "workflow_action_name": "Close",
-  "modified": "2026-10-21 18:10:32.376219"
+  "workflow_action_name": "Close"
  }
 ]

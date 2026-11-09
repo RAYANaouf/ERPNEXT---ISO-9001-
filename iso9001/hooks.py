@@ -55,6 +55,12 @@ app_license = "mit"
 
 doctype_js = {"Purchase Invoice": "public/js/purchase_invoice.js"}
 
+doc_events = {
+    "Issue": {
+        "validate": "iso9001.iso_9001.it_kpi.validate_issue_outage_times",
+    },
+}
+
 # Home Pages
 # ----------
 

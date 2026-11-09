@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "creation": "2026-11-09 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "day_of_week",
+  "is_working_day",
+  "start_time",
+  "end_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "day_of_week",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Jour de la semaine",
+   "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_working_day",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Jour travaillé"
+  },
+  {
+   "depends_on": "eval:doc.is_working_day",
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Début du service"
+  },
+  {
+   "depends_on": "eval:doc.is_working_day",
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Fin du service"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "module": "ISO 9001",
+ "name": "TBQ IT Working Day",
+ "owner": "Administrator",
+ "permissions": []
+}

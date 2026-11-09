@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "creation": "2026-11-09 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "schedule_section",
+  "weekly_schedule",
+  "holiday_list",
+  "setup_complete"
+ ],
+ "fields": [
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Horaire de service ERP"
+  },
+  {
+   "fieldname": "weekly_schedule",
+   "fieldtype": "Table",
+   "label": "Horaire hebdomadaire",
+   "options": "TBQ IT Working Day"
+  },
+  {
+   "fieldname": "holiday_list",
+   "fieldtype": "Link",
+   "label": "Liste des jours fériés (facultatif)",
+   "options": "Holiday List"
+  },
+  {
+   "default": "0",
+   "fieldname": "setup_complete",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Horaire initialisé",
+   "read_only": 1
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "module": "ISO 9001",
+ "name": "TBQ IT Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Support Team"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

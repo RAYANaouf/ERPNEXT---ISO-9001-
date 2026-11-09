@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import os
 import re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, time as datetime_time, timedelta
 
 import frappe
 from frappe.utils import (
@@ -24,16 +24,17 @@ from frappe.utils import (
 	get_quarter_ending,
 	get_quarter_start,
 	getdate,
+	get_time,
 	now_datetime,
 )
 
 IT_PROJECT_NAME = "SUPPORT IT"
 ISSUE_PANNE = "Panne ERP"
 ISSUE_SUPPORT = "Support"
-HOURS_PER_DAY = 8
 CLOSED_SUPPORT = ("Resolved", "Closed")
 CLOSED_TASK = ("Completed",)
 CANCELLED_TASK = ("Cancelled", "Template")
+WEEK_DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
 BACKUP_NAME_RE = re.compile(r"(20\d{2})[-_](\d{2})[-_](\d{2})")
 
@@ -101,10 +102,122 @@ def card_formations(filters=None):
 
 
 def after_migrate():
-	try:
-		install_dashboard()
-	except Exception:
-		frappe.log_error(title="SUPPORT IT — after_migrate")
+	for title, method in (
+		("horaires TBQ IT", ensure_it_schedule),
+		("champs de panne ERP", ensure_issue_outage_fields),
+		("tableau de bord TBQ IT", install_dashboard),
+	):
+		try:
+			method()
+		except Exception:
+			frappe.log_error(title=f"SUPPORT IT — {title}")
+
+
+def ensure_it_schedule():
+	if not frappe.db.exists("DocType", "TBQ IT Settings"):
+		return
+
+	settings = frappe.get_single("TBQ IT Settings")
+	if settings.setup_complete and settings.weekly_schedule:
+		return
+
+	if not settings.weekly_schedule:
+		for day in WEEK_DAYS:
+			settings.append(
+				"weekly_schedule",
+				{
+					"day_of_week": day,
+					"is_working_day": 1,
+					"start_time": "06:00:00",
+					"end_time": "20:00:00",
+				},
+			)
+	settings.setup_complete = 1
+	settings.save(ignore_permissions=True)
+
+
+def ensure_issue_outage_fields():
+	if not frappe.db.exists("DocType", "Issue"):
+		return
+
+	role_read_only = 'eval:frappe.session.user != "Administrator" && !frappe.user.has_role("Support Team") && !frappe.user.has_role("System Manager")'
+	fields = [
+		{
+			"fieldname": "custom_it_panne_section",
+			"fieldtype": "Section Break",
+			"label": "Horaires réels de la panne (IT)",
+			"insert_after": "resolution_time",
+			"depends_on": 'eval:doc.issue_type == "Panne ERP"',
+		},
+		{
+			"fieldname": "custom_it_panne_debut_reel",
+			"fieldtype": "Datetime",
+			"label": "Début réel de la panne",
+			"insert_after": "custom_it_panne_section",
+			"depends_on": 'eval:doc.issue_type == "Panne ERP"',
+			"read_only_depends_on": role_read_only,
+		},
+		{
+			"fieldname": "custom_it_panne_retablissement_reel",
+			"fieldtype": "Datetime",
+			"label": "Rétablissement réel",
+			"insert_after": "custom_it_panne_debut_reel",
+			"depends_on": 'eval:doc.issue_type == "Panne ERP"',
+			"read_only_depends_on": role_read_only,
+		},
+	]
+
+	for definition in fields:
+		filters = {"dt": "Issue", "fieldname": definition["fieldname"]}
+		name = frappe.db.get_value("Custom Field", filters, "name")
+		if name:
+			custom_field = frappe.get_doc("Custom Field", name)
+			custom_field.update(definition)
+			custom_field.module = "ISO 9001"
+			custom_field.save(ignore_permissions=True)
+		else:
+			frappe.get_doc(
+				{
+					"doctype": "Custom Field",
+					"dt": "Issue",
+					"module": "ISO 9001",
+					**definition,
+				}
+			).insert(ignore_permissions=True)
+
+	frappe.clear_cache(doctype="Issue")
+
+
+def validate_issue_outage_times(doc, method=None):
+	if doc.doctype != "Issue":
+		return
+
+	fields = ("custom_it_panne_debut_reel", "custom_it_panne_retablissement_reel")
+	before = doc.get_doc_before_save() if not doc.is_new() else None
+	changed = any(
+		(doc.get(fieldname) or None) != ((before.get(fieldname) or None) if before else None)
+		for fieldname in fields
+	)
+	roles = set(frappe.get_roles())
+	can_manage_times = frappe.session.user == "Administrator" or bool(
+		roles.intersection({"Support Team", "System Manager"})
+	)
+	if changed and not can_manage_times:
+		frappe.throw(
+			"Seule l'équipe IT (rôle Support Team) ou un administrateur système peut modifier les horaires réels d'une panne ERP.",
+			frappe.PermissionError,
+		)
+
+	start = doc.get(fields[0])
+	end = doc.get(fields[1])
+	if end and not start:
+		frappe.throw("Renseigne le début réel de la panne avant son rétablissement.")
+	if start and get_datetime(start) > now_datetime():
+		frappe.throw("Le début réel de la panne ne peut pas être dans le futur.")
+	if end and get_datetime(end) > now_datetime():
+		frappe.throw("Le rétablissement réel ne peut pas être dans le futur.")
+	if start and end and get_datetime(end) <= get_datetime(start):
+		frappe.throw("Le rétablissement réel doit être après le début réel de la panne.")
 
 
 def install_dashboard():
@@ -182,13 +295,15 @@ def _fix_example_panne():
 
 
 def _kpi_disponibilite(start, end):
-	planned = _working_hours(start, end)
-	panne_hours = _panne_hours(start, end)
+	schedule, holiday_list = _get_work_schedule()
+	service_intervals = _service_intervals(start, end, schedule, holiday_list)
+	planned = sum((interval_end - interval_start).total_seconds() / 3600 for interval_start, interval_end in service_intervals)
+	panne_hours = _panne_hours(start, end, service_intervals)
 	available = max(planned - panne_hours, 0)
 	value = _ratio(available, planned)
 	return {
 		"indicator": "Taux de disponibilité ERP",
-		"formula": "(Heures d'accessibilité ERP / Heures de travail prévues) × 100",
+		"formula": "((Heures de service prévues − panne pendant ces heures) / Heures de service prévues) × 100",
 		"frequency": "Mensuelle",
 		"target": "≥ 98 %",
 		"target_value": 98,
@@ -198,7 +313,7 @@ def _kpi_disponibilite(start, end):
 		"unit": "%",
 		"source": f"Issue Type « {ISSUE_PANNE} »",
 		"conforme": value >= 98 if value is not None else False,
-		"detail": f"{round(panne_hours, 2)} h de panne / {round(planned, 2)} h ouvrées",
+		"detail": f"{round(panne_hours, 2)} h de panne pendant le service / {round(planned, 2)} h prévues",
 	}
 
 
@@ -322,13 +437,51 @@ def _kpi_formations(start, end):
 	}
 
 
-def _panne_hours(start, end):
+def _get_work_schedule():
+	settings = frappe.get_single("TBQ IT Settings")
+	schedule = {}
+	for row in settings.weekly_schedule:
+		if not row.is_working_day or row.day_of_week not in WEEK_DAYS:
+			continue
+		schedule[WEEK_DAYS.index(row.day_of_week)] = (get_time(row.start_time), get_time(row.end_time))
+	return schedule, settings.holiday_list
+
+
+def _service_intervals(start, end, schedule, holiday_list=None):
+	period_start = datetime.combine(getdate(start), datetime_time.min)
+	period_end = datetime.combine(add_days(getdate(end), 1), datetime_time.min)
+	intervals = []
+	day = getdate(start) - timedelta(days=1)
+	last_day = getdate(end)
+	while day <= last_day:
+		work_time = schedule.get(day.weekday())
+		if work_time and not (
+			holiday_list and frappe.db.exists("Holiday", {"parent": holiday_list, "holiday_date": day})
+		):
+			start_time, end_time = work_time
+			service_start = datetime.combine(day, start_time)
+			service_end = datetime.combine(day, end_time)
+			if service_end <= service_start:
+				service_end += timedelta(days=1)
+			interval_start = max(service_start, period_start)
+			interval_end = min(service_end, period_end)
+			if interval_end > interval_start:
+				intervals.append((interval_start, interval_end))
+		day = add_days(day, 1)
+	intervals.sort()
+	merged = []
+	for interval_start, interval_end in intervals:
+		if merged and interval_start <= merged[-1][1]:
+			merged[-1] = (merged[-1][0], max(merged[-1][1], interval_end))
+		else:
+			merged.append((interval_start, interval_end))
+	return merged
+
+
+def _panne_hours(start, end, service_intervals):
 	issues = frappe.get_all(
 		"Issue",
-		filters={
-			"issue_type": ISSUE_PANNE,
-			"opening_date": ["between", [start, end]],
-		},
+		filters={"issue_type": ISSUE_PANNE},
 		fields=[
 			"name",
 			"opening_date",
@@ -337,30 +490,51 @@ def _panne_hours(start, end):
 			"status",
 			"modified",
 			"sla_resolution_date",
+			"custom_it_panne_debut_reel",
+			"custom_it_panne_retablissement_reel",
 		],
 	)
 	hours = 0.0
-	period_end = datetime.combine(getdate(end), datetime.max.time().replace(microsecond=0))
 	now = now_datetime()
 	for issue in issues:
-		if flt(issue.resolution_time):
-			hours += flt(issue.resolution_time) / 3600
-			continue
-		opened = _opening_datetime(issue.opening_date, issue.opening_time)
-		if not opened:
-			continue
-		closed = None
-		if issue.sla_resolution_date:
-			closed = get_datetime(issue.sla_resolution_date)
-		elif issue.status in CLOSED_SUPPORT:
-			closed = get_datetime(issue.modified)
+		opened = issue.custom_it_panne_debut_reel
+		closed = issue.custom_it_panne_retablissement_reel
+		if opened:
+			opened = get_datetime(opened)
+			if closed:
+				closed = get_datetime(closed)
+			else:
+				closed = (
+					get_datetime(issue.modified)
+					if issue.status in CLOSED_SUPPORT
+					else now
+				)
 		else:
-			closed = now
-		if closed > period_end:
-			closed = period_end
-		if closed > opened:
-			hours += (closed - opened).total_seconds() / 3600
+			# Keep historical Issues measurable until IT fills in their actual outage times.
+			opened = _opening_datetime(issue.opening_date, issue.opening_time)
+			if not opened:
+				continue
+			if flt(issue.resolution_time):
+				closed = opened + timedelta(seconds=flt(issue.resolution_time))
+			else:
+				closed = _issue_end_datetime(issue, now)
+
+		if not closed or closed <= opened:
+			continue
+		for interval_start, interval_end in service_intervals:
+			downtime_start = max(opened, interval_start)
+			downtime_end = min(closed, interval_end)
+			if downtime_end > downtime_start:
+				hours += (downtime_end - downtime_start).total_seconds() / 3600
 	return hours
+
+
+def _issue_end_datetime(issue, now):
+	if issue.sla_resolution_date:
+		return get_datetime(issue.sla_resolution_date)
+	if issue.status in CLOSED_SUPPORT:
+		return get_datetime(issue.modified)
+	return now
 
 
 def _opening_datetime(opening_date, opening_time):
@@ -376,17 +550,6 @@ def _opening_datetime(opening_date, opening_time):
 		return get_datetime(f"{opening_date} {time_part}")
 	except Exception:
 		return get_datetime(opening_date)
-
-
-def _working_hours(start, end):
-	hours = 0
-	day = getdate(start)
-	last = getdate(end)
-	while day <= last:
-		if day.weekday() < 5:
-			hours += HOURS_PER_DAY
-		day = add_days(day, 1)
-	return hours
 
 
 def _backup_days(start, end):

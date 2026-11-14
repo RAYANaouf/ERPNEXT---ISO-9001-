@@ -690,3 +690,49 @@ The weighted score is out of 100. A weight of 0 excludes the criterion.,Le score
 3 - Acceptable terms,3 - Conditions acceptables
 4 - Favorable,4 - Favorables
 5 - Very favorable,5 - Très favorables
+Attendance Incident,Rapport de retard ou d'absence
+Attendance Incident Form,Fiche de retard ou d'absence
+Incident Date,Date de l'incident
+Incident Type,Type d'incident
+Other Incident,Autre incident
+Incident Details,Détails de l'incident
+Late Arrival,Retard au travail
+Justified Absence,Absence justifiée
+Unjustified Absence,Absence injustifiée
+Early Departure,Départ anticipé
+Early Departure,Départ anticipé,Attendance Incident
+Scheduled Arrival,Heure prévue d'arrivée
+Actual Arrival,Heure réelle d'arrivée
+Scheduled Departure,Heure prévue de départ
+Actual Departure,Heure réelle de départ
+Late Duration (min),Durée du retard (min)
+Early Departure Duration (min),Durée du départ anticipé (min)
+Absence Duration (min),Durée de l'absence (min)
+Employee Explanation,Explication du salarié
+Reason Given by Employee,Motif indiqué par le salarié
+Justification,Justificatif
+Manager Review,Examen du responsable
+Manager Observations,Observations du responsable
+Decision / Action,Décision / mesure
+Verbal Warning,Avertissement oral
+Written Warning,Avertissement écrit
+Request for Justification,Demande de justification
+Other Action,Autre mesure
+Acknowledgement and Signatures,Prise de connaissance et signatures
+Employee Signature,Signature du salarié
+Signature Date,Date de signature
+Review Status,État de validation
+Under Review,En examen RH
+Under Review,En examen RH,Attendance Incident
+Validated,Validé
+Pointage Source,Source du pointage
+Employee Checkins,Pointages du salarié
+Data Warnings,Points à vérifier
+Correction Reason,Motif de correction
+Source Snapshot,Données sources figées
+Prefill from Check-ins,Préremplir depuis les pointages
+Reading attendance data...,Lecture des pointages...
+Attendance data to verify,Données de présence à vérifier
+Select an employee and incident date first.,Choisissez d'abord le salarié et la date.
+Late Period,Période de retard
+No complete attendance times were found. Enter the missing times or check synchronization.,Aucun horaire de présence complet trouvé. Saisissez les heures manquantes ou vérifiez la synchronisation.

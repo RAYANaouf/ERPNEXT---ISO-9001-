@@ -1,0 +1,168 @@
+{% macro labelled_rows(fields) %}
+	{% for label, fieldname in fields %}
+	<tr>
+		<th scope="row">{{ label }}</th>
+		<td class="fiche-text">{{ (doc.get(fieldname) or "") | e }}</td>
+	</tr>
+	{% endfor %}
+{% endmacro %}
+
+{% macro numbered_section(title, entries) %}
+	<table class="fiche-grid fiche-numbered">
+		<colgroup><col class="fiche-number"><col></colgroup>
+		<thead>
+			<tr>
+				<th scope="col">N°</th>
+				<th scope="col" class="fiche-section fiche-section-emphasis">{{ title }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for entry in entries %}
+			<tr>
+				<th scope="row">{{ loop.index }}</th>
+				<td class="fiche-text">{{ (entry.description or "") | e }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endmacro %}
+
+<style>
+	.print-format {
+		page-size: Letter;
+		orientation: Portrait;
+		margin-top: 12mm;
+		margin-right: 10mm;
+		margin-bottom: 12mm;
+		margin-left: 10mm;
+	}
+
+	@page { size: letter portrait; margin: 12mm 10mm; }
+
+	.print-format .fiche-poste {
+		color: #000;
+		font: 10pt/1.2 Calibri, Carlito, Arial, sans-serif;
+	}
+
+	.print-format .fiche-grid {
+		width: 100%;
+		border-collapse: collapse;
+		table-layout: fixed;
+		margin: 0;
+	}
+
+	.print-format .fiche-grid th,
+	.print-format .fiche-grid td {
+		border: 0.75pt solid #000 !important;
+		padding: 0.65mm 2mm !important;
+		vertical-align: middle !important;
+		word-wrap: break-word;
+		color: #000;
+	}
+
+	.print-format .fiche-grid th {
+		font-family: Arial, "Liberation Sans", sans-serif;
+		font-size: 9.5pt;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.print-format .fiche-grid tr { page-break-inside: avoid; }
+	.print-format .fiche-grid thead { display: table-header-group; }
+	.print-format .fiche-grid + .fiche-grid { margin-top: -1px; }
+	.print-format .fiche-grid .fiche-text { white-space: pre-line; }
+
+	.print-format .fiche-masthead {
+		margin-bottom: 3mm;
+		page-break-inside: avoid;
+	}
+
+	.print-format .fiche-masthead td { height: 5.3mm; }
+	.print-format .fiche-masthead .fiche-left { width: 24%; }
+	.print-format .fiche-masthead .fiche-right { width: 21%; }
+	.print-format .fiche-masthead th,
+	.print-format .fiche-numbered th:first-child,
+	.print-format .fiche-grid .fiche-title,
+	.print-format .fiche-grid .fiche-section { text-align: center; }
+
+	.print-format .fiche-grid .fiche-title {
+		font-size: 15pt;
+		padding: 2mm !important;
+	}
+
+	.print-format .fiche-grid .fiche-section { font-size: 11pt; }
+	.print-format .fiche-grid .fiche-section-emphasis { font-style: italic; }
+	.print-format .fiche-identity .fiche-label { width: 29%; }
+	.print-format .fiche-profile .fiche-label { width: 38%; }
+	.print-format .fiche-numbered .fiche-number { width: 6%; }
+
+	.print-format .fiche-mission p,
+	.print-format .fiche-mission h4 { margin: 0; }
+	.print-format .fiche-mission p + p { margin-top: 0.4em; }
+	.print-format .fiche-mission .ql-editor {
+		padding: 0;
+		font: inherit;
+	}
+
+	@media print {
+		.print-format-gutter > .print-format,
+		body > .print-format {
+			margin: 0 !important;
+			padding: 0 !important;
+			width: auto !important;
+			min-height: 0 !important;
+		}
+	}
+</style>
+
+<div class="fiche-poste" lang="fr" dir="ltr">
+	<table class="fiche-grid fiche-masthead" role="presentation">
+		<colgroup><col class="fiche-left"><col><col class="fiche-right"></colgroup>
+		<tr>
+			<td rowspan="3"></td>
+			<th>Système Management de la Qualité</th>
+			<td></td>
+		</tr>
+		<tr>
+			<th rowspan="2">FICHE DE POSTE</th>
+			<td></td>
+		</tr>
+		<tr><td></td></tr>
+	</table>
+
+	<table class="fiche-grid fiche-identity">
+		<colgroup><col class="fiche-label"><col></colgroup>
+		<tbody>
+			<tr><th colspan="2" class="fiche-title">FICHE DE POSTE</th></tr>
+			{{ labelled_rows([
+				("INTITULÉ DU POSTE", "job_title"),
+				("RELATION HIÉRARCHIQUE", "hierarchical_relation_alt"),
+				("RELATION FONCTIONNELLE", "functional_reporting")
+			]) }}
+			<tr><th colspan="2" class="fiche-section fiche-section-emphasis">MISSION GÉNÉRALE</th></tr>
+			<tr>
+				<td colspan="2" class="fiche-mission">{{ doc.get_formatted("general_mission") }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	{% if doc.authorities %}
+		{{ numbered_section("AUTORITÉS « si applicable »", doc.authorities) }}
+	{% endif %}
+	{{ numbered_section("DESCRIPTION DES TÂCHES", doc.tasks_description) }}
+
+	<table class="fiche-grid fiche-profile">
+		<colgroup><col class="fiche-label"><col></colgroup>
+		<thead>
+			<tr><th colspan="2" class="fiche-section">Critères d’accès au poste</th></tr>
+		</thead>
+		<tbody>
+			{{ labelled_rows([
+				("FORMATION DE BASE", "basic_education"),
+				("FORMATION PROFESSIONNELLE", "professional_training"),
+				("CONDITIONS PARTICULIÈRES", "special_conditions"),
+				("EXPÉRIENCE PROFESSIONNELLE", "professional_experience")
+			]) }}
+		</tbody>
+	</table>
+</div>

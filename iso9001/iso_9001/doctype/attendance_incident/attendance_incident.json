@@ -1,0 +1,472 @@
+{
+ "autoname": "ATT-INC-.YYYY.-.#####",
+ "custom": 0,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "employee_section",
+   "fieldtype": "Section Break",
+   "label": "Employee"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "incident_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Incident Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.custom_fiche_de_poste",
+   "fieldname": "job_description",
+   "fieldtype": "Link",
+   "label": "Fiche de poste",
+   "options": "Job description",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.reports_to",
+   "fieldname": "manager",
+   "fieldtype": "Link",
+   "label": "Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "incident_section",
+   "fieldtype": "Section Break",
+   "label": "Incident Type"
+  },
+  {
+   "fieldname": "incident_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Incident Type",
+   "options": "\nLate Arrival\nUnjustified Absence\nJustified Absence\nEarly Departure\nOther"
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Other'",
+   "fieldname": "other_incident",
+   "fieldtype": "Data",
+   "label": "Other Incident"
+  },
+  {
+   "depends_on": "eval:['Late Arrival', 'Early Departure', 'Justified Absence', 'Unjustified Absence'].includes(doc.incident_type)",
+   "fieldname": "timing_section",
+   "fieldtype": "Section Break",
+   "label": "Incident Details"
+  },
+  {
+   "depends_on": "eval:['Late Arrival', 'Early Departure', 'Justified Absence', 'Unjustified Absence'].includes(doc.incident_type)",
+   "fieldname": "shift_type",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift Type"
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Late Arrival'",
+   "fieldname": "scheduled_start",
+   "fieldtype": "Datetime",
+   "label": "Scheduled Arrival"
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Late Arrival'",
+   "fieldname": "actual_arrival",
+   "fieldtype": "Datetime",
+   "label": "Actual Arrival"
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Late Arrival' && doc.late_minutes>0",
+   "fieldname": "late_period",
+   "fieldtype": "Data",
+   "label": "Late Period",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Late Arrival' && doc.scheduled_start && doc.actual_arrival",
+   "fieldname": "late_minutes",
+   "fieldtype": "Float",
+   "label": "Late Duration (min)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Early Departure'",
+   "fieldname": "scheduled_end",
+   "fieldtype": "Datetime",
+   "label": "Scheduled Departure"
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Early Departure'",
+   "fieldname": "actual_departure",
+   "fieldtype": "Datetime",
+   "label": "Actual Departure"
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Early Departure' && doc.scheduled_end && doc.actual_departure",
+   "fieldname": "early_minutes",
+   "fieldtype": "Float",
+   "label": "Early Departure Duration (min)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.incident_type=='Justified Absence' || doc.incident_type=='Unjustified Absence'",
+   "fieldname": "absence_minutes",
+   "fieldtype": "Float",
+   "label": "Absence Duration (min)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "reason_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Explanation"
+  },
+  {
+   "fieldname": "employee_reason",
+   "fieldtype": "Small Text",
+   "label": "Reason Given by Employee"
+  },
+  {
+   "fieldname": "justification_attachment",
+   "fieldtype": "Attach",
+   "label": "Justification"
+  },
+  {
+   "fieldname": "review_section",
+   "fieldtype": "Section Break",
+   "label": "Manager Review"
+  },
+  {
+   "fieldname": "manager_observations",
+   "fieldtype": "Small Text",
+   "label": "Manager Observations",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "decision_section",
+   "fieldtype": "Section Break",
+   "label": "Decision / Action"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Select",
+   "label": "Action Taken",
+   "options": "\nVerbal Warning\nWritten Warning\nRequest for Justification\nOther Action",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:doc.action_taken=='Other Action'",
+   "fieldname": "other_action",
+   "fieldtype": "Data",
+   "label": "Other Action",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "label": "Acknowledgement and Signatures"
+  },
+  {
+   "fieldname": "employee_signature",
+   "fieldtype": "Signature",
+   "label": "Employee Signature",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "manager_signature",
+   "fieldtype": "Signature",
+   "label": "Manager Signature",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "signature_date",
+   "fieldtype": "Date",
+   "label": "Signature Date",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:doc.docstatus==1",
+   "fieldname": "review_status_section",
+   "fieldtype": "Section Break",
+   "label": "Review Status"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "fieldname": "review_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Review Status",
+   "options": "Draft\nUnder Review\nValidated\nClosed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "validated_by",
+   "fieldtype": "Link",
+   "label": "Validated By",
+   "options": "User",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "validated_on",
+   "fieldtype": "Datetime",
+   "label": "Validated On",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Pointage Source"
+  },
+  {
+   "fieldname": "source_attendance",
+   "fieldtype": "Link",
+   "label": "Attendance",
+   "options": "Attendance",
+   "permlevel": 2,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_leave",
+   "fieldtype": "Link",
+   "label": "Leave Application",
+   "options": "Leave Application",
+   "permlevel": 2,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_checkins",
+   "fieldtype": "Small Text",
+   "label": "Employee Checkins",
+   "permlevel": 2,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "prefilled_at",
+   "fieldtype": "Datetime",
+   "label": "Prefilled At",
+   "permlevel": 2,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_notes",
+   "fieldtype": "Small Text",
+   "label": "Data Warnings",
+   "permlevel": 2,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "correction_reason",
+   "fieldtype": "Small Text",
+   "label": "Correction Reason",
+   "permlevel": 2,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "source_snapshot",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Source Snapshot",
+   "permlevel": 2,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Attendance Incident",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2026-11-07 16:44:59.568282",
+ "module": "ISO 9001",
+ "name": "Attendance Incident",
+ "naming_rule": "Expression",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "permlevel": 2,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "HR Manager",
+   "write": 1
+  },
+  {
+   "permlevel": 2,
+   "read": 1,
+   "role": "HR Manager",
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "HR User",
+   "write": 1
+  },
+  {
+   "permlevel": 2,
+   "read": 1,
+   "role": "HR User",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "employee,employee_name,incident_date",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "employee_name",
+ "track_changes": 1,
+ "field_order": [
+  "employee_section",
+  "employee",
+  "employee_name",
+  "incident_date",
+  "designation",
+  "job_description",
+  "department",
+  "company",
+  "manager",
+  "incident_section",
+  "incident_type",
+  "other_incident",
+  "timing_section",
+  "shift_type",
+  "scheduled_start",
+  "actual_arrival",
+  "late_period",
+  "late_minutes",
+  "scheduled_end",
+  "actual_departure",
+  "early_minutes",
+  "absence_minutes",
+  "reason_section",
+  "employee_reason",
+  "justification_attachment",
+  "review_section",
+  "manager_observations",
+  "decision_section",
+  "action_taken",
+  "other_action",
+  "signature_section",
+  "employee_signature",
+  "manager_signature",
+  "signature_date",
+  "review_status_section",
+  "review_status",
+  "validated_by",
+  "validated_on",
+  "source_section",
+  "source_attendance",
+  "source_leave",
+  "source_checkins",
+  "prefilled_at",
+  "data_notes",
+  "correction_reason",
+  "source_snapshot",
+  "amended_from"
+ ]
+}

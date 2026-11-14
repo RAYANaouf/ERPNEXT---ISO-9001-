@@ -1,0 +1,48 @@
+Attendance Incident,تقرير تأخر أو غياب
+Attendance Incident Form,نموذج تقرير تأخر أو غياب
+Incident Date,تاريخ الحادثة
+Incident Type,نوع المخالفة
+Other Incident,مخالفة أخرى
+Incident Details,تفاصيل الحادثة
+Late Arrival,تأخر عن العمل
+Justified Absence,غياب مبرر
+Unjustified Absence,غياب بدون مبرر
+Early Departure,مغادرة مبكرة
+Scheduled Arrival,الوقت المعتاد للحضور
+Actual Arrival,الوقت الفعلي للحضور
+Scheduled Departure,الوقت المعتاد للمغادرة
+Actual Departure,الوقت الفعلي للمغادرة
+Late Duration (min),مدة التأخر (دقيقة)
+Early Departure Duration (min),مدة المغادرة المبكرة (دقيقة)
+Absence Duration (min),مدة الغياب (دقيقة)
+Employee Explanation,تفسير الموظف
+Reason Given by Employee,السبب المصرح به من طرف الموظف
+Justification,مبرر
+Manager Review,مراجعة المسؤول
+Manager Observations,ملاحظات المسؤول
+Decision / Action,القرار / الإجراء
+Action Taken,الإجراء المتخذ
+Verbal Warning,إنذار شفهي
+Written Warning,إنذار كتابي
+Request for Justification,طلب تبرير
+Other Action,إجراء آخر
+Acknowledgement and Signatures,الإطلاع والتوقيعات
+Employee Signature,توقيع الموظف
+Manager Signature,توقيع المسؤول
+Signature Date,تاريخ التوقيع
+Review Status,حالة المراجعة
+Under Review,قيد المراجعة
+Validated,تم التحقق
+Closed,مغلق
+Pointage Source,مصدر البصمة
+Employee Checkins,بصمات الموظف
+Data Warnings,بيانات تحتاج التحقق
+Correction Reason,سبب التصحيح
+Source Snapshot,نسخة من بيانات المصدر
+Prefill from Check-ins,تعبئة من بيانات البصمة
+Reading attendance data...,قراءة بيانات الحضور...
+Attendance data to verify,بيانات الحضور تحتاج التحقق
+Select an employee and incident date first.,اختر الموظف وتاريخ الحادثة أولاً.
+Late Period,فترة التأخر
+No complete attendance times were found. Enter the missing times or check synchronization.,لم يتم العثور على أوقات حضور مكتملة. أدخل الأوقات الناقصة أو تحقق من المزامنة.
+Fiche de poste,بطاقة الوصف الوظيفي

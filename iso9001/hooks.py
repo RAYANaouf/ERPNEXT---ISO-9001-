@@ -258,8 +258,8 @@ fixtures = [
     {
         'dt': 'DocType',
         'filters': [
-            ["istable" , "=" ,  1],
-            ["module" , "in" , ["ISO 9001"]],
+            ["istable", "=", 1],
+            ["module", "=", "ISO 9001"],
         ]
     },
     {
@@ -270,15 +270,18 @@ fixtures = [
     },
     {
         'dt': 'Client Script',
-        'filters': [
-            ["module" , "in" , ["ISO 9001"]],
-        ]
+        'filters': [["module", "=", "ISO 9001"]],
     },
     {
         'dt': 'Server Script',
+        'filters': [["module", "=", "ISO 9001"]],
+    },
+    {
+        'dt': 'Print Format',
         'filters': [
-            ["module" , "in" , ["ISO 9001"]],
-        ]
+            ["module", "=", "ISO 9001"],
+            ["standard", "=", "No"],
+        ],
     },
     {
         'dt': 'Report',
@@ -299,8 +302,9 @@ fixtures = [
     },
     {
         'dt': 'Workspace',
-        'filters': [
-            ["module" , "in" , ["ISO 9001"]],
+        'or_filters': [
+            ["module", "=", "ISO 9001"],
+            ["name", "=", "QM"],
         ]
     },
 ]

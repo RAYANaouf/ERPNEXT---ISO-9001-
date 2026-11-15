@@ -308,15 +308,3 @@ fixtures = [
         ]
     },
 ]
-
-
-
-
-
-
-
-scheduler_events = {
-    "all": [
-        "iso9001.controle.doctype.system_brain_instruction.system_brain_instruction.execute_cron_jobs"
-    ]
-}

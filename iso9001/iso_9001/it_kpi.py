@@ -28,7 +28,7 @@ from frappe.utils import (
 	now_datetime,
 )
 
-IT_PROJECT_NAME = "SUPPORT IT"
+EVOLUTION_TASK_TYPE = "Évolution ERP"
 ISSUE_PANNE = "Panne ERP"
 ISSUE_SUPPORT = "Support"
 CLOSED_SUPPORT = ("Resolved", "Closed")
@@ -90,9 +90,7 @@ def card_demandes(filters=None):
 @frappe.whitelist()
 def card_evolutions(filters=None):
 	kpi = compute_kpis(filters)["evolutions"]
-	projects = _project_names()
-	options = {"project": projects[0]} if projects else None
-	return _card(kpi["value"], "Percent", ["List", "Task"], options)
+	return _card(kpi["value"], "Percent", ["List", "Task"], {"type": EVOLUTION_TASK_TYPE})
 
 
 @frappe.whitelist()
@@ -105,6 +103,7 @@ def after_migrate():
 	for title, method in (
 		("horaires TBQ IT", ensure_it_schedule),
 		("champs de panne ERP", ensure_issue_outage_fields),
+		("type de tâche Évolution ERP", ensure_evolution_task_type),
 		("tableau de bord TBQ IT", install_dashboard),
 	):
 		try:
@@ -188,6 +187,16 @@ def ensure_issue_outage_fields():
 	frappe.clear_cache(doctype="Issue")
 
 
+def ensure_evolution_task_type():
+	if not frappe.db.exists("DocType", "Task Type"):
+		return
+	if frappe.db.exists("Task Type", EVOLUTION_TASK_TYPE):
+		return
+	frappe.get_doc({"doctype": "Task Type", "name": EVOLUTION_TASK_TYPE}).insert(
+		ignore_permissions=True
+	)
+
+
 def validate_issue_outage_times(doc, method=None):
 	if doc.doctype != "Issue":
 		return
@@ -234,64 +243,10 @@ def install_dashboard():
 	sync_dashboards(app="iso9001")
 	if os.path.exists(workspace_json):
 		import_file_by_path(workspace_json, force=True)
-	ensure_it_project()
 	frappe.db.commit()
 	if frappe.db.exists("Workspace", "SUPPORT IT"):
 		write_document_file(frappe.get_doc("Workspace", "SUPPORT IT"), "ISO 9001")
 	return "SUPPORT IT dashboard installed"
-
-
-def ensure_it_project():
-	existing = frappe.db.get_value("Project", {"project_name": IT_PROJECT_NAME}, "name")
-	if existing:
-		_link_example_tasks(existing)
-		_fix_example_panne()
-		return existing
-
-	company = frappe.defaults.get_global_default("company") or frappe.db.get_value(
-		"Company", {"is_group": 0}, "name"
-	)
-	if not company:
-		return None
-
-	doc = frappe.get_doc(
-		{
-			"doctype": "Project",
-			"project_name": IT_PROJECT_NAME,
-			"status": "Open",
-			"is_active": "Yes",
-			"company": company,
-			"expected_start_date": "2026-09-01",
-			"notes": "Projet de suivi des évolutions ERP du processus SUPPORT IT (ISO 9001).",
-		}
-	)
-	doc.insert(ignore_permissions=True)
-	_link_example_tasks(doc.name)
-	_fix_example_panne()
-	return doc.name
-
-
-def _link_example_tasks(project):
-	if not project:
-		return
-	names = frappe.get_all("Task", filters={"subject": ["like", "%EXEMPLE IT%"]}, pluck="name")
-	for name in names:
-		if frappe.db.get_value("Task", name, "project") != project:
-			frappe.db.set_value("Task", name, "project", project, update_modified=False)
-
-
-def _fix_example_panne():
-	name = frappe.db.get_value(
-		"Issue",
-		{"issue_type": ISSUE_PANNE, "subject": ["like", "%EXEMPLE IT%"]},
-		"name",
-	)
-	if not name:
-		return
-	current = flt(frappe.db.get_value("Issue", name, "resolution_time"))
-	if current:
-		return
-	frappe.db.set_value("Issue", name, "resolution_time", 2 * 3600, update_modified=False)
 
 
 def _kpi_disponibilite(start, end):
@@ -364,31 +319,31 @@ def _kpi_demandes(start, end):
 
 
 def _kpi_evolutions(start, end):
-	projects = _project_names()
-	filters = {}
-	if projects:
-		filters["project"] = ["in", projects]
-	else:
-		filters["subject"] = ["like", "%EXEMPLE IT%"]
+	start, end = getdate(start), getdate(end)
 	tasks = frappe.get_all(
 		"Task",
-		filters=filters,
-		fields=["name", "status", "creation", "exp_start_date", "completed_on"],
+		filters={
+			"type": EVOLUTION_TASK_TYPE,
+			"exp_end_date": ["between", [start, end]],
+			"is_group": 0,
+			"status": ["not in", CANCELLED_TASK],
+		},
+		fields=["name", "status", "completed_on"],
 	)
-	start, end = getdate(start), getdate(end)
-	in_period = []
-	for task in tasks:
-		if task.status in CANCELLED_TASK:
-			continue
-		dates = [getdate(value) for value in (task.exp_start_date, task.completed_on, task.creation) if value]
-		if any(start <= day <= end for day in dates):
-			in_period.append(task)
-	planned = len(in_period)
-	done = len([task for task in in_period if task.status in CLOSED_TASK])
+	planned = len(tasks)
+	done = len(
+		[
+			task
+			for task in tasks
+			if task.status in CLOSED_TASK
+			and task.completed_on
+			and getdate(task.completed_on) <= end
+		]
+	)
 	value = _ratio(done, planned)
 	return {
 		"indicator": "Taux de réalisation des évolutions ERP",
-		"formula": "(Évolutions livrées / Évolutions planifiées) × 100 — rapports, fonctions, applications",
+		"formula": "(Tâches d’évolution terminées / Tâches d’évolution prévues en livraison dans la période) × 100",
 		"frequency": "Mensuelle",
 		"target": "≥ 80 %",
 		"target_value": 80,
@@ -396,7 +351,7 @@ def _kpi_evolutions(start, end):
 		"numerator": done,
 		"denominator": planned,
 		"unit": "%",
-		"source": f"Tâche / Projet « {IT_PROJECT_NAME} »",
+		"source": f"Task Type « {EVOLUTION_TASK_TYPE} » avec date de fin prévue dans la période",
 		"conforme": value >= 80 if value is not None else False,
 		"detail": f"{done} livrée(s) / {planned} planifiée(s)",
 	}
@@ -597,10 +552,6 @@ def _backup_days(start, end):
 		source_parts.append("aucune preuve de sauvegarde sur la période")
 
 	return len(days), " + ".join(source_parts)
-
-
-def _project_names():
-	return frappe.get_all("Project", filters={"project_name": IT_PROJECT_NAME}, pluck="name")
 
 
 def _ratio(numerator, denominator):

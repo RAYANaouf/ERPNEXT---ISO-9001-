@@ -109,9 +109,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Project",
+   "label": "Type de t\u00e2che",
    "link_count": 0,
-   "link_to": "Project",
+   "link_to": "Task Type",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
